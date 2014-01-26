@@ -1,0 +1,72 @@
+{
+"sms": [
+      {
+      "category": "情话",
+      "data": [
+             {
+             "name": "情话短信",
+             "icon": "1.png",
+             "file": "情话短信.sqlite"
+             },
+             {
+             "name": "经典情话",
+             "icon": "1.png",
+             "file": "b.sqlite"
+             },
+             {
+             "name": "肉麻情话",
+             "icon": "1.png",
+             "file": "b.sqlite"
+             }
+             ]
+      },
+      {
+      "category": "祝福",
+      "data": [
+             {
+             "name": "高中",
+             "file": "a.sqlite"
+             },
+             {
+             "name": "过年",
+             "file": "b.sqlite"
+             }
+             ]
+      }
+      ],
+    "mms": [
+            {
+            "category": "情话",
+            "data": [
+                     {
+                     "name": "短篇情话",
+                     "icon": "1.png",
+                     "file": "a.sqlite"
+                     },
+                     {
+                     "name": "经典情话",
+                     "icon": "1.png",
+                     "file": "b.sqlite"
+                     },
+                     {
+                     "name": "肉麻情话",
+                     "icon": "1.png",
+                     "file": "b.sqlite"
+                     }
+                     ]
+            },
+            {
+            "category": "祝福",
+            "data": [
+                     {
+                     "name": "高中",
+                     "file": "a.sqlite"
+                     },
+                     {
+                     "name": "过年",
+                     "file": "b.sqlite"
+                     }
+                     ]
+            }
+            ]
+}
