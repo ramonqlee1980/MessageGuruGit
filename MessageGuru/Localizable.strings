@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  MessageGuru
+
+  Created by Ramonqlee on 1/27/14.
+  Copyright (c) 2014 iDreems. All rights reserved.
+*/
+"Title"="手机信息大师";
+"About"="版本V1.0.0  iDreems.com荣誉出品";
+
+"Tab_Title_Favorites"="收藏";
+"Tab_Title_Setting"="设置";
+"Tab_Title_RecommmendApps"="推荐";
+
+//setting
+"AboutTitle"="版本信息";
+"kMoreFeedBackKey"="用户反馈";
+"kMoreRateKey"="评个分";
+
+//tip
+"Add2FavoriteToast"="收藏成功";

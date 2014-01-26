@@ -30,7 +30,7 @@
 #import "SMSListViewController.h"
 #import "Favorite.h"
 #import "RMFavoriteViewController.h"
-
+#import "SettingsViewController.h"
 
 
 @interface TabbedViewController()
@@ -55,11 +55,16 @@
                           [self categoryController],
                             [self viewControllerWithTabTitle:@"" image:nil],
                             [self favoriteController],
-                            [self viewControllerWithTabTitle:@"关于" image:[UIImage imageNamed:@"tab_messages.png"]], nil];
+                            [self aboutController], nil];
 }
 
 #pragma mark view controllers
-
+-(UIViewController*)aboutController
+{
+    SettingsViewController* ret = [[SettingsViewController new]autorelease];
+    ret.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"关于" image:[UIImage imageNamed:@"tab_messages.png"] tag:0] autorelease];
+    return ret;
+}
 -(UIViewController*)categoryController
 {
     HomeViewController* categoryViewController = [[HomeViewController alloc]initWithNibName:@"HomeViewController" bundle:nil];

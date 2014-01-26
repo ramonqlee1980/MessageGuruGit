@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>127BB8CC-3DA8-49FF-A944-FFC71196FDAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UMSocial_Sdk_Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8EBE4A51-9854-4948-9A27-3028342B778E</key>
+		<string>https://github.com/ramonqlee1980/SwipeProjectTempl.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UMSocial_Sdk_All_2.2.1.1/UMSocial_Sdk_Demo/UMSocial_Sdk_Demo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8EBE4A51-9854-4948-9A27-3028342B778E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ramonqlee1980/SwipeProjectTempl.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8EBE4A51-9854-4948-9A27-3028342B778E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8EBE4A51-9854-4948-9A27-3028342B778E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS_Lib</string>
+		</dict>
+	</array>
+</dict>
+</plist>

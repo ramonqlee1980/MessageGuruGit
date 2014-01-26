@@ -25,8 +25,8 @@
 /**************** 应用采用的id  ********************/
 #define CP_Weixin_App_Id @"wx6582d481655eb966"
 #define CP_UMeng_App_Key @"52e43f5a56240b921b0f1a2c"
-//#define kFlurryAppId @"PQKG4KVJJNSMCMKTMFH9"
-//#define kAppleId @"776660126"
+#define kFlurryAppId @"PQKG4KVJJNSMCMKTMFH9"
+#define kAppleId @"776660126"
 
 
 /**************** flurry event ********************/
@@ -38,6 +38,16 @@
 #define kSNSPlatformKey @"SNSPlatform"
 #define kEnterIAPViewEvent @"EnterIAPViewEvent"
 #define kUnlockCategoryEvent @"UnlockCategory"
+
+
+#define kOpenFeedbackEvent @"kOpenFeedbackEvent"
+#define kSetQuitNotificationEvent @"kSetQuitNotificationEvent"
+#define kOpenRecommendAppListEvent @"kOpenRecommendAppListEvent"
+#define kOpenEarnGoldListInSettingEvent @"kOpenEarnGoldListInSettingEvent"
+#define kOpenIAPListInSettingEvent @"kOpenIAPListInSettingEvent"
+#define kOpenIAPListInDetailViewEvent @"kOpenIAPListInDetailViewEvent"
+#define kOpenRateInSettingEvent @"kOpenRateInSettingEvent"
+#define kOpenRecommendAdInDetailViewEvent @"kOpenRecommendAdInDetailViewEvent"
 
 //金币变更事件，将记录变更前后的金币数量
 #define kCoinsChangeEvent @"CoinsChangeEvent"
@@ -109,4 +119,7 @@
 #define CP_Value_Key @"value"
 
 #define HTTP_OK 200
+
+#define kDefaultEmailRecipients @"feedback4iosapp@gmail.com"
+
 #endif//__CONSTANTS__
