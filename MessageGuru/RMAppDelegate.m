@@ -17,6 +17,7 @@
     // Override point for customization after application launch.
     TabbedViewController* homepage = [[TabbedViewController new]autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc]initWithRootViewController:homepage]autorelease];
+    navigationController.navigationBarHidden = YES;
     navigationController.delegate = self;
     
     self.window.rootViewController = navigationController;

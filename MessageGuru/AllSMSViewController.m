@@ -65,14 +65,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    NSString *title = @"";
-    POHorizontalList *list;
-    
     RMCategory* category = [self.categoryArray objectAtIndex:indexPath.row];
-    title = category.name;
+    NSString *title = category.name;
     
-    list = [[[POHorizontalList alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 155.0) title:title items:[self.categoryListItemArray objectAtIndex:indexPath.row]]autorelease];
-
+    POHorizontalList *list = [[[POHorizontalList alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 155.0) title:title items:[self.categoryListItemArray objectAtIndex:indexPath.row]]autorelease];
     
     [list setDelegate:self];
     [cell.contentView addSubview:list];
