@@ -7,6 +7,7 @@
 //
 
 #import "RMCategory.h"
+#import "RMCategoryItem.h"
 
 @implementation RMCategory
 @synthesize name,itemArray;
@@ -17,5 +18,19 @@
         itemArray = [NSMutableArray new];
     }
     return self;
+}
++(id)initWithDict:(NSDictionary*)item
+{
+    RMCategory* rc = [[RMCategory new]autorelease];
+    rc.name = [item objectForKey:@"category"];
+    rc.hot = (nil!=[item objectForKey:@"hot"]);
+    
+    NSArray* arr = [item objectForKey:@"data"];
+    for (NSDictionary* temp in arr) {
+        RMCategoryItem* ci = [RMCategoryItem initWithJson:temp];
+        [rc.itemArray addObject:ci];
+    }
+    
+    return rc;
 }
 @end

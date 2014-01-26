@@ -104,6 +104,7 @@
 		30A8E6621895C01200DE7D99 /* ios-social-sdk-socialbar.html in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E6171895C01200DE7D99 /* ios-social-sdk-socialbar.html */; };
 		30A8E6631895C01200DE7D99 /* UMSocial_Sdk_ReleaseNotes.html in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E6181895C01200DE7D99 /* UMSocial_Sdk_ReleaseNotes.html */; };
 		30A8E6681895C07100DE7D99 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A8E6671895C07100DE7D99 /* SystemConfiguration.framework */; };
+		30A8E66B1895C4C000DE7D99 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E66A1895C4C000DE7D99 /* HotViewController.m */; };
 		30BBF4621891491F00631F6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BBF4611891491F00631F6E /* Foundation.framework */; };
 		30BBF4641891491F00631F6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BBF4631891491F00631F6E /* CoreGraphics.framework */; };
 		30BBF4661891491F00631F6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BBF4651891491F00631F6E /* UIKit.framework */; };
@@ -120,8 +121,8 @@
 		30BBF4951891494D00631F6E /* TabbedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF4931891494D00631F6E /* TabbedViewController.m */; };
 		30BBF4F7189159AE00631F6E /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF4F0189159AE00631F6E /* ListItem.m */; };
 		30BBF4F8189159AE00631F6E /* POHorizontalList.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF4F2189159AE00631F6E /* POHorizontalList.m */; };
-		30BBF4F9189159AE00631F6E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF4F5189159AE00631F6E /* HomeViewController.m */; };
-		30BBF4FA189159AE00631F6E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF4F6189159AE00631F6E /* HomeViewController.xib */; };
+		30BBF4F9189159AE00631F6E /* AllSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF4F5189159AE00631F6E /* AllSMSViewController.m */; };
+		30BBF4FA189159AE00631F6E /* AllSMSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF4F6189159AE00631F6E /* AllSMSViewController.xib */; };
 		30BBF52118915A3C00631F6E /* camera_button_take.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50818915A3C00631F6E /* camera_button_take.png */; };
 		30BBF52218915A3C00631F6E /* camera_button_take@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50918915A3C00631F6E /* camera_button_take@2x.png */; };
 		30BBF52318915A3C00631F6E /* DailyBoothIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50A18915A3C00631F6E /* DailyBoothIcon.png */; };
@@ -285,6 +286,8 @@
 		30A8E6171895C01200DE7D99 /* ios-social-sdk-socialbar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ios-social-sdk-socialbar.html"; sourceTree = "<group>"; };
 		30A8E6181895C01200DE7D99 /* UMSocial_Sdk_ReleaseNotes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = UMSocial_Sdk_ReleaseNotes.html; sourceTree = "<group>"; };
 		30A8E6671895C07100DE7D99 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		30A8E6691895C4C000DE7D99 /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
+		30A8E66A1895C4C000DE7D99 /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
 		30BBF45E1891491F00631F6E /* MessageGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BBF4611891491F00631F6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30BBF4631891491F00631F6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -310,9 +313,9 @@
 		30BBF4F1189159AE00631F6E /* POHorizontalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POHorizontalList.h; sourceTree = "<group>"; };
 		30BBF4F2189159AE00631F6E /* POHorizontalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POHorizontalList.m; sourceTree = "<group>"; };
 		30BBF4F3189159AE00631F6E /* POHorizontalListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POHorizontalListDelegate.h; sourceTree = "<group>"; };
-		30BBF4F4189159AE00631F6E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		30BBF4F5189159AE00631F6E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		30BBF4F6189159AE00631F6E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		30BBF4F4189159AE00631F6E /* AllSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSMSViewController.h; sourceTree = "<group>"; };
+		30BBF4F5189159AE00631F6E /* AllSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSMSViewController.m; sourceTree = "<group>"; };
+		30BBF4F6189159AE00631F6E /* AllSMSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllSMSViewController.xib; sourceTree = "<group>"; };
 		30BBF50818915A3C00631F6E /* camera_button_take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_button_take.png; sourceTree = "<group>"; };
 		30BBF50918915A3C00631F6E /* camera_button_take@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_button_take@2x.png"; sourceTree = "<group>"; };
 		30BBF50A18915A3C00631F6E /* DailyBoothIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DailyBoothIcon.png; sourceTree = "<group>"; };
@@ -466,11 +469,13 @@
 				30BBF4931891494D00631F6E /* TabbedViewController.m */,
 				30BBF52F1893BDD600631F6E /* SMSListViewController.h */,
 				30BBF5301893BDD600631F6E /* SMSListViewController.m */,
-				30BBF4F4189159AE00631F6E /* HomeViewController.h */,
-				30BBF4F5189159AE00631F6E /* HomeViewController.m */,
-				30BBF4F6189159AE00631F6E /* HomeViewController.xib */,
+				30BBF4F4189159AE00631F6E /* AllSMSViewController.h */,
+				30BBF4F5189159AE00631F6E /* AllSMSViewController.m */,
+				30BBF4F6189159AE00631F6E /* AllSMSViewController.xib */,
 				30A8E573189546D500DE7D99 /* RMFavoriteViewController.h */,
 				30A8E574189546D500DE7D99 /* RMFavoriteViewController.m */,
+				30A8E6691895C4C000DE7D99 /* HotViewController.h */,
+				30A8E66A1895C4C000DE7D99 /* HotViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -943,7 +948,7 @@
 				30BBF52618915A3C00631F6E /* tab_feed@2x.png in Resources */,
 				30A8E61F1895C01200DE7D99 /* UMSCommentInputControlleriPad.xib in Resources */,
 				30A8E62B1895C01200DE7D99 /* UMSocialControllerService.html in Resources */,
-				30BBF4FA189159AE00631F6E /* HomeViewController.xib in Resources */,
+				30BBF4FA189159AE00631F6E /* AllSMSViewController.xib in Resources */,
 				30A8E63C1895C01200DE7D99 /* disclosure.png in Resources */,
 				30BBF52318915A3C00631F6E /* DailyBoothIcon.png in Resources */,
 				30A8E6201895C01200DE7D99 /* UMShareEditViewController.xib in Resources */,
@@ -1003,7 +1008,7 @@
 				30A8E57218947D2400DE7D99 /* StringUtil.m in Sources */,
 				30BBF46E1891491F00631F6E /* main.m in Sources */,
 				30A8E5181893D40800DE7D99 /* Utils.m in Sources */,
-				30BBF4F9189159AE00631F6E /* HomeViewController.m in Sources */,
+				30BBF4F9189159AE00631F6E /* AllSMSViewController.m in Sources */,
 				30A8E5261893FBC000DE7D99 /* RMSmsDataCenter.m in Sources */,
 				30BBF4F7189159AE00631F6E /* ListItem.m in Sources */,
 				30A8E562189479D400DE7D99 /* Favorite.m in Sources */,
@@ -1016,6 +1021,7 @@
 				30A8E51E1893DC5B00DE7D99 /* RMCategory.m in Sources */,
 				30A8E56F18947D2400DE7D99 /* GTMNSString+HTML.m in Sources */,
 				30A8E56518947C1E00DE7D99 /* RMSMS.m in Sources */,
+				30A8E66B1895C4C000DE7D99 /* HotViewController.m in Sources */,
 				30BBF4721891491F00631F6E /* RMAppDelegate.m in Sources */,
 				30A8E57018947D2400DE7D99 /* NSString+HTML.m in Sources */,
 				30BBF4951891494D00631F6E /* TabbedViewController.m in Sources */,

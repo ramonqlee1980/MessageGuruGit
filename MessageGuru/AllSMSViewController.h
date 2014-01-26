@@ -9,16 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "POHorizontalList.h"
 
-//#define kEnableData
-
-@interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, POHorizontalListDelegate> {
-#ifdef kEnableData
-    NSMutableArray *freeList;
-    NSMutableArray *paidList;
-    NSMutableArray *grossingList;
-#endif
+@interface AllSMSViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, POHorizontalListDelegate> {
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
-
+@property(nonatomic,retain)NSArray* categoryArray;//json data
+@property(nonatomic,retain)NSMutableArray* categoryListItemArray;//ListItem data
 @end

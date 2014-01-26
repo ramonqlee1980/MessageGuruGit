@@ -44,7 +44,7 @@ NSString* reuseIdentifier = @"UITableViewCellStyleDefault";
     
     //set status bar color
     [self.view window].backgroundColor = [UIColor blackColor];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
     
 //    UIBarButtonItem *button =
 //    [UIBarButtonItem barItemWithImage:[UIImage imageNamed:@"top_navigation_back.png"]

@@ -36,15 +36,7 @@ Impl_Singleton(RMDataCenter)
             NSArray* categoryArray = [res objectForKey:key];
             NSMutableArray* cArray = [NSMutableArray new];
             for (NSDictionary* item in categoryArray) {
-                RMCategory* rc = [RMCategory new];
-                rc.name = [item objectForKey:@"category"];
-                
-                NSArray* arr = [item objectForKey:@"data"];
-                for (NSDictionary* temp in arr) {
-                    RMCategoryItem* ci = [RMCategoryItem initWithJson:temp];
-                    [rc.itemArray addObject:ci];
-                }
-                [cArray addObject:rc];
+                [cArray addObject:[RMCategory initWithDict:item]];
             }
             
             [rootDict setValue:cArray forKey:key];

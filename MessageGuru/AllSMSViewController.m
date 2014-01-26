@@ -1,0 +1,119 @@
+//
+//  ViewController.m
+//  POHorizontalList
+//
+//  Created by Polat Olu on 15/02/2013.
+//  Copyright (c) 2013 Polat Olu. All rights reserved.
+//
+
+#import "AllSMSViewController.h"
+#import "SMSListViewController.h"
+#import "RMDataCenter.h"
+#import "RMCategory.h"
+#import "RMCategoryItem.h"
+#import "RMSmsDataCenter.h"
+
+#define kMaxLoadingNumber 300
+
+@interface AllSMSViewController ()
+@end
+
+@implementation AllSMSViewController
+@synthesize categoryArray,categoryListItemArray;
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+    }
+    
+    return self;
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self loadData];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma tableview data source
+- (int)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return categoryListItemArray?categoryListItemArray.count:0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 155.0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cell";
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    NSString *title = @"";
+    POHorizontalList *list;
+    
+    RMCategory* category = [self.categoryArray objectAtIndex:indexPath.row];
+    title = category.name;
+    
+    list = [[[POHorizontalList alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 155.0) title:title items:[self.categoryListItemArray objectAtIndex:indexPath.row]]autorelease];
+
+    
+    [list setDelegate:self];
+    [cell.contentView addSubview:list];
+    
+    return cell;
+}
+
+#pragma mark  POHorizontalListDelegate
+
+- (void) didSelectItem:(ListItem *)item {
+    
+    NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
+    SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
+
+    //从item的name对应的db文件中，读取数据
+    detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:item.imageTitle startFrom:0 tillEnd:kMaxLoadingNumber];
+    
+    
+    UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
+    detailMsgViewController.navigationItem.title = item.imageTitle;
+    
+    [self presentViewController:navi animated:YES completion:nil];
+}
+#pragma mark data loading
+-(void)loadData
+{
+    RMDataCenter* dataCenter = [RMDataCenter sharedInstance];
+    self.categoryArray = [dataCenter category:kSMSCategory];
+    
+    for (RMCategory* data in self.categoryArray) {
+        if (data && data.name && data.itemArray) {
+            NSMutableArray* listArray = [NSMutableArray new];
+            for (RMCategoryItem* item in data.itemArray) {
+                [listArray addObject:[[ListItem alloc] initWithFrame:CGRectZero image:[UIImage imageNamed:item.icon] text:item.name]];
+            }
+            
+            if (!self.categoryListItemArray) {
+                self.categoryListItemArray = [NSMutableArray new];
+            }
+            [self.categoryListItemArray addObject:listArray];
+        }
+    }
+}
+@end

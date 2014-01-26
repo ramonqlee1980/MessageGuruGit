@@ -10,5 +10,7 @@
 
 @interface RMCategory : NSObject
 @property(nonatomic,copy)NSString* name;
+@property(nonatomic,assign)BOOL hot;//是否热门
 @property(nonatomic,retain)NSMutableArray* itemArray;
++(id)initWithDict:(NSDictionary*)data;
 @end
