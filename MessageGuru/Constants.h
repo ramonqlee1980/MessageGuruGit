@@ -21,12 +21,12 @@
 #define kDBSMSKeyColumn @"url"
 #define kChannelUrl @"http://www.idreams.com"
 
-#warning reset these ids and online resources,including icons,etc
+#warning online resources,including icons,etc
 /**************** 应用采用的id  ********************/
 #define CP_Weixin_App_Id @"wx6582d481655eb966"
 #define CP_UMeng_App_Key @"52e43f5a56240b921b0f1a2c"
-#define kFlurryAppId @"PQKG4KVJJNSMCMKTMFH9"
-#define kAppleId @"776660126"
+#define kFlurryAppId @"SZ4XVCHNNBXYRS53YV9N"
+#define kAppleId @"807749462"
 
 
 /**************** flurry event ********************/
@@ -124,4 +124,6 @@
 
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 #define kDeviceHeight [UIScreen mainScreen].bounds.size.height
+
+#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
 #endif//__CONSTANTS__

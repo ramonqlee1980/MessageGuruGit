@@ -3,20 +3,45 @@
       {
       "category": "情话",
       "data": [
+               {
+               "name": "感人的情话",
+               "icon": "qinghua.png",
+               "file": "感人的情话.sqlite"
+               },
+               {
+               "name": "浪漫的情话",
+               "icon": "qinghua.png",
+               "file": "浪漫的情话.sqlite"
+               },
+               {
+               "name": "爱情宣言",
+               "icon": "qinghua.png",
+               "file": "爱情宣言.sqlite"
+               },
+               {
+               "name": "爱情诗句",
+               "icon": "qinghua.png",
+               "file": "爱情诗句.sqlite"
+               },
+               {
+               "name": "爱情语录",
+               "icon": "qinghua.png",
+               "file": "爱情语录.sqlite"
+               },
+               {
+               "name": "肉麻的情话",
+               "icon": "qinghua.png",
+               "file": "肉麻的情话.sqlite"
+               },
              {
              "name": "情话短信",
-             "icon": "1.png",
+             "icon": "qinghua.png",
              "file": "情话短信.sqlite"
              },
              {
              "name": "经典情话",
-             "icon": "1.png",
-             "file": "b.sqlite"
-             },
-             {
-             "name": "肉麻情话",
-             "icon": "1.png",
-             "file": "b.sqlite"
+             "icon": "jingdian.png",
+             "file": "经典情话.sqlite"
              }
              ]
       },

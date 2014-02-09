@@ -12,6 +12,7 @@
 #import "RMCategory.h"
 #import "RMCategoryItem.h"
 #import "RMSmsDataCenter.h"
+#import "Constants.h"
 
 #define kMaxLoadingNumber 300
 
@@ -34,6 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(IOS7)
+    {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
     [self loadData];
 }
 

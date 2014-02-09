@@ -20,6 +20,8 @@
     navigationController.navigationBarHidden = YES;
     navigationController.delegate = self;
     
+    [[UIApplication sharedApplication]setStatusBarHidden:YES];
+    
     self.window.rootViewController = navigationController;
     
     self.window.backgroundColor = [UIColor whiteColor];

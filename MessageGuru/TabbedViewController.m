@@ -61,7 +61,7 @@
 #pragma mark view controllers
 -(UIViewController*)hotViewController
 {
-    HotViewController* categoryViewController = [[HotViewController alloc]initWithNibName:@"HomeViewController" bundle:nil];
+    HotViewController* categoryViewController = [[HotViewController alloc]initWithNibName:NSStringFromClass ([AllSMSViewController class]) bundle:nil];
     categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"热门" image:[UIImage imageNamed:@"tab_live"] tag:0] autorelease];
     
     return categoryViewController;
@@ -75,7 +75,7 @@
 
 -(UIViewController*)categoryController
 {
-    AllSMSViewController* categoryViewController = [[AllSMSViewController alloc]initWithNibName:@"HomeViewController" bundle:nil];
+    AllSMSViewController* categoryViewController = [[AllSMSViewController alloc]initWithNibName:NSStringFromClass ([AllSMSViewController class]) bundle:nil];
     categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"短信大全" image:[UIImage imageNamed:@"tab_feed.png"] tag:0] autorelease];
     
     return categoryViewController;

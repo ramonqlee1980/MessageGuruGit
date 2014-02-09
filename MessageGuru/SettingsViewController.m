@@ -44,14 +44,10 @@ NSString* reuseIdentifier = @"UITableViewCellStyleDefault";
     
     //set status bar color
     [self.view window].backgroundColor = [UIColor blackColor];
-//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
-    
-//    UIBarButtonItem *button =
-//    [UIBarButtonItem barItemWithImage:[UIImage imageNamed:@"top_navigation_back.png"]
-//                        selectedImage:[UIImage imageNamed:@"top_navigation_back.png"]
-//                               target:self
-//                               action:@selector(back)];
-//    self.navigationItem.leftBarButtonItem = button;
+    if(IOS7)
+    {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
 -(void)viewWillAppear:(BOOL)animated
 {

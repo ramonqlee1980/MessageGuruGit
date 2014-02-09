@@ -10,6 +10,7 @@
 #import "RMDataCenter.h"
 #import "RMCategory.h"
 #import "RMCategoryItem.h"
+#import "Constants.h"
 
 @interface HotViewController ()
 
@@ -29,6 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(IOS7)
+    {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 	// Do any additional setup after loading the view.
 }
 

@@ -32,6 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(IOS7)
+    {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
     
 	// Do any additional setup after loading the view.
     NSRange range = NSMakeRange(0, kMaxFavoriteCount);
