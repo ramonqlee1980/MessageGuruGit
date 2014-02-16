@@ -49,11 +49,13 @@ Impl_Singleton(RMSmsDataCenter)
                     stringByReplacingOccurrencesOfString:@"+" withString:@" "]
                    stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             
-            NSString* url = [row objectForKey:@"PageUrl"];
-            RMSMS* message= [[RMSMS new]autorelease];
-            message.content = msg;
-            message.url = url;
-            [data addObject:message];
+            if (msg && ((NSString*)msg).length!=0) {
+                NSString* url = [row objectForKey:@"PageUrl"];
+                RMSMS* message= [[RMSMS new]autorelease];
+                message.content = msg;
+                message.url = url;
+                [data addObject:message];
+            }
         }
     }
     

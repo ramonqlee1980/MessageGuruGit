@@ -15,6 +15,91 @@
                  "tablename": "幽默祝福",
                  "icon": "jingdian.png",
                  "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "生日祝福",
+                 "tablename": "生日祝福",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "早安祝福",
+                 "tablename": "早安祝福",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "晚安祝福",
+                 "tablename": "晚安祝福",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "健康短信",
+                 "tablename": "健康短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 }
+                 ,
+                 {
+                 "name": "生活短信",
+                 "tablename": "生活短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "生病问候",
+                 "tablename": "生病问候",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "送别短信",
+                 "tablename": "送别短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "感谢短信",
+                 "tablename": "感谢短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "道歉短信",
+                 "tablename": "道歉短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "思念短信",
+                 "tablename": "思念短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "情话短信",
+                 "tablename": "情话短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "表白短信",
+                 "tablename": "表白短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "求婚短信",
+                 "tablename": "求婚短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "爱情短信",
+                 "tablename": "爱情短信",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
                  }
                  ]
         },
@@ -78,7 +163,169 @@
                "tablename": "小年",
                "icon": "jingdian.png",
                "file": "中国传统节日.sqlite"
-             }
+               },
+               {
+               "name": "除夕",
+               "tablename": "除夕",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "春节",
+               "tablename": "春节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "五路财神日",
+               "tablename": "五路财神日",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "元宵节",
+               "tablename": "元宵节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "龙抬头",
+               "tablename": "龙抬头",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "妇女节",
+               "tablename": "妇女节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "植树节",
+               "tablename": "植树节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "清明节",
+               "tablename": "清明节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "劳动节",
+               "tablename": "劳动节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "青年节",
+               "tablename": "青年节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "儿童节",
+               "tablename": "儿童节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "端午节",
+               "tablename": "端午节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "建党节",
+               "tablename": "建党节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "建军节",
+               "tablename": "建军节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "七夕节",
+               "tablename": "七夕节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "中元节",
+               "tablename": "中元节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "教师节",
+               "tablename": "教师节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "中秋节",
+               "tablename": "中秋节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "国庆节",
+               "tablename": "国庆节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "重阳节",
+               "tablename": "重阳节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "扫尘日",
+               "tablename": "扫尘日",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "祈福日",
+               "tablename": "祈福日",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "送穷日",
+               "tablename": "送穷日",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "记者节",
+               "tablename": "记者节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "护士节",
+               "tablename": "护士节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "佛诞日",
+               "tablename": "佛诞日",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               },
+               {
+               "name": "腊八节",
+               "tablename": "腊八节",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
+               }
              ]
       }
       ],
