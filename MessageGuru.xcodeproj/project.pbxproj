@@ -107,7 +107,6 @@
 		304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FA318B0F8B2006B4A59 /* 母亲节.jpeg */; };
 		304C2FAF18B0F8B2006B4A59 /* 父亲节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FA418B0F8B2006B4A59 /* 父亲节.jpeg */; };
 		304C2FB018B0F8B2006B4A59 /* 高考.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FA518B0F8B2006B4A59 /* 高考.jpeg */; };
-		304C2FC418B0FB5F006B4A59 /* 万圣节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB118B0FB5F006B4A59 /* 万圣节.jpeg */; };
 		304C2FC518B0FB5F006B4A59 /* 健康短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */; };
 		304C2FC618B0FB5F006B4A59 /* 圣诞节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */; };
 		304C2FC718B0FB5F006B4A59 /* 幽默祝福.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */; };
@@ -365,7 +364,6 @@
 		304C2FA318B0F8B2006B4A59 /* 母亲节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "母亲节.jpeg"; sourceTree = "<group>"; };
 		304C2FA418B0F8B2006B4A59 /* 父亲节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "父亲节.jpeg"; sourceTree = "<group>"; };
 		304C2FA518B0F8B2006B4A59 /* 高考.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "高考.jpeg"; sourceTree = "<group>"; };
-		304C2FB118B0FB5F006B4A59 /* 万圣节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "万圣节.jpeg"; sourceTree = "<group>"; };
 		304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "健康短信.jpg"; sourceTree = "<group>"; };
 		304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "圣诞节.jpeg"; sourceTree = "<group>"; };
 		304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "幽默祝福.jpg"; sourceTree = "<group>"; };
@@ -1006,7 +1004,6 @@
 				304C2FDB18B0FCAC006B4A59 /* 爱情语录.jpg */,
 				304C2FDC18B0FCAC006B4A59 /* 经典情话.jpg */,
 				304C2FDD18B0FCAC006B4A59 /* 肉麻的情话.jpg */,
-				304C2FB118B0FB5F006B4A59 /* 万圣节.jpeg */,
 				304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */,
 				304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */,
 				304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */,
@@ -1187,7 +1184,6 @@
 				30BBF52A18915A3C00631F6E /* tab_live@2x.png in Resources */,
 				30BBF52918915A3C00631F6E /* tab_live.png in Resources */,
 				304C2FDF18B0FCAC006B4A59 /* 浪漫的情话.jpg in Resources */,
-				304C2FC418B0FB5F006B4A59 /* 万圣节.jpeg in Resources */,
 				304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */,
 				30A8E5051893C72E00DE7D99 /* pic_plank_down.png in Resources */,
 				304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */,
