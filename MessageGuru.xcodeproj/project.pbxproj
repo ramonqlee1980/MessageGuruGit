@@ -107,6 +107,61 @@
 		304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FA318B0F8B2006B4A59 /* 母亲节.jpeg */; };
 		304C2FAF18B0F8B2006B4A59 /* 父亲节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FA418B0F8B2006B4A59 /* 父亲节.jpeg */; };
 		304C2FB018B0F8B2006B4A59 /* 高考.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FA518B0F8B2006B4A59 /* 高考.jpeg */; };
+		304C2FC418B0FB5F006B4A59 /* 万圣节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB118B0FB5F006B4A59 /* 万圣节.jpeg */; };
+		304C2FC518B0FB5F006B4A59 /* 健康短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */; };
+		304C2FC618B0FB5F006B4A59 /* 圣诞节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */; };
+		304C2FC718B0FB5F006B4A59 /* 幽默祝福.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */; };
+		304C2FC818B0FB5F006B4A59 /* 开业短信.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB518B0FB5F006B4A59 /* 开业短信.jpeg */; };
+		304C2FC918B0FB5F006B4A59 /* 思念短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB618B0FB5F006B4A59 /* 思念短信.jpg */; };
+		304C2FCA18B0FB5F006B4A59 /* 情话短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB718B0FB5F006B4A59 /* 情话短信.jpg */; };
+		304C2FCB18B0FB5F006B4A59 /* 感谢短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB818B0FB5F006B4A59 /* 感谢短信.jpg */; };
+		304C2FCC18B0FB5F006B4A59 /* 日常祝福.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FB918B0FB5F006B4A59 /* 日常祝福.jpg */; };
+		304C2FCD18B0FB5F006B4A59 /* 早安祝福.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FBA18B0FB5F006B4A59 /* 早安祝福.jpg */; };
+		304C2FCE18B0FB5F006B4A59 /* 晚安祝福.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FBB18B0FB5F006B4A59 /* 晚安祝福.jpg */; };
+		304C2FCF18B0FB5F006B4A59 /* 求婚短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FBC18B0FB5F006B4A59 /* 求婚短信.jpg */; };
+		304C2FD018B0FB5F006B4A59 /* 爱情短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FBD18B0FB5F006B4A59 /* 爱情短信.jpg */; };
+		304C2FD118B0FB5F006B4A59 /* 生日祝福.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FBE18B0FB5F006B4A59 /* 生日祝福.jpg */; };
+		304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FBF18B0FB5F006B4A59 /* 生活短信.jpg */; };
+		304C2FD318B0FB5F006B4A59 /* 生病问候.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FC018B0FB5F006B4A59 /* 生病问候.jpg */; };
+		304C2FD418B0FB5F006B4A59 /* 表白短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FC118B0FB5F006B4A59 /* 表白短信.jpg */; };
+		304C2FD518B0FB5F006B4A59 /* 送别短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FC218B0FB5F006B4A59 /* 送别短信.jpg */; };
+		304C2FD618B0FB5F006B4A59 /* 道歉短信.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FC318B0FB5F006B4A59 /* 道歉短信.jpg */; };
+		304C2FDE18B0FCAC006B4A59 /* 感人的情话.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FD718B0FCAC006B4A59 /* 感人的情话.jpg */; };
+		304C2FDF18B0FCAC006B4A59 /* 浪漫的情话.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FD818B0FCAC006B4A59 /* 浪漫的情话.jpg */; };
+		304C2FE018B0FCAC006B4A59 /* 爱情宣言.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FD918B0FCAC006B4A59 /* 爱情宣言.jpg */; };
+		304C2FE118B0FCAC006B4A59 /* 爱情诗句.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FDA18B0FCAC006B4A59 /* 爱情诗句.jpg */; };
+		304C2FE218B0FCAC006B4A59 /* 爱情语录.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FDB18B0FCAC006B4A59 /* 爱情语录.jpg */; };
+		304C2FE318B0FCAC006B4A59 /* 经典情话.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FDC18B0FCAC006B4A59 /* 经典情话.jpg */; };
+		304C2FE418B0FCAC006B4A59 /* 肉麻的情话.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FDD18B0FCAC006B4A59 /* 肉麻的情话.jpg */; };
+		304C300218B0FFBB006B4A59 /* 七夕节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FE518B0FFBB006B4A59 /* 七夕节.jpg */; };
+		304C300318B0FFBB006B4A59 /* 中元节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FE618B0FFBB006B4A59 /* 中元节.jpg */; };
+		304C300418B0FFBB006B4A59 /* 中秋节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FE718B0FFBB006B4A59 /* 中秋节.jpeg */; };
+		304C300518B0FFBB006B4A59 /* 五路财神日.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FE818B0FFBB006B4A59 /* 五路财神日.jpg */; };
+		304C300618B0FFBB006B4A59 /* 佛诞日.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FE918B0FFBB006B4A59 /* 佛诞日.jpg */; };
+		304C300718B0FFBB006B4A59 /* 儿童节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FEA18B0FFBB006B4A59 /* 儿童节.jpg */; };
+		304C300818B0FFBB006B4A59 /* 元宵节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FEB18B0FFBB006B4A59 /* 元宵节.jpeg */; };
+		304C300918B0FFBB006B4A59 /* 元旦.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FEC18B0FFBB006B4A59 /* 元旦.jpg */; };
+		304C300A18B0FFBB006B4A59 /* 劳动节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FED18B0FFBB006B4A59 /* 劳动节.jpeg */; };
+		304C300B18B0FFBB006B4A59 /* 国庆节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FEE18B0FFBB006B4A59 /* 国庆节.jpeg */; };
+		304C300C18B0FFBB006B4A59 /* 妇女节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FEF18B0FFBB006B4A59 /* 妇女节.jpeg */; };
+		304C300D18B0FFBB006B4A59 /* 小年.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF018B0FFBB006B4A59 /* 小年.jpg */; };
+		304C300E18B0FFBB006B4A59 /* 建党节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF118B0FFBB006B4A59 /* 建党节.jpeg */; };
+		304C300F18B0FFBB006B4A59 /* 建军节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF218B0FFBB006B4A59 /* 建军节.jpeg */; };
+		304C301018B0FFBB006B4A59 /* 扫尘日.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF318B0FFBB006B4A59 /* 扫尘日.jpg */; };
+		304C301118B0FFBB006B4A59 /* 护士节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF418B0FFBB006B4A59 /* 护士节.jpg */; };
+		304C301218B0FFBB006B4A59 /* 教师节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF518B0FFBB006B4A59 /* 教师节.jpeg */; };
+		304C301318B0FFBB006B4A59 /* 春节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF618B0FFBB006B4A59 /* 春节.jpeg */; };
+		304C301418B0FFBB006B4A59 /* 植树节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF718B0FFBB006B4A59 /* 植树节.jpg */; };
+		304C301518B0FFBB006B4A59 /* 清明节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF818B0FFBB006B4A59 /* 清明节.jpeg */; };
+		304C301618B0FFBB006B4A59 /* 祈福日.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FF918B0FFBB006B4A59 /* 祈福日.jpg */; };
+		304C301718B0FFBB006B4A59 /* 端午节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFA18B0FFBB006B4A59 /* 端午节.jpeg */; };
+		304C301818B0FFBB006B4A59 /* 腊八节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFB18B0FFBB006B4A59 /* 腊八节.jpg */; };
+		304C301918B0FFBB006B4A59 /* 记者节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFC18B0FFBB006B4A59 /* 记者节.jpg */; };
+		304C301A18B0FFBB006B4A59 /* 送穷日.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFD18B0FFBB006B4A59 /* 送穷日.jpg */; };
+		304C301B18B0FFBB006B4A59 /* 重阳节.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFE18B0FFBB006B4A59 /* 重阳节.jpg */; };
+		304C301C18B0FFBB006B4A59 /* 除夕.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */; };
+		304C301D18B0FFBB006B4A59 /* 青年节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C300018B0FFBB006B4A59 /* 青年节.jpeg */; };
+		304C301E18B0FFBB006B4A59 /* 龙抬头.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C300118B0FFBB006B4A59 /* 龙抬头.jpg */; };
 		30A8E4C71893C4E900DE7D99 /* readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C61893C4E900DE7D99 /* readme.rtf */; };
 		30A8E4CA1893C70000DE7D99 /* SMSMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */; };
 		30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4DA1893C72E00DE7D99 /* ico_people.png */; };
@@ -310,6 +365,61 @@
 		304C2FA318B0F8B2006B4A59 /* 母亲节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "母亲节.jpeg"; sourceTree = "<group>"; };
 		304C2FA418B0F8B2006B4A59 /* 父亲节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "父亲节.jpeg"; sourceTree = "<group>"; };
 		304C2FA518B0F8B2006B4A59 /* 高考.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "高考.jpeg"; sourceTree = "<group>"; };
+		304C2FB118B0FB5F006B4A59 /* 万圣节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "万圣节.jpeg"; sourceTree = "<group>"; };
+		304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "健康短信.jpg"; sourceTree = "<group>"; };
+		304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "圣诞节.jpeg"; sourceTree = "<group>"; };
+		304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "幽默祝福.jpg"; sourceTree = "<group>"; };
+		304C2FB518B0FB5F006B4A59 /* 开业短信.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "开业短信.jpeg"; sourceTree = "<group>"; };
+		304C2FB618B0FB5F006B4A59 /* 思念短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "思念短信.jpg"; sourceTree = "<group>"; };
+		304C2FB718B0FB5F006B4A59 /* 情话短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "情话短信.jpg"; sourceTree = "<group>"; };
+		304C2FB818B0FB5F006B4A59 /* 感谢短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "感谢短信.jpg"; sourceTree = "<group>"; };
+		304C2FB918B0FB5F006B4A59 /* 日常祝福.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "日常祝福.jpg"; sourceTree = "<group>"; };
+		304C2FBA18B0FB5F006B4A59 /* 早安祝福.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "早安祝福.jpg"; sourceTree = "<group>"; };
+		304C2FBB18B0FB5F006B4A59 /* 晚安祝福.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "晚安祝福.jpg"; sourceTree = "<group>"; };
+		304C2FBC18B0FB5F006B4A59 /* 求婚短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "求婚短信.jpg"; sourceTree = "<group>"; };
+		304C2FBD18B0FB5F006B4A59 /* 爱情短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "爱情短信.jpg"; sourceTree = "<group>"; };
+		304C2FBE18B0FB5F006B4A59 /* 生日祝福.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "生日祝福.jpg"; sourceTree = "<group>"; };
+		304C2FBF18B0FB5F006B4A59 /* 生活短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "生活短信.jpg"; sourceTree = "<group>"; };
+		304C2FC018B0FB5F006B4A59 /* 生病问候.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "生病问候.jpg"; sourceTree = "<group>"; };
+		304C2FC118B0FB5F006B4A59 /* 表白短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "表白短信.jpg"; sourceTree = "<group>"; };
+		304C2FC218B0FB5F006B4A59 /* 送别短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "送别短信.jpg"; sourceTree = "<group>"; };
+		304C2FC318B0FB5F006B4A59 /* 道歉短信.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "道歉短信.jpg"; sourceTree = "<group>"; };
+		304C2FD718B0FCAC006B4A59 /* 感人的情话.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "感人的情话.jpg"; sourceTree = "<group>"; };
+		304C2FD818B0FCAC006B4A59 /* 浪漫的情话.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浪漫的情话.jpg"; sourceTree = "<group>"; };
+		304C2FD918B0FCAC006B4A59 /* 爱情宣言.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "爱情宣言.jpg"; sourceTree = "<group>"; };
+		304C2FDA18B0FCAC006B4A59 /* 爱情诗句.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "爱情诗句.jpg"; sourceTree = "<group>"; };
+		304C2FDB18B0FCAC006B4A59 /* 爱情语录.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "爱情语录.jpg"; sourceTree = "<group>"; };
+		304C2FDC18B0FCAC006B4A59 /* 经典情话.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "经典情话.jpg"; sourceTree = "<group>"; };
+		304C2FDD18B0FCAC006B4A59 /* 肉麻的情话.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "肉麻的情话.jpg"; sourceTree = "<group>"; };
+		304C2FE518B0FFBB006B4A59 /* 七夕节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "七夕节.jpg"; sourceTree = "<group>"; };
+		304C2FE618B0FFBB006B4A59 /* 中元节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中元节.jpg"; sourceTree = "<group>"; };
+		304C2FE718B0FFBB006B4A59 /* 中秋节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中秋节.jpeg"; sourceTree = "<group>"; };
+		304C2FE818B0FFBB006B4A59 /* 五路财神日.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "五路财神日.jpg"; sourceTree = "<group>"; };
+		304C2FE918B0FFBB006B4A59 /* 佛诞日.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "佛诞日.jpg"; sourceTree = "<group>"; };
+		304C2FEA18B0FFBB006B4A59 /* 儿童节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儿童节.jpg"; sourceTree = "<group>"; };
+		304C2FEB18B0FFBB006B4A59 /* 元宵节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "元宵节.jpeg"; sourceTree = "<group>"; };
+		304C2FEC18B0FFBB006B4A59 /* 元旦.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "元旦.jpg"; sourceTree = "<group>"; };
+		304C2FED18B0FFBB006B4A59 /* 劳动节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "劳动节.jpeg"; sourceTree = "<group>"; };
+		304C2FEE18B0FFBB006B4A59 /* 国庆节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "国庆节.jpeg"; sourceTree = "<group>"; };
+		304C2FEF18B0FFBB006B4A59 /* 妇女节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "妇女节.jpeg"; sourceTree = "<group>"; };
+		304C2FF018B0FFBB006B4A59 /* 小年.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "小年.jpg"; sourceTree = "<group>"; };
+		304C2FF118B0FFBB006B4A59 /* 建党节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "建党节.jpeg"; sourceTree = "<group>"; };
+		304C2FF218B0FFBB006B4A59 /* 建军节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "建军节.jpeg"; sourceTree = "<group>"; };
+		304C2FF318B0FFBB006B4A59 /* 扫尘日.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "扫尘日.jpg"; sourceTree = "<group>"; };
+		304C2FF418B0FFBB006B4A59 /* 护士节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "护士节.jpg"; sourceTree = "<group>"; };
+		304C2FF518B0FFBB006B4A59 /* 教师节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "教师节.jpeg"; sourceTree = "<group>"; };
+		304C2FF618B0FFBB006B4A59 /* 春节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "春节.jpeg"; sourceTree = "<group>"; };
+		304C2FF718B0FFBB006B4A59 /* 植树节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "植树节.jpg"; sourceTree = "<group>"; };
+		304C2FF818B0FFBB006B4A59 /* 清明节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "清明节.jpeg"; sourceTree = "<group>"; };
+		304C2FF918B0FFBB006B4A59 /* 祈福日.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "祈福日.jpg"; sourceTree = "<group>"; };
+		304C2FFA18B0FFBB006B4A59 /* 端午节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "端午节.jpeg"; sourceTree = "<group>"; };
+		304C2FFB18B0FFBB006B4A59 /* 腊八节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "腊八节.jpg"; sourceTree = "<group>"; };
+		304C2FFC18B0FFBB006B4A59 /* 记者节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "记者节.jpg"; sourceTree = "<group>"; };
+		304C2FFD18B0FFBB006B4A59 /* 送穷日.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "送穷日.jpg"; sourceTree = "<group>"; };
+		304C2FFE18B0FFBB006B4A59 /* 重阳节.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "重阳节.jpg"; sourceTree = "<group>"; };
+		304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "除夕.jpg"; sourceTree = "<group>"; };
+		304C300018B0FFBB006B4A59 /* 青年节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "青年节.jpeg"; sourceTree = "<group>"; };
+		304C300118B0FFBB006B4A59 /* 龙抬头.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "龙抬头.jpg"; sourceTree = "<group>"; };
 		30A8E4C61893C4E900DE7D99 /* readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = readme.rtf; sourceTree = "<group>"; };
 		30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMSMessageCell.xib; sourceTree = "<group>"; };
 		30A8E4DA1893C72E00DE7D99 /* ico_people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_people.png; sourceTree = "<group>"; };
@@ -860,6 +970,61 @@
 		30BBF4FB18915A3C00631F6E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				304C2FE518B0FFBB006B4A59 /* 七夕节.jpg */,
+				304C2FE618B0FFBB006B4A59 /* 中元节.jpg */,
+				304C2FE718B0FFBB006B4A59 /* 中秋节.jpeg */,
+				304C2FE818B0FFBB006B4A59 /* 五路财神日.jpg */,
+				304C2FE918B0FFBB006B4A59 /* 佛诞日.jpg */,
+				304C2FEA18B0FFBB006B4A59 /* 儿童节.jpg */,
+				304C2FEB18B0FFBB006B4A59 /* 元宵节.jpeg */,
+				304C2FEC18B0FFBB006B4A59 /* 元旦.jpg */,
+				304C2FED18B0FFBB006B4A59 /* 劳动节.jpeg */,
+				304C2FEE18B0FFBB006B4A59 /* 国庆节.jpeg */,
+				304C2FEF18B0FFBB006B4A59 /* 妇女节.jpeg */,
+				304C2FF018B0FFBB006B4A59 /* 小年.jpg */,
+				304C2FF118B0FFBB006B4A59 /* 建党节.jpeg */,
+				304C2FF218B0FFBB006B4A59 /* 建军节.jpeg */,
+				304C2FF318B0FFBB006B4A59 /* 扫尘日.jpg */,
+				304C2FF418B0FFBB006B4A59 /* 护士节.jpg */,
+				304C2FF518B0FFBB006B4A59 /* 教师节.jpeg */,
+				304C2FF618B0FFBB006B4A59 /* 春节.jpeg */,
+				304C2FF718B0FFBB006B4A59 /* 植树节.jpg */,
+				304C2FF818B0FFBB006B4A59 /* 清明节.jpeg */,
+				304C2FF918B0FFBB006B4A59 /* 祈福日.jpg */,
+				304C2FFA18B0FFBB006B4A59 /* 端午节.jpeg */,
+				304C2FFB18B0FFBB006B4A59 /* 腊八节.jpg */,
+				304C2FFC18B0FFBB006B4A59 /* 记者节.jpg */,
+				304C2FFD18B0FFBB006B4A59 /* 送穷日.jpg */,
+				304C2FFE18B0FFBB006B4A59 /* 重阳节.jpg */,
+				304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */,
+				304C300018B0FFBB006B4A59 /* 青年节.jpeg */,
+				304C300118B0FFBB006B4A59 /* 龙抬头.jpg */,
+				304C2FD718B0FCAC006B4A59 /* 感人的情话.jpg */,
+				304C2FD818B0FCAC006B4A59 /* 浪漫的情话.jpg */,
+				304C2FD918B0FCAC006B4A59 /* 爱情宣言.jpg */,
+				304C2FDA18B0FCAC006B4A59 /* 爱情诗句.jpg */,
+				304C2FDB18B0FCAC006B4A59 /* 爱情语录.jpg */,
+				304C2FDC18B0FCAC006B4A59 /* 经典情话.jpg */,
+				304C2FDD18B0FCAC006B4A59 /* 肉麻的情话.jpg */,
+				304C2FB118B0FB5F006B4A59 /* 万圣节.jpeg */,
+				304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */,
+				304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */,
+				304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */,
+				304C2FB518B0FB5F006B4A59 /* 开业短信.jpeg */,
+				304C2FB618B0FB5F006B4A59 /* 思念短信.jpg */,
+				304C2FB718B0FB5F006B4A59 /* 情话短信.jpg */,
+				304C2FB818B0FB5F006B4A59 /* 感谢短信.jpg */,
+				304C2FB918B0FB5F006B4A59 /* 日常祝福.jpg */,
+				304C2FBA18B0FB5F006B4A59 /* 早安祝福.jpg */,
+				304C2FBB18B0FB5F006B4A59 /* 晚安祝福.jpg */,
+				304C2FBC18B0FB5F006B4A59 /* 求婚短信.jpg */,
+				304C2FBD18B0FB5F006B4A59 /* 爱情短信.jpg */,
+				304C2FBE18B0FB5F006B4A59 /* 生日祝福.jpg */,
+				304C2FBF18B0FB5F006B4A59 /* 生活短信.jpg */,
+				304C2FC018B0FB5F006B4A59 /* 生病问候.jpg */,
+				304C2FC118B0FB5F006B4A59 /* 表白短信.jpg */,
+				304C2FC218B0FB5F006B4A59 /* 送别短信.jpg */,
+				304C2FC318B0FB5F006B4A59 /* 道歉短信.jpg */,
 				304C2F9B18B0F8B2006B4A59 /* 万圣节.jpg */,
 				304C2F9C18B0F8B2006B4A59 /* 圣诞节.jpg */,
 				304C2F9D18B0F8B2006B4A59 /* 复活节.jpg */,
@@ -988,20 +1153,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				30BBF46C1891491F00631F6E /* InfoPlist.strings in Resources */,
+				304C301118B0FFBB006B4A59 /* 护士节.jpg in Resources */,
 				304C2E1818AF7BAB006B4A59 /* umFeedback.bundle in Resources */,
 				30BBF52418915A3C00631F6E /* DailyBoothIcon@2x.png in Resources */,
 				30A8E5031893C72E00DE7D99 /* pic_plank_among.png in Resources */,
+				304C2FCC18B0FB5F006B4A59 /* 日常祝福.jpg in Resources */,
 				30A8E4CA1893C70000DE7D99 /* SMSMessageCell.xib in Resources */,
+				304C301018B0FFBB006B4A59 /* 扫尘日.jpg in Resources */,
 				304C2F6A18AF7C60006B4A59 /* ios-social-sdk-socialbar.html in Resources */,
 				30BBF52118915A3C00631F6E /* camera_button_take.png in Resources */,
+				304C300D18B0FFBB006B4A59 /* 小年.jpg in Resources */,
+				304C300C18B0FFBB006B4A59 /* 妇女节.jpeg in Resources */,
+				304C300E18B0FFBB006B4A59 /* 建党节.jpeg in Resources */,
 				304C2F4918AF7C60006B4A59 /* UMSocialDataDelegate.html in Resources */,
 				304C2F4318AF7C60006B4A59 /* class_grath.png in Resources */,
 				30A8E5071893C72E00DE7D99 /* pic_plank_up.png in Resources */,
 				304C2F9818B0F72C006B4A59 /* 开业短信.jpg in Resources */,
+				304C301218B0FFBB006B4A59 /* 教师节.jpeg in Resources */,
+				304C300F18B0FFBB006B4A59 /* 建军节.jpeg in Resources */,
 				30BBF52C18915A3C00631F6E /* tab_messages@2x.png in Resources */,
 				30A8E5011893C72E00DE7D99 /* pic_icon_fresh.png in Resources */,
+				304C2FD318B0FB5F006B4A59 /* 生病问候.jpg in Resources */,
 				304C2F2718AF7C60006B4A59 /* UMSCommentInputControlleriPad.xib in Resources */,
 				304C2FB018B0F8B2006B4A59 /* 高考.jpeg in Resources */,
+				304C2FC618B0FB5F006B4A59 /* 圣诞节.jpeg in Resources */,
 				304C2F4618AF7C60006B4A59 /* library_background.png in Resources */,
 				30A8E5881895BDB200DE7D99 /* Localizable.strings in Resources */,
 				304C2F4A18AF7C60006B4A59 /* UMSocialUIDelegate.html in Resources */,
@@ -1011,9 +1186,13 @@
 				30BBF52B18915A3C00631F6E /* tab_messages.png in Resources */,
 				30BBF52A18915A3C00631F6E /* tab_live@2x.png in Resources */,
 				30BBF52918915A3C00631F6E /* tab_live.png in Resources */,
+				304C2FDF18B0FCAC006B4A59 /* 浪漫的情话.jpg in Resources */,
+				304C2FC418B0FB5F006B4A59 /* 万圣节.jpeg in Resources */,
 				304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */,
 				30A8E5051893C72E00DE7D99 /* pic_plank_down.png in Resources */,
+				304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */,
 				304C2FA718B0F8B2006B4A59 /* 圣诞节.jpg in Resources */,
+				304C2FC818B0FB5F006B4A59 /* 开业短信.jpeg in Resources */,
 				304C2F2C18AF7C60006B4A59 /* UMSShareListController.xib in Resources */,
 				304C2F3E18AF7C60006B4A59 /* UMSocialUrlResource.html in Resources */,
 				304C2F8018B0F2B2006B4A59 /* lengxiaohua.jpg in Resources */,
@@ -1021,31 +1200,50 @@
 				304C2F6318AF7C60006B4A59 /* ios-social-sdk-comment-detail.html in Resources */,
 				30A8E5061893C72E00DE7D99 /* pic_plank_down@2x.png in Resources */,
 				30A8E4FB1893C72E00DE7D99 /* ico_reply.png in Resources */,
+				304C301918B0FFBB006B4A59 /* 记者节.jpg in Resources */,
 				304C2F8818B0F3E2006B4A59 /* 趣味短信.jpg in Resources */,
 				304C2F2B18AF7C60006B4A59 /* UMSnsAccountViewController.xib in Resources */,
 				304C2F4218AF7C60006B4A59 /* button_bar_background.png in Resources */,
 				304C2F9018B0F625006B4A59 /* 结婚短信.jpg in Resources */,
 				304C2F9918B0F72C006B4A59 /* 暑假快乐.jpg in Resources */,
+				304C300818B0FFBB006B4A59 /* 元宵节.jpeg in Resources */,
 				30A8E5111893D33000DE7D99 /* data.json in Resources */,
+				304C2FCE18B0FB5F006B4A59 /* 晚安祝福.jpg in Resources */,
+				304C300618B0FFBB006B4A59 /* 佛诞日.jpg in Resources */,
 				304C2F8F18B0F625006B4A59 /* 毕业短信.jpg in Resources */,
 				30A8E50F1893CC7000DE7D99 /* readme.rtf in Resources */,
 				304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */,
+				304C301518B0FFBB006B4A59 /* 清明节.jpeg in Resources */,
 				304C2F7A18B0E466006B4A59 /* 西方传统节日.sqlite in Resources */,
 				304C2FAF18B0F8B2006B4A59 /* 父亲节.jpeg in Resources */,
+				304C2FE118B0FCAC006B4A59 /* 爱情诗句.jpg in Resources */,
 				304C2FA618B0F8B2006B4A59 /* 万圣节.jpg in Resources */,
+				304C301818B0FFBB006B4A59 /* 腊八节.jpg in Resources */,
 				304C2F3718AF7C60006B4A59 /* UMSocialDataService.html in Resources */,
 				30BBF52818915A3C00631F6E /* tab_feed_profile@2x.png in Resources */,
 				304C2F3D18AF7C60006B4A59 /* UMSocialSnsService.html in Resources */,
 				304C2F6B18AF7C60006B4A59 /* UMSocial_Sdk_ReleaseNotes.html in Resources */,
 				304C2E1618AF7BAB006B4A59 /* changes_log.html in Resources */,
+				304C2FE318B0FCAC006B4A59 /* 经典情话.jpg in Resources */,
+				304C300A18B0FFBB006B4A59 /* 劳动节.jpeg in Resources */,
+				304C301618B0FFBB006B4A59 /* 祈福日.jpg in Resources */,
 				304C2F2818AF7C60006B4A59 /* UMShareEditViewController.xib in Resources */,
 				304C2F3818AF7C60006B4A59 /* UMSocialExtConfig.html in Resources */,
 				30A8E4FC1893C72E00DE7D99 /* ico_reply@2x.png in Resources */,
+				304C2FD018B0FB5F006B4A59 /* 爱情短信.jpg in Resources */,
+				304C2FCA18B0FB5F006B4A59 /* 情话短信.jpg in Resources */,
 				304C2F2E18AF7C60006B4A59 /* UMSocialAccountEntity.html in Resources */,
 				304C2F4418AF7C60006B4A59 /* disclosure.png in Resources */,
+				304C2FCD18B0FB5F006B4A59 /* 早安祝福.jpg in Resources */,
 				304C2F3918AF7C60006B4A59 /* UMSocialIconActionSheet.html in Resources */,
 				304C2F3218AF7C60006B4A59 /* UMSocialConfig.html in Resources */,
+				304C301E18B0FFBB006B4A59 /* 龙抬头.jpg in Resources */,
 				304C2F3B18AF7C60006B4A59 /* UMSocialSnsPlatform.html in Resources */,
+				304C2FE418B0FCAC006B4A59 /* 肉麻的情话.jpg in Resources */,
+				304C301718B0FFBB006B4A59 /* 端午节.jpeg in Resources */,
+				304C2FC518B0FB5F006B4A59 /* 健康短信.jpg in Resources */,
+				304C301318B0FFBB006B4A59 /* 春节.jpeg in Resources */,
+				304C301D18B0FFBB006B4A59 /* 青年节.jpeg in Resources */,
 				304C2F8E18B0F625006B4A59 /* 开学短信.jpg in Resources */,
 				304C2F9A18B0F72C006B4A59 /* 高考.jpg in Resources */,
 				304C2F8D18B0F625006B4A59 /* 喜得贵子.jpg in Resources */,
@@ -1054,14 +1252,19 @@
 				304C2FA818B0F8B2006B4A59 /* 复活节.jpg in Resources */,
 				304C2FA918B0F8B2006B4A59 /* 平安夜.jpg in Resources */,
 				304C2F8618B0F3E2006B4A59 /* 爆笑口误.jpg in Resources */,
+				304C2FE218B0FCAC006B4A59 /* 爱情语录.jpg in Resources */,
 				304C2F8718B0F3E2006B4A59 /* 调侃短信.jpg in Resources */,
 				304C2F2D18AF7C60006B4A59 /* UMSocialSDKResourcesNew.bundle in Resources */,
+				304C301A18B0FFBB006B4A59 /* 送穷日.jpg in Resources */,
 				304C2DFD18AF7BAB006B4A59 /* iRate.bundle in Resources */,
+				304C2FDE18B0FCAC006B4A59 /* 感人的情话.jpg in Resources */,
 				304C2E1918AF7BAB006B4A59 /* 开发指南.html in Resources */,
 				304C2F6718AF7C60006B4A59 /* ios-social-sdk-login-quick.html in Resources */,
+				304C2FC718B0FB5F006B4A59 /* 幽默祝福.jpg in Resources */,
 				304C2F4118AF7C60006B4A59 /* hierarchy.html in Resources */,
 				304C2F7C18B0E73A006B4A59 /* 贺词大全.sqlite in Resources */,
 				304C2F8518B0F3E2006B4A59 /* 囧糗事.jpg in Resources */,
+				304C2FD518B0FB5F006B4A59 /* 送别短信.jpg in Resources */,
 				304C2F4018AF7C60006B4A59 /* stylesPrint.css in Resources */,
 				304C2FAB18B0F8B2006B4A59 /* 情人节.jpg in Resources */,
 				30A8E5041893C72E00DE7D99 /* pic_plank_among@2x.png in Resources */,
@@ -1069,38 +1272,55 @@
 				30BBF4FA189159AE00631F6E /* AllSMSViewController.xib in Resources */,
 				30BBF52318915A3C00631F6E /* DailyBoothIcon.png in Resources */,
 				30BBF52218915A3C00631F6E /* camera_button_take@2x.png in Resources */,
+				304C300718B0FFBB006B4A59 /* 儿童节.jpg in Resources */,
 				304C2FAD18B0F8B2006B4A59 /* 感恩节.jpg in Resources */,
 				304C2F2F18AF7C60006B4A59 /* UMSocialAccountManager.html in Resources */,
 				304C2F3118AF7C60006B4A59 /* UMSocialButton.html in Resources */,
+				304C2FD118B0FB5F006B4A59 /* 生日祝福.jpg in Resources */,
+				304C2FD618B0FB5F006B4A59 /* 道歉短信.jpg in Resources */,
+				304C2FC918B0FB5F006B4A59 /* 思念短信.jpg in Resources */,
+				304C301B18B0FFBB006B4A59 /* 重阳节.jpg in Resources */,
 				304C2F3618AF7C60006B4A59 /* UMSocialData.html in Resources */,
 				30BBF52E18915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png in Resources */,
+				304C2FCF18B0FB5F006B4A59 /* 求婚短信.jpg in Resources */,
 				304C2F2118AF7C60006B4A59 /* UMSocialLocalizable.strings in Resources */,
 				30A8E4FA1893C72E00DE7D99 /* ico_people@2x.png in Resources */,
 				304C2F3018AF7C60006B4A59 /* UMSocialBar.html in Resources */,
 				304C2F7818B03CFC006B4A59 /* 日常问候.sqlite in Resources */,
+				304C300218B0FFBB006B4A59 /* 七夕节.jpg in Resources */,
+				304C300918B0FFBB006B4A59 /* 元旦.jpg in Resources */,
 				30BBF52518915A3C00631F6E /* tab_feed.png in Resources */,
 				304C2F2518AF7C60006B4A59 /* UMSCommentDetailController.xib in Resources */,
 				30BBF52D18915A3C00631F6E /* tabBar_cameraButton_ready_matte.png in Resources */,
+				304C300518B0FFBB006B4A59 /* 五路财神日.jpg in Resources */,
 				30A8E5081893C72E00DE7D99 /* pic_plank_up@2x.png in Resources */,
 				30BBF52718915A3C00631F6E /* tab_feed_profile.png in Resources */,
 				304C2F3518AF7C60006B4A59 /* UMSocialCustomAccount.html in Resources */,
+				304C301C18B0FFBB006B4A59 /* 除夕.jpg in Resources */,
 				304C2F6818AF7C60006B4A59 /* ios-social-sdk-share-detail.html in Resources */,
+				304C2FCB18B0FB5F006B4A59 /* 感谢短信.jpg in Resources */,
 				304C2F2A18AF7C60006B4A59 /* UMSLoginViewController.xib in Resources */,
+				304C2FE018B0FCAC006B4A59 /* 爱情宣言.jpg in Resources */,
 				304C2F2618AF7C60006B4A59 /* UMSCommentInputController.xib in Resources */,
 				304C2F6418AF7C60006B4A59 /* ios-social-sdk-comment-quick.html in Resources */,
 				30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */,
+				304C300B18B0FFBB006B4A59 /* 国庆节.jpeg in Resources */,
 				304C2F3318AF7C60006B4A59 /* UMSocialControllerService.html in Resources */,
 				304C2F3A18AF7C60006B4A59 /* UMSocialResponseEntity.html in Resources */,
 				304C2F2918AF7C60006B4A59 /* UMShareEditViewControlleriPad.xib in Resources */,
 				304C2F4518AF7C60006B4A59 /* disclosure_open.png in Resources */,
 				304C2F6518AF7C60006B4A59 /* ios-social-sdk-like.html in Resources */,
 				30BBF4741891491F00631F6E /* Images.xcassets in Resources */,
+				304C300418B0FFBB006B4A59 /* 中秋节.jpeg in Resources */,
+				304C301418B0FFBB006B4A59 /* 植树节.jpg in Resources */,
 				304C2F6918AF7C60006B4A59 /* ios-social-sdk-share-quick.html in Resources */,
 				304C2F4718AF7C60006B4A59 /* title_background.png in Resources */,
 				304C2F3F18AF7C60006B4A59 /* styles.css in Resources */,
 				30A8E5021893C72E00DE7D99 /* pic_icon_fresh@2x.png in Resources */,
 				304C2F6618AF7C60006B4A59 /* ios-social-sdk-login-detail.html in Resources */,
 				304C2F4818AF7C60006B4A59 /* index.html in Resources */,
+				304C300318B0FFBB006B4A59 /* 中元节.jpg in Resources */,
+				304C2FD418B0FB5F006B4A59 /* 表白短信.jpg in Resources */,
 				304C2F7418B034FB006B4A59 /* 中国传统节日.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
