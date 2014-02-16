@@ -1,5 +1,66 @@
 {
 "sms": [
+        
+        {
+        "category": "贺词大全",
+        "hot":"1",
+        "data": [
+                 {
+                 "name": "喜得贵子",
+                 "tablename": "喜得贵子",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "结婚短信",
+                 "tablename": "结婚短信",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "开学短信",
+                 "tablename": "开学短信",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "毕业短信",
+                 "tablename": "毕业短信",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "高考",
+                 "tablename": "高考",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "暑假快乐",
+                 "tablename": "暑假快乐",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "开业短信",
+                 "tablename": "开业短信",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "乔迁短信",
+                 "tablename": "乔迁短信",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 },
+                 {
+                 "name": "升职短信",
+                 "tablename": "升职短信",
+                 "icon": "jingdian.png",
+                 "file": "贺词大全.sqlite"
+                 }
+                 ]
+        },
         {
         "category": "西方传统节日",
         "hot":"0",
