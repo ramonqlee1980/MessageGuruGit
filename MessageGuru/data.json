@@ -1,6 +1,41 @@
 {
 "sms": [
-        
+        {
+        "category": "笑话",
+        "hot":"1",
+        "data": [
+                 {
+                 "name": "冷笑话",
+                 "tablename": "冷笑话",
+                 "icon": "jingdian.png",
+                 "file": "笑话.sqlite"
+                 },
+                 {
+                 "name": "调侃短信",
+                 "tablename": "调侃短信",
+                 "icon": "jingdian.png",
+                 "file": "笑话.sqlite"
+                 },
+                 {
+                 "name": "趣味短信",
+                 "tablename": "趣味短信",
+                 "icon": "jingdian.png",
+                 "file": "笑话.sqlite"
+                 },
+                 {
+                 "name": "爆笑口误",
+                 "tablename": "爆笑口误",
+                 "icon": "jingdian.png",
+                 "file": "笑话.sqlite"
+                 },
+                 {
+                 "name": "囧糗事",
+                 "tablename": "囧糗事",
+                 "icon": "jingdian.png",
+                 "file": "笑话.sqlite"
+                 }
+                 ]
+        },
         {
         "category": "贺词大全",
         "hot":"1",
