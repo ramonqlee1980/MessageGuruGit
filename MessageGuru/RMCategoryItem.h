@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface RMCategoryItem : NSObject
-@property(nonatomic,copy)NSString* name;//名字，一般作为db的名字
+@property(nonatomic,copy)NSString* name;//显示用名字
 @property(nonatomic,copy)NSString* icon;
-@property(nonatomic,copy)NSString* source;//来源文件，同name，deprecated
+@property(nonatomic,copy)NSString* tablename;//表名
+@property(nonatomic,copy)NSString* fromFile;//来源db文件
 
 +(id)initWithJson:(NSDictionary*)data;
 @end

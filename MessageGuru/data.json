@@ -1,37 +1,55 @@
 {
 "sms": [
+        {
+        "category": "日常问候",
+        "hot":"1",
+        "data": [
+                 {
+                 "name": "日常祝福",
+                 "tablename": "日常祝福",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 },
+                 {
+                 "name": "幽默祝福",
+                 "tablename": "幽默祝福",
+                 "icon": "jingdian.png",
+                 "file": "日常问候.sqlite"
+                 }
+                 ]
+        },
       {
       "category": "情话",
       "data": [
                {
                "name": "感人的情话",
                "icon": "qinghua.png",
-               "file": "感人的情话.sqlite"
+               "file": "情话.sqlite"
                },
                {
                "name": "浪漫的情话",
                "icon": "qinghua.png",
-               "file": "浪漫的情话.sqlite"
+               "file": "情话.sqlite"
                },
                {
                "name": "爱情宣言",
                "icon": "qinghua.png",
-               "file": "爱情宣言.sqlite"
+               "file": "情话.sqlite"
                },
                {
                "name": "爱情诗句",
                "icon": "qinghua.png",
-               "file": "爱情诗句.sqlite"
+               "file": "情话.sqlite"
                },
                {
                "name": "爱情语录",
                "icon": "qinghua.png",
-               "file": "爱情语录.sqlite"
+               "file": "情话.sqlite"
                },
                {
                "name": "肉麻的情话",
                "icon": "qinghua.png",
-               "file": "肉麻的情话.sqlite"
+               "file": "情话.sqlite"
                },
              {
              "name": "情话短信",
@@ -46,16 +64,20 @@
              ]
       },
       {
-      "category": "祝福",
+      "category": "中国传统节日",
       "hot":"1",
       "data": [
              {
-             "name": "高中",
-             "file": "a.sqlite"
+               "name": "元旦",
+               "tablename": "元旦",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
              },
              {
-             "name": "过年",
-             "file": "b.sqlite"
+               "name": "小年",
+               "tablename": "小年",
+               "icon": "jingdian.png",
+               "file": "中国传统节日.sqlite"
              }
              ]
       }

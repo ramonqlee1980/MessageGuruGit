@@ -82,15 +82,25 @@
 }
 
 #pragma mark  POHorizontalListDelegate
-
+//从item的name对应的db文件中，读取数据
+-(RMCategoryItem*)categoryItemForItem:(NSString*)displayName
+{
+    for (RMCategory* category in self.categoryArray) {
+        for (RMCategoryItem* item in category.itemArray) {
+            if ([displayName isEqualToString:item.name]) {
+                return item;
+            }
+        }
+    }
+    return nil;
+}
 - (void) didSelectItem:(ListItem *)item {
     
     NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
     SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
-
-    //从item的name对应的db文件中，读取数据
-    detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:item.imageTitle startFrom:0 tillEnd:kMaxLoadingNumber];
     
+    RMCategoryItem* categoryItem = [self categoryItemForItem:item.imageTitle];
+    detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];
     
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
     detailMsgViewController.navigationItem.title = item.imageTitle;

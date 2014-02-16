@@ -9,7 +9,7 @@
 #import "RMCategoryItem.h"
 
 @implementation RMCategoryItem
-@synthesize name,source;
+@synthesize name,fromFile,tablename,icon;
 +(id)initWithJson:(NSDictionary*)data
 {
     RMCategoryItem* ret = [[RMCategoryItem new]autorelease];
@@ -19,7 +19,11 @@
     
     ret.name = [data objectForKey:@"name"];
     ret.icon = [data objectForKey:@"icon"];
-    ret.source = [data objectForKey:@"file"];
+    ret.tablename = [data objectForKey:@"tablename"];
+    if (ret.tablename==nil || ret.tablename.length==0) {
+        ret.tablename = ret.name;
+    }
+    ret.fromFile = [data objectForKey:@"file"];
     
     return ret;
 }

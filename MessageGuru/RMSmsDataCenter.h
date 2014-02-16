@@ -11,5 +11,9 @@
 
 @interface RMSmsDataCenter : NSObject
 Decl_Singleton(RMSmsDataCenter);
--(NSArray*)sms:(NSString*)categoryName startFrom:(NSUInteger)start tillEnd:(NSUInteger)end;
+
+-(NSArray*)sms:(NSString*)categoryName startFrom:(NSUInteger)start tillEnd:(NSUInteger)end __attribute__((deprecated));
+
+-(NSArray*)sms:(NSString*)tableName fromDb:(NSString*)dbName startFrom:(NSUInteger)start tillEnd:(NSUInteger)end;
+
 @end

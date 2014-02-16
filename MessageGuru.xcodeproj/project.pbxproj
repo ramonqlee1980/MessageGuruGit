@@ -77,6 +77,9 @@
 		304C2F6A18AF7C60006B4A59 /* ios-social-sdk-socialbar.html in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F1F18AF7C60006B4A59 /* ios-social-sdk-socialbar.html */; };
 		304C2F6B18AF7C60006B4A59 /* UMSocial_Sdk_ReleaseNotes.html in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F2018AF7C60006B4A59 /* UMSocial_Sdk_ReleaseNotes.html */; };
 		304C2F7118AF7C82006B4A59 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 304C2F7018AF7C82006B4A59 /* BaseViewController.m */; };
+		304C2F7418B034FB006B4A59 /* 中国传统节日.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7318B034FB006B4A59 /* 中国传统节日.sqlite */; };
+		304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7518B03CFB006B4A59 /* 情话.sqlite */; };
+		304C2F7818B03CFC006B4A59 /* 日常问候.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7618B03CFB006B4A59 /* 日常问候.sqlite */; };
 		30A8E4C71893C4E900DE7D99 /* readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C61893C4E900DE7D99 /* readme.rtf */; };
 		30A8E4CA1893C70000DE7D99 /* SMSMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */; };
 		30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4DA1893C72E00DE7D99 /* ico_people.png */; };
@@ -100,7 +103,6 @@
 		30A8E51E1893DC5B00DE7D99 /* RMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E51D1893DC5B00DE7D99 /* RMCategory.m */; };
 		30A8E5261893FBC000DE7D99 /* RMSmsDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E5251893FBC000DE7D99 /* RMSmsDataCenter.m */; };
 		30A8E5281893FD4800DE7D99 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A8E5271893FD4800DE7D99 /* libsqlite3.dylib */; };
-		30A8E52B189400E200DE7D99 /* 情话短信.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E52A189400E200DE7D99 /* 情话短信.sqlite */; };
 		30A8E562189479D400DE7D99 /* Favorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E561189479D400DE7D99 /* Favorite.m */; };
 		30A8E56518947C1E00DE7D99 /* RMSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E56418947C1E00DE7D99 /* RMSMS.m */; };
 		30A8E575189546D500DE7D99 /* RMFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E574189546D500DE7D99 /* RMFavoriteViewController.m */; };
@@ -108,13 +110,6 @@
 		30A8E5881895BDB200DE7D99 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E5871895BDB200DE7D99 /* Localizable.strings */; };
 		30A8E6681895C07100DE7D99 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A8E6671895C07100DE7D99 /* SystemConfiguration.framework */; };
 		30A8E66B1895C4C000DE7D99 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A8E66A1895C4C000DE7D99 /* HotViewController.m */; };
-		30A8E66D1897196E00DE7D99 /* 经典情话.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E66C1897196E00DE7D99 /* 经典情话.sqlite */; };
-		30A8E67418971DB300DE7D99 /* 感人的情话.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E66E18971DB300DE7D99 /* 感人的情话.sqlite */; };
-		30A8E67518971DB300DE7D99 /* 浪漫的情话.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E66F18971DB300DE7D99 /* 浪漫的情话.sqlite */; };
-		30A8E67618971DB300DE7D99 /* 爱情宣言.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E67018971DB300DE7D99 /* 爱情宣言.sqlite */; };
-		30A8E67718971DB300DE7D99 /* 爱情诗句.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E67118971DB300DE7D99 /* 爱情诗句.sqlite */; };
-		30A8E67818971DB300DE7D99 /* 爱情语录.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E67218971DB300DE7D99 /* 爱情语录.sqlite */; };
-		30A8E67918971DB300DE7D99 /* 肉麻的情话.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E67318971DB300DE7D99 /* 肉麻的情话.sqlite */; };
 		30BBF4621891491F00631F6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BBF4611891491F00631F6E /* Foundation.framework */; };
 		30BBF4641891491F00631F6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BBF4631891491F00631F6E /* CoreGraphics.framework */; };
 		30BBF4661891491F00631F6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BBF4651891491F00631F6E /* UIKit.framework */; };
@@ -258,6 +253,9 @@
 		304C2F2018AF7C60006B4A59 /* UMSocial_Sdk_ReleaseNotes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = UMSocial_Sdk_ReleaseNotes.html; sourceTree = "<group>"; };
 		304C2F6F18AF7C82006B4A59 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		304C2F7018AF7C82006B4A59 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		304C2F7318B034FB006B4A59 /* 中国传统节日.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "中国传统节日.sqlite"; sourceTree = "<group>"; };
+		304C2F7518B03CFB006B4A59 /* 情话.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "情话.sqlite"; sourceTree = "<group>"; };
+		304C2F7618B03CFB006B4A59 /* 日常问候.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "日常问候.sqlite"; sourceTree = "<group>"; };
 		30A8E4C61893C4E900DE7D99 /* readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = readme.rtf; sourceTree = "<group>"; };
 		30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMSMessageCell.xib; sourceTree = "<group>"; };
 		30A8E4DA1893C72E00DE7D99 /* ico_people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_people.png; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 		30A8E5241893FBC000DE7D99 /* RMSmsDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSmsDataCenter.h; sourceTree = "<group>"; };
 		30A8E5251893FBC000DE7D99 /* RMSmsDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSmsDataCenter.m; sourceTree = "<group>"; };
 		30A8E5271893FD4800DE7D99 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		30A8E52A189400E200DE7D99 /* 情话短信.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "情话短信.sqlite"; sourceTree = "<group>"; };
 		30A8E560189479D400DE7D99 /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		30A8E561189479D400DE7D99 /* Favorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorite.m; sourceTree = "<group>"; };
 		30A8E56318947C1E00DE7D99 /* RMSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMS.h; sourceTree = "<group>"; };
@@ -302,13 +299,6 @@
 		30A8E6671895C07100DE7D99 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		30A8E6691895C4C000DE7D99 /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
 		30A8E66A1895C4C000DE7D99 /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
-		30A8E66C1897196E00DE7D99 /* 经典情话.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "经典情话.sqlite"; sourceTree = "<group>"; };
-		30A8E66E18971DB300DE7D99 /* 感人的情话.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "感人的情话.sqlite"; sourceTree = "<group>"; };
-		30A8E66F18971DB300DE7D99 /* 浪漫的情话.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "浪漫的情话.sqlite"; sourceTree = "<group>"; };
-		30A8E67018971DB300DE7D99 /* 爱情宣言.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "爱情宣言.sqlite"; sourceTree = "<group>"; };
-		30A8E67118971DB300DE7D99 /* 爱情诗句.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "爱情诗句.sqlite"; sourceTree = "<group>"; };
-		30A8E67218971DB300DE7D99 /* 爱情语录.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "爱情语录.sqlite"; sourceTree = "<group>"; };
-		30A8E67318971DB300DE7D99 /* 肉麻的情话.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "肉麻的情话.sqlite"; sourceTree = "<group>"; };
 		30BBF45E1891491F00631F6E /* MessageGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BBF4611891491F00631F6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30BBF4631891491F00631F6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -684,7 +674,9 @@
 		30A8E529189400E200DE7D99 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				30A8E67A18971F3A00DE7D99 /* 情话 */,
+				304C2F7518B03CFB006B4A59 /* 情话.sqlite */,
+				304C2F7618B03CFB006B4A59 /* 日常问候.sqlite */,
+				304C2F7318B034FB006B4A59 /* 中国传统节日.sqlite */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -724,21 +716,6 @@
 				30A8E66A1895C4C000DE7D99 /* HotViewController.m */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		30A8E67A18971F3A00DE7D99 /* 情话 */ = {
-			isa = PBXGroup;
-			children = (
-				30A8E66E18971DB300DE7D99 /* 感人的情话.sqlite */,
-				30A8E66F18971DB300DE7D99 /* 浪漫的情话.sqlite */,
-				30A8E67018971DB300DE7D99 /* 爱情宣言.sqlite */,
-				30A8E67118971DB300DE7D99 /* 爱情诗句.sqlite */,
-				30A8E67218971DB300DE7D99 /* 爱情语录.sqlite */,
-				30A8E67318971DB300DE7D99 /* 肉麻的情话.sqlite */,
-				30A8E66C1897196E00DE7D99 /* 经典情话.sqlite */,
-				30A8E52A189400E200DE7D99 /* 情话短信.sqlite */,
-			);
-			name = "情话";
 			sourceTree = "<group>";
 		};
 		30BBF4551891491F00631F6E = {
@@ -938,12 +915,10 @@
 				30BBF52118915A3C00631F6E /* camera_button_take.png in Resources */,
 				304C2F4918AF7C60006B4A59 /* UMSocialDataDelegate.html in Resources */,
 				304C2F4318AF7C60006B4A59 /* class_grath.png in Resources */,
-				30A8E67818971DB300DE7D99 /* 爱情语录.sqlite in Resources */,
 				30A8E5071893C72E00DE7D99 /* pic_plank_up.png in Resources */,
 				30BBF52C18915A3C00631F6E /* tab_messages@2x.png in Resources */,
 				30A8E5011893C72E00DE7D99 /* pic_icon_fresh.png in Resources */,
 				304C2F2718AF7C60006B4A59 /* UMSCommentInputControlleriPad.xib in Resources */,
-				30A8E67518971DB300DE7D99 /* 浪漫的情话.sqlite in Resources */,
 				304C2F4618AF7C60006B4A59 /* library_background.png in Resources */,
 				30A8E5881895BDB200DE7D99 /* Localizable.strings in Resources */,
 				304C2F4A18AF7C60006B4A59 /* UMSocialUIDelegate.html in Resources */,
@@ -961,8 +936,8 @@
 				304C2F4218AF7C60006B4A59 /* button_bar_background.png in Resources */,
 				30A8E5111893D33000DE7D99 /* data.json in Resources */,
 				30A8E50F1893CC7000DE7D99 /* readme.rtf in Resources */,
+				304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */,
 				304C2F3718AF7C60006B4A59 /* UMSocialDataService.html in Resources */,
-				30A8E66D1897196E00DE7D99 /* 经典情话.sqlite in Resources */,
 				30BBF52818915A3C00631F6E /* tab_feed_profile@2x.png in Resources */,
 				304C2F3D18AF7C60006B4A59 /* UMSocialSnsService.html in Resources */,
 				304C2F6B18AF7C60006B4A59 /* UMSocial_Sdk_ReleaseNotes.html in Resources */,
@@ -976,9 +951,7 @@
 				304C2F3218AF7C60006B4A59 /* UMSocialConfig.html in Resources */,
 				304C2F3B18AF7C60006B4A59 /* UMSocialSnsPlatform.html in Resources */,
 				304C2F3C18AF7C60006B4A59 /* UMSocialSnsPlatformManager.html in Resources */,
-				30A8E67918971DB300DE7D99 /* 肉麻的情话.sqlite in Resources */,
 				304C2F2D18AF7C60006B4A59 /* UMSocialSDKResourcesNew.bundle in Resources */,
-				30A8E67718971DB300DE7D99 /* 爱情诗句.sqlite in Resources */,
 				304C2DFD18AF7BAB006B4A59 /* iRate.bundle in Resources */,
 				304C2E1918AF7BAB006B4A59 /* 开发指南.html in Resources */,
 				304C2F6718AF7C60006B4A59 /* ios-social-sdk-login-quick.html in Resources */,
@@ -996,17 +969,16 @@
 				304C2F2118AF7C60006B4A59 /* UMSocialLocalizable.strings in Resources */,
 				30A8E4FA1893C72E00DE7D99 /* ico_people@2x.png in Resources */,
 				304C2F3018AF7C60006B4A59 /* UMSocialBar.html in Resources */,
+				304C2F7818B03CFC006B4A59 /* 日常问候.sqlite in Resources */,
 				30BBF52518915A3C00631F6E /* tab_feed.png in Resources */,
 				304C2F2518AF7C60006B4A59 /* UMSCommentDetailController.xib in Resources */,
 				30BBF52D18915A3C00631F6E /* tabBar_cameraButton_ready_matte.png in Resources */,
 				30A8E5081893C72E00DE7D99 /* pic_plank_up@2x.png in Resources */,
 				30BBF52718915A3C00631F6E /* tab_feed_profile.png in Resources */,
 				304C2F3518AF7C60006B4A59 /* UMSocialCustomAccount.html in Resources */,
-				30A8E67418971DB300DE7D99 /* 感人的情话.sqlite in Resources */,
 				304C2F6818AF7C60006B4A59 /* ios-social-sdk-share-detail.html in Resources */,
 				304C2F2A18AF7C60006B4A59 /* UMSLoginViewController.xib in Resources */,
 				304C2F2618AF7C60006B4A59 /* UMSCommentInputController.xib in Resources */,
-				30A8E67618971DB300DE7D99 /* 爱情宣言.sqlite in Resources */,
 				304C2F6418AF7C60006B4A59 /* ios-social-sdk-comment-quick.html in Resources */,
 				30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */,
 				304C2F3318AF7C60006B4A59 /* UMSocialControllerService.html in Resources */,
@@ -1020,8 +992,8 @@
 				304C2F3F18AF7C60006B4A59 /* styles.css in Resources */,
 				30A8E5021893C72E00DE7D99 /* pic_icon_fresh@2x.png in Resources */,
 				304C2F6618AF7C60006B4A59 /* ios-social-sdk-login-detail.html in Resources */,
-				30A8E52B189400E200DE7D99 /* 情话短信.sqlite in Resources */,
 				304C2F4818AF7C60006B4A59 /* index.html in Resources */,
+				304C2F7418B034FB006B4A59 /* 中国传统节日.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

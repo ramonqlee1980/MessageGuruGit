@@ -20,6 +20,12 @@ Impl_Singleton(RMSmsDataCenter)
     NSString* query = [NSString stringWithFormat:@"SELECT * FROM Content"];
     return [RMSmsDataCenter getSqlData:dbName withSQL:query];
 }
+-(NSArray*)sms:(NSString*)tableName fromDb:(NSString*)dbName startFrom:(NSUInteger)start tillEnd:(NSUInteger)end
+{
+    NSString* query = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
+    return [RMSmsDataCenter getSqlData:dbName withSQL:query];
+}
+
 +(NSArray*)getSqlData:(NSString*)dbName withSQL:(NSString*)query
 {
     SQLiteManager* dbManager = [[[SQLiteManager alloc] initWithDatabaseNamed:[NSString stringWithFormat:@"%@",dbName]]autorelease];
@@ -31,14 +37,14 @@ Impl_Singleton(RMSmsDataCenter)
     //[dbManager doQuery:@"DELETE FROM Content WHERE Title is null"];
 //    NSLog(@"query:%@",query);
     NSArray* rows=[dbManager getRowsForQuery:query];
-    
+    NSNull* kNull = [NSNull null];
     for (NSDictionary* row in rows) {
         
-        NSString* msg = [row objectForKey:@"M1"];
-        if (!msg) {
+        id msg = [row objectForKey:@"M1"];
+        if (msg==kNull) {
             msg = [row objectForKey:@"M2"];
         }
-        if (msg) {
+        if (msg!=kNull) {
             msg = [[msg
                     stringByReplacingOccurrencesOfString:@"+" withString:@" "]
                    stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
