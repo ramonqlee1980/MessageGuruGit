@@ -56,7 +56,14 @@
             [cArray addObject:data];
             NSMutableArray* listArray = [NSMutableArray new];
             for (RMCategoryItem* item in data.itemArray) {
-                [listArray addObject:[[ListItem alloc] initWithFrame:CGRectZero image:[UIImage imageNamed:item.icon] text:item.name]];
+                UIImage* image = [UIImage imageNamed:item.icon];
+                if (!image) {
+                    image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",item.name]];
+                }
+                if (!image) {
+                    image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg",item.name]];
+                }
+                [listArray addObject:[[ListItem alloc] initWithFrame:CGRectZero image:image text:item.name]];
             }
             
             if (!self.categoryListItemArray) {
