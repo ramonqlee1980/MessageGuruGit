@@ -38,6 +38,7 @@ Impl_Singleton(RMSmsDataCenter)
 //    NSLog(@"query:%@",query);
     NSArray* rows=[dbManager getRowsForQuery:query];
     NSNull* kNull = [NSNull null];
+    const NSUInteger kDupPrefixLength = 5;
     for (NSDictionary* row in rows) {
         
         id msg = [row objectForKey:@"M1"];
@@ -53,6 +54,12 @@ Impl_Singleton(RMSmsDataCenter)
                 NSString* url = [row objectForKey:@"PageUrl"];
                 RMSMS* message= [[RMSMS new]autorelease];
                 message.content = msg;
+                //remove duplicate bug(bug when collecting data)
+                NSString* prefix = [message.content substringToIndex:MIN(kDupPrefixLength, message.content.length-1)];
+                NSRange r = [message.content rangeOfString:prefix options:NSBackwardsSearch];
+                if (r.length!=0) {
+                    message.content = [message.content substringFromIndex:r.location];
+                }
                 message.url = url;
                 [data addObject:message];
             }
