@@ -80,6 +80,7 @@
 		304C2F7418B034FB006B4A59 /* 中国传统节日.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7318B034FB006B4A59 /* 中国传统节日.sqlite */; };
 		304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7518B03CFB006B4A59 /* 情话.sqlite */; };
 		304C2F7818B03CFC006B4A59 /* 日常问候.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7618B03CFB006B4A59 /* 日常问候.sqlite */; };
+		304C2F7A18B0E466006B4A59 /* 西方传统节日.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 304C2F7918B0E466006B4A59 /* 西方传统节日.sqlite */; };
 		30A8E4C71893C4E900DE7D99 /* readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C61893C4E900DE7D99 /* readme.rtf */; };
 		30A8E4CA1893C70000DE7D99 /* SMSMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */; };
 		30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4DA1893C72E00DE7D99 /* ico_people.png */; };
@@ -256,6 +257,7 @@
 		304C2F7318B034FB006B4A59 /* 中国传统节日.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "中国传统节日.sqlite"; sourceTree = "<group>"; };
 		304C2F7518B03CFB006B4A59 /* 情话.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "情话.sqlite"; sourceTree = "<group>"; };
 		304C2F7618B03CFB006B4A59 /* 日常问候.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "日常问候.sqlite"; sourceTree = "<group>"; };
+		304C2F7918B0E466006B4A59 /* 西方传统节日.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "西方传统节日.sqlite"; sourceTree = "<group>"; };
 		30A8E4C61893C4E900DE7D99 /* readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = readme.rtf; sourceTree = "<group>"; };
 		30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMSMessageCell.xib; sourceTree = "<group>"; };
 		30A8E4DA1893C72E00DE7D99 /* ico_people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_people.png; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 		30A8E529189400E200DE7D99 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				304C2F7918B0E466006B4A59 /* 西方传统节日.sqlite */,
 				304C2F7518B03CFB006B4A59 /* 情话.sqlite */,
 				304C2F7618B03CFB006B4A59 /* 日常问候.sqlite */,
 				304C2F7318B034FB006B4A59 /* 中国传统节日.sqlite */,
@@ -937,6 +940,7 @@
 				30A8E5111893D33000DE7D99 /* data.json in Resources */,
 				30A8E50F1893CC7000DE7D99 /* readme.rtf in Resources */,
 				304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */,
+				304C2F7A18B0E466006B4A59 /* 西方传统节日.sqlite in Resources */,
 				304C2F3718AF7C60006B4A59 /* UMSocialDataService.html in Resources */,
 				30BBF52818915A3C00631F6E /* tab_feed_profile@2x.png in Resources */,
 				304C2F3D18AF7C60006B4A59 /* UMSocialSnsService.html in Resources */,

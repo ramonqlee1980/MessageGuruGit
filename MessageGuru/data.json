@@ -1,6 +1,66 @@
 {
 "sms": [
         {
+        "category": "西方传统节日",
+        "hot":"0",
+        "data": [
+                 {
+                 "name": "情人节",
+                 "tablename": "情人节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "圣诞节",
+                 "tablename": "圣诞节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "平安夜",
+                 "tablename": "平安夜",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "感恩节",
+                 "tablename": "感恩节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "母亲节",
+                 "tablename": "母亲节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "父亲节",
+                 "tablename": "父亲节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "复活节",
+                 "tablename": "复活节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "愚人节",
+                 "tablename": "愚人节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 },
+                 {
+                 "name": "万圣节",
+                 "tablename": "万圣节",
+                 "icon": "jingdian.png",
+                 "file": "西方传统节日.sqlite"
+                 }
+                 ]
+                 },
+        {
         "category": "日常问候",
         "hot":"1",
         "data": [
