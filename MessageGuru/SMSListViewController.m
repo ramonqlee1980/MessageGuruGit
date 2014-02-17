@@ -12,6 +12,7 @@
 #import "WXApi.h"
 #import "Constants.h"
 #import "Favorite.h"
+#import "Toast+UIView.h"
 
 NSString *CellIdentifier = @"SMSMessageCell";
 
@@ -103,6 +104,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
 -(void)add2Favorite:(id)sender withMessage:(RMSMS *)msg
 {
     [Favorite addToSMSFavorite:msg];
+    [self.view makeToast:NSLocalizedString(@"Add2FavoriteToast", "") duration:CSToastDefaultDuration position:CSToastCenterPosition];
 }
 
 - (void)showShareView:(id)sender withText:(NSString*)text withImage:(UIImage*)image{

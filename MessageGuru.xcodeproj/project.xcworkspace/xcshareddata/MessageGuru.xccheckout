@@ -10,6 +10,8 @@
 	<string>MessageGuru</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>126B56A9-F131-4D58-9594-49476D24031A</key>
+		<string>https://github.com/ramonqlee1980/SwipeProjectTempl.git</string>
 		<key>EDE05FEF-9E33-4349-8D2C-FC2103006B63</key>
 		<string>https://github.com/ramonqlee1980/MessageGuruGit.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>MessageGuru.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>126B56A9-F131-4D58-9594-49476D24031A</key>
+		<string>../../../iOS_Lib</string>
 		<key>EDE05FEF-9E33-4349-8D2C-FC2103006B63</key>
 		<string>../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>EDE05FEF-9E33-4349-8D2C-FC2103006B63</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>126B56A9-F131-4D58-9594-49476D24031A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS_Lib</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
