@@ -161,6 +161,10 @@
 		304C301C18B0FFBB006B4A59 /* 除夕.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */; };
 		304C301D18B0FFBB006B4A59 /* 青年节.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 304C300018B0FFBB006B4A59 /* 青年节.jpeg */; };
 		304C301E18B0FFBB006B4A59 /* 龙抬头.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 304C300118B0FFBB006B4A59 /* 龙抬头.jpg */; };
+		3096EABF18B63247004B5B8F /* TimelineLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABB18B63247004B5B8F /* TimelineLine.m */; };
+		3096EAC018B63247004B5B8F /* timeline_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3096EABC18B63247004B5B8F /* timeline_button.png */; };
+		3096EAC118B63247004B5B8F /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABE18B63247004B5B8F /* TimelineViewController.m */; };
+		3096EAC418B63297004B5B8F /* RMTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EAC318B63297004B5B8F /* RMTimelineViewController.m */; };
 		30A8E4C71893C4E900DE7D99 /* readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C61893C4E900DE7D99 /* readme.rtf */; };
 		30A8E4CA1893C70000DE7D99 /* SMSMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */; };
 		30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A8E4DA1893C72E00DE7D99 /* ico_people.png */; };
@@ -423,6 +427,14 @@
 		304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "除夕.jpg"; sourceTree = "<group>"; };
 		304C300018B0FFBB006B4A59 /* 青年节.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "青年节.jpeg"; sourceTree = "<group>"; };
 		304C300118B0FFBB006B4A59 /* 龙抬头.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "龙抬头.jpg"; sourceTree = "<group>"; };
+		3096EAB918B63247004B5B8F /* MakeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLine.h; sourceTree = "<group>"; };
+		3096EABA18B63247004B5B8F /* TimelineLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineLine.h; sourceTree = "<group>"; };
+		3096EABB18B63247004B5B8F /* TimelineLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineLine.m; sourceTree = "<group>"; };
+		3096EABC18B63247004B5B8F /* timeline_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_button.png; sourceTree = "<group>"; };
+		3096EABD18B63247004B5B8F /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		3096EABE18B63247004B5B8F /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		3096EAC218B63297004B5B8F /* RMTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTimelineViewController.h; sourceTree = "<group>"; };
+		3096EAC318B63297004B5B8F /* RMTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTimelineViewController.m; sourceTree = "<group>"; };
 		30A8E4C61893C4E900DE7D99 /* readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = readme.rtf; sourceTree = "<group>"; };
 		30A8E4C91893C70000DE7D99 /* SMSMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMSMessageCell.xib; sourceTree = "<group>"; };
 		30A8E4DA1893C72E00DE7D99 /* ico_people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_people.png; sourceTree = "<group>"; };
@@ -792,6 +804,27 @@
 			name = BaseViewController;
 			sourceTree = "<group>";
 		};
+		3096EAB718B63247004B5B8F /* timeline */ = {
+			isa = PBXGroup;
+			children = (
+				3096EAB818B63247004B5B8F /* Line */,
+				3096EABC18B63247004B5B8F /* timeline_button.png */,
+				3096EABD18B63247004B5B8F /* TimelineViewController.h */,
+				3096EABE18B63247004B5B8F /* TimelineViewController.m */,
+			);
+			path = timeline;
+			sourceTree = "<group>";
+		};
+		3096EAB818B63247004B5B8F /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				3096EAB918B63247004B5B8F /* MakeLine.h */,
+				3096EABA18B63247004B5B8F /* TimelineLine.h */,
+				3096EABB18B63247004B5B8F /* TimelineLine.m */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
 		30A8E4CB1893C72E00DE7D99 /* MessageCellImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +897,7 @@
 		30A8E55E1894760500DE7D99 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				3096EAB718B63247004B5B8F /* timeline */,
 				30EE962018B2C9B700E76697 /* Toast */,
 				304C2F7218AF7D68006B4A59 /* BaseViewController */,
 				304C2EA618AF7C5F006B4A59 /* UMSocial_Sdk_All_2.2.1.1 */,
@@ -895,6 +929,8 @@
 				30A8E574189546D500DE7D99 /* RMFavoriteViewController.m */,
 				30A8E6691895C4C000DE7D99 /* HotViewController.h */,
 				30A8E66A1895C4C000DE7D99 /* HotViewController.m */,
+				3096EAC218B63297004B5B8F /* RMTimelineViewController.h */,
+				3096EAC318B63297004B5B8F /* RMTimelineViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1285,6 +1321,7 @@
 				304C2E1918AF7BAB006B4A59 /* 开发指南.html in Resources */,
 				304C2F6718AF7C60006B4A59 /* ios-social-sdk-login-quick.html in Resources */,
 				304C2FC718B0FB5F006B4A59 /* 幽默祝福.jpg in Resources */,
+				3096EAC018B63247004B5B8F /* timeline_button.png in Resources */,
 				304C2F4118AF7C60006B4A59 /* hierarchy.html in Resources */,
 				304C2F7C18B0E73A006B4A59 /* 贺词大全.sqlite in Resources */,
 				304C2F8518B0F3E2006B4A59 /* 囧糗事.jpg in Resources */,
@@ -1376,6 +1413,7 @@
 				30EE962318B2C9B700E76697 /* Toast+UIView.m in Sources */,
 				304C2E1018AF7BAB006B4A59 /* POHorizontalList.m in Sources */,
 				30A8E562189479D400DE7D99 /* Favorite.m in Sources */,
+				3096EAC118B63247004B5B8F /* TimelineViewController.m in Sources */,
 				304C2E0218AF7BAB006B4A59 /* StaticTextFieldTableViewCell.m in Sources */,
 				30A8E51B1893DC3100DE7D99 /* RMCategoryItem.m in Sources */,
 				304C2DFE18AF7BAB006B4A59 /* iRate.m in Sources */,
@@ -1388,11 +1426,13 @@
 				30A8E56518947C1E00DE7D99 /* RMSMS.m in Sources */,
 				304C2E1318AF7BAB006B4A59 /* NSString+HTML.m in Sources */,
 				304C2E1418AF7BAB006B4A59 /* NSString+StringThatFits.m in Sources */,
+				3096EAC418B63297004B5B8F /* RMTimelineViewController.m in Sources */,
 				304C2E1518AF7BAB006B4A59 /* StringUtil.m in Sources */,
 				30A8E66B1895C4C000DE7D99 /* HotViewController.m in Sources */,
 				30BBF4721891491F00631F6E /* RMAppDelegate.m in Sources */,
 				30BBF4951891494D00631F6E /* TabbedViewController.m in Sources */,
 				30A8E5151893D38700DE7D99 /* RMDataCenter.m in Sources */,
+				3096EABF18B63247004B5B8F /* TimelineLine.m in Sources */,
 				304C2E1218AF7BAB006B4A59 /* GTMNSString+HTML.m in Sources */,
 				30A8E50D1893C80600DE7D99 /* SMSMessageCell.m in Sources */,
 				30BBF5311893BDD600631F6E /* SMSListViewController.m in Sources */,
