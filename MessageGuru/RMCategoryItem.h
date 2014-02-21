@@ -13,6 +13,7 @@
 @property(nonatomic,copy)NSString* icon;
 @property(nonatomic,copy)NSString* tablename;//表名
 @property(nonatomic,copy)NSString* fromFile;//来源db文件
+@property(nonatomic,copy)NSDate* date;
 
 +(id)initWithJson:(NSDictionary*)data;
 @end

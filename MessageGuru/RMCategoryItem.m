@@ -9,7 +9,7 @@
 #import "RMCategoryItem.h"
 
 @implementation RMCategoryItem
-@synthesize name,fromFile,tablename,icon;
+@synthesize name,fromFile,tablename,icon,date;
 +(id)initWithJson:(NSDictionary*)data
 {
     RMCategoryItem* ret = [[RMCategoryItem new]autorelease];
@@ -24,6 +24,13 @@
         ret.tablename = ret.name;
     }
     ret.fromFile = [data objectForKey:@"file"];
+    //TODO::获取日期
+    id d = [data objectForKey:@"date"];
+    if (d) {
+        NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc]init]autorelease];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        ret.date = [dateFormatter dateFromString:(NSString*)d];
+    }
     
     return ret;
 }

@@ -28,7 +28,28 @@
     NSArray* arr = [item objectForKey:@"data"];
     for (NSDictionary* temp in arr) {
         RMCategoryItem* ci = [RMCategoryItem initWithJson:temp];
-        [rc.itemArray addObject:ci];
+        //按照时间进行排序
+        if (rc.itemArray.count==0 || (!ci.date)) {
+            [rc.itemArray addObject:ci];
+        }
+        else
+        {
+            NSInteger i =0;
+            for (; i<rc.itemArray.count; ++i) {
+                RMCategoryItem* currentItem = [rc.itemArray objectAtIndex:i];
+                if (!currentItem.date) {
+                    continue;
+                }
+                if ([currentItem.date compare:ci.date]==NSOrderedDescending) {
+                    [rc.itemArray insertObject:ci atIndex:i];
+                    break;
+                }
+            }
+            
+            if (i==rc.itemArray.count) {
+                [rc.itemArray addObject:ci];
+            }
+        }
     }
     
     return rc;
