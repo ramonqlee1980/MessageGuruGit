@@ -1,5 +1,7 @@
 #ifndef __CONSTANTS__
 #define __CONSTANTS__
+
+#define kMaxLoadingNumber 1000//最大加载短信数
 /**************    调试    ************************/
 
 #define NEED_OUTPUT_LOG 0

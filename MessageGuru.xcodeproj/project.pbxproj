@@ -981,12 +981,12 @@
 		30BBF4681891491F00631F6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30A8E51F1893E27D00DE7D99 /* Constants.h */,
 				30A8E5931895BE8500DE7D99 /* resConstants.h */,
 				30A8E5101893D33000DE7D99 /* data.json */,
 				30BBF4731891491F00631F6E /* Images.xcassets */,
 				30BBF4701891491F00631F6E /* RMAppDelegate.h */,
 				30BBF4711891491F00631F6E /* RMAppDelegate.m */,
-				30A8E51F1893E27D00DE7D99 /* Constants.h */,
 				30BBF4FB18915A3C00631F6E /* Images */,
 				30BBF4691891491F00631F6E /* MessageGuru-Info.plist */,
 				30BBF46A1891491F00631F6E /* InfoPlist.strings */,

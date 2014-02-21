@@ -241,10 +241,8 @@
     [view.layer setShadowColor:[UIColor blackColor].CGColor];
     [view.layer setShadowOffset:CGSizeMake(10, 10)];
     [view.layer setShadowOpacity:0.5];
-    view.backgroundColor = [UIColor purpleColor];
+//    view.backgroundColor = [UIColor purpleColor];
     
-//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoNext)];
-//    [view addGestureRecognizer:singleTap];
     
     [[timelineRoundbuttonArray objectAtIndex:button.tag] setFrame:CGRectMake(46, button.tag*50, 30, 30)];
     [[leftCellViewArray objectAtIndex:button.tag] setFrame:CGRectMake(5, button.tag*50, 40, 30)];
@@ -255,10 +253,9 @@
     if (self.dataSource) {
         detailCell = [self.dataSource detailCellForRow:button.tag];
         CGRect frame =detailCell.frame;
-        frame.origin.y = 10;
+        frame.origin.y = 50;//TODO::调整到合适的位置
         detailCell.frame = frame;
         
-        [detailCell setUserInteractionEnabled:NO];
         [cellView addSubview:detailCell];
     }
 

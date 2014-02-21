@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TimelineViewController.h"
+#import "POHorizontalList.h"
 
-@interface RMTimelineViewController : UIViewController<RMTimelineViewDataSource>
+@interface RMTimelineViewController : UIViewController<RMTimelineViewDataSource,POHorizontalListDelegate>
 
 @end

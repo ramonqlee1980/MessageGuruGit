@@ -10,12 +10,15 @@
 #import "RMDataCenter.h"
 #import "RMCategory.h"
 #import "RMCategoryItem.h"
+#import "SMSListViewController.h"
+#import "RMSmsDataCenter.h"
+#import "Constants.h"
 
 const NSUInteger kMonthNumber= 12;//一年12个月份
 
 @interface RMTimelineViewController ()
 {
-    NSMutableArray* itemsAscByDateArray;
+    NSMutableArray* itemsAscByDateArray;//12个月的数组，废弃第0个，启动第12个；每个里面是一个数组，记录具体的信息
 }
 @end
 
@@ -95,27 +98,24 @@ const NSUInteger kMonthNumber= 12;//一年12个月份
 
 - (UIView *)detailCellForRow:(NSUInteger)index//展开后的view，缺省状态下隐藏
 {
-    UILabel* label = [[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 30)]autorelease];
-    label.textAlignment= 1;
-    
-    NSMutableString* stringBuilder = [[NSMutableString new]autorelease];
-    id list = [itemsAscByDateArray objectAtIndex:index+1];
-    if (list) {
-        NSArray* listItems = (NSArray*)list;
-        for (RMCategoryItem* item in listItems) {
-            NSString *dateString = [NSDateFormatter localizedStringFromDate:item.date
-                                                                  dateStyle:NSDateFormatterShortStyle
-                                                                  timeStyle:NSDateFormatterShortStyle];
-            NSLog(@"%@",dateString);
-            [stringBuilder appendString:[NSString stringWithFormat:@"%@ %@\n",dateString,item.name]];
+    NSMutableArray* listArray = [[NSMutableArray new]autorelease];
+
+    for (RMCategoryItem* item in [itemsAscByDateArray objectAtIndex:index+1]) {
+        UIImage* image = [UIImage imageNamed:item.icon];
+        if (!image) {
+            image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",item.name]];
         }
+        if (!image) {
+            image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg",item.name]];
+        }
+        [listArray addObject:[[ListItem alloc] initWithFrame:CGRectZero image:image text:item.name]];
     }
     
-    [label setText:stringBuilder];
-    label.font = [UIFont fontWithName:@"Noteworthy-Light" size:10];
-    label.backgroundColor = [UIColor clearColor];
+    POHorizontalList *horList = [[POHorizontalList alloc] initWithFrame:CGRectMake(0.0, 0.0, 250.0, 155.0) title:@"" items:listArray];
+    horList.userInteractionEnabled = YES;
     
-    return label;
+    [horList setDelegate:self];
+    return horList;
 }
 
 #pragma mark data loading
@@ -192,4 +192,32 @@ const NSUInteger kMonthNumber= 12;//一年12个月份
     NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date]; // Get necessary date components
     return components;
 }
+
+#pragma mark
+//从item的name对应的db文件中，读取数据
+-(RMCategoryItem*)categoryItemForItem:(NSString*)displayName
+{
+    for (NSArray* list in itemsAscByDateArray) {
+        for (RMCategoryItem* item in list) {
+            if ([displayName isEqualToString:item.name]) {
+                return item;
+            }
+        }
+    }
+    return nil;
+}
+- (void) didSelectItem:(ListItem *)item
+{
+    NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
+    SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
+    
+    RMCategoryItem* categoryItem = [self categoryItemForItem:item.imageTitle];
+    detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];
+    
+    UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
+    detailMsgViewController.navigationItem.title = item.imageTitle;
+    
+    [self presentViewController:navi animated:YES completion:nil];
+}
+
 @end

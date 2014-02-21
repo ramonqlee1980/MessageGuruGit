@@ -14,7 +14,7 @@
 #import "RMSmsDataCenter.h"
 #import "Constants.h"
 
-#define kMaxLoadingNumber 1000
+
 
 @interface AllSMSViewController ()
 @end
