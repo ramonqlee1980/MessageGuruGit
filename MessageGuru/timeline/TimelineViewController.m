@@ -122,9 +122,10 @@
 //时间线本身线的绘制的绘制
 -(void)addTimeline
 {
-    UIImageView* imageView = [[UIImageView alloc]init];
+    UIImageView* imageView = [[[UIImageView alloc]init]autorelease];
     imageView.frame = CGRectMake(0, 0, scrollView.bounds.size.width, scrollView.contentSize.height);
     [scrollView addSubview:imageView];
+
     self.view.backgroundColor = [UIColor whiteColor];
     TimelineLine *plan = [[TimelineLine alloc]init];
     plan.delegate = self;
@@ -149,6 +150,8 @@
         [timelineRoundbuttonArray addObject:timelineRoundButton];
        
         if (self.dataSource) {
+            [self.dataSource decorateButton:timelineRoundButton withinContainer:scrollView forPos:i];
+            
             UIView* leftCell = [self.dataSource leftCellForRow:i];
             leftCell.frame = CGRectMake(0, i*50, 40, 30);
             

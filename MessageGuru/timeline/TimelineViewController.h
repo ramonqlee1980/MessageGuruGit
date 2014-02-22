@@ -32,6 +32,8 @@
 - (UIView *)rightCellForRow:(NSUInteger)index;//右边的view
 
 - (UIView *)detailCellForRow:(NSUInteger)index;//展开后的view，缺省状态下隐藏
+
+-(void)decorateButton:(UIButton*)button withinContainer:(UIView*)parent forPos:(NSUInteger)index;//显示时间线上的button后的回调
 @end
 
 @interface TimelineViewController : UIViewController<LineDelegate,UIScrollViewDelegate>

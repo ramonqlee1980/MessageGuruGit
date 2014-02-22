@@ -14,12 +14,13 @@
 #import "RMSmsDataCenter.h"
 #import "Constants.h"
 #import "DMScrollingTicker.h"
+#import "PulsingHaloLayer.h"
 
 const NSUInteger kMonthNumber= 12;//一年12个月份
 
 //右侧标题显示效果，跑马灯动画相关
 const NSUInteger kFreezing = 1;
-const NSUInteger kMaxAnimationNumber = 100;//动画播放次数
+const NSUInteger kMaxAnimationNumber = 1000;//动画播放次数
 const CGFloat kLeftTextViewTextOffsetY= 10.0f;
 
 @interface RMTimelineViewController ()
@@ -27,9 +28,11 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     NSMutableArray* itemsAscByDateArray;//12个月的数组，废弃第0个，启动第12个；每个里面是一个数组，记录具体的信息
     DMScrollingTicker* scrollingTicker;
 }
+@property(nonatomic,assign)PulsingHaloLayer* halo;
 @end
 
 @implementation RMTimelineViewController
+@synthesize halo;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,6 +61,26 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
 }
 
 #pragma mark RMTimelineViewDataSource
+-(void)decorateButton:(UIButton*)button  withinContainer:(UIView*)parent forPos:(NSUInteger)index
+{
+    //当前月的进行decorate
+    NSInteger month = [RMTimelineViewController convert2DateComponents:[NSDate date]].month;
+    if(!button || !parent || month!=index+1)
+    {
+        return;
+    }
+    self.halo = [PulsingHaloLayer layer];
+    self.halo.position = button.center;
+    [parent.layer insertSublayer:self.halo below:button.layer];
+    
+    self.halo.radius = 40;
+    UIColor *color = [UIColor colorWithRed:1.0
+                                     green:0
+                                      blue:0
+                                     alpha:1.0];
+    
+    self.halo.backgroundColor = color.CGColor;
+}
 - (NSUInteger)numberOfItem//时间线上的元素项数
 {
     return kMonthNumber;
@@ -72,22 +95,14 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     monthlabel.backgroundColor = [UIColor clearColor];
     return monthlabel;
 }
-#if 1
+
 - (void)singleTapAnimationView:(id)sender
 {
     LPScrollingTickerLabelItem *label = (LPScrollingTickerLabelItem *)sender;
     
     [self openItemController:label.titleLabel.text];
 }
-#else
-- (void)singleTapAnimationView:(UITapGestureRecognizer *)gesture
-{
-    NSLog(@"tap viewid:%d",gesture.view.tag);
-    LPScrollingTickerLabelItem *label = (LPScrollingTickerLabelItem *)gesture.view;
-    
-    [self openItemController:label.titleLabel.text];
-}
-#endif
+
 //缺省显示第一个节日，点击可以跑马灯效果滚动，点击停止
 - (UIView *)rightCellForRow:(NSUInteger)index//右边的view
 {
@@ -119,19 +134,8 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
             
             //添加点击时间相应
             label.userInteractionEnabled = YES;
-#if 1
             [label addTarget:self action:@selector(singleTapAnimationView:) forControlEvents:UIControlEventTouchUpInside];
-#else
-            UITapGestureRecognizer *single_tap_recognizer = [[[UITapGestureRecognizer alloc]
-                                                              initWithTarget : self
-                                                              action         : @selector(singleTapAnimationView:)]
-                                                             autorelease];
-            
-            [single_tap_recognizer setNumberOfTouchesRequired : 1];
-            [label addGestureRecognizer : single_tap_recognizer];
-#endif
 
-            
             [sizes addObject:[NSValue valueWithCGSize:label.frame.size]];
             [l addObject:label];
         }
