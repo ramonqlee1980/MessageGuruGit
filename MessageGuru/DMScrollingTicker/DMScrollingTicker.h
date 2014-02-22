@@ -71,7 +71,7 @@ enum {
         - scrollDirection   =   Pick between LPScrollingDirection_FromLeft (animation starts from left and continues to the right side)
                                 or LPScrollingDirection_FromRight (animation starts from right and continues back to the left side)
         - scrollSpeed       =   scrolling speed in pixels per second (0 = use defaults scrool speed, 50 p/s)
-        - loops             =   The number of animations loops to make (0 means infinite)
+        - loops             =   The number of animations loops to make (-1 means infinite)
         - completition      =   Called every when the animation ends a loop animation.
  */
 - (void) beginAnimationWithViews:(NSArray *) subviewsItems

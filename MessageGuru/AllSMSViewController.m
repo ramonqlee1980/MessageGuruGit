@@ -13,7 +13,7 @@
 #import "RMCategoryItem.h"
 #import "RMSmsDataCenter.h"
 #import "Constants.h"
-
+#import "RMTimelineViewController.h"
 
 
 @interface AllSMSViewController ()
@@ -95,18 +95,9 @@
     return nil;
 }
 - (void) didSelectItem:(ListItem *)item {
-    
-    NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
-    SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
-    
-    RMCategoryItem* categoryItem = [self categoryItemForItem:item.imageTitle];
-    detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];
-    
-    UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
-    detailMsgViewController.navigationItem.title = item.imageTitle;
-    
-    [self presentViewController:navi animated:YES completion:nil];
+    [RMTimelineViewController openItemController:[self categoryItemForItem:item.imageTitle] withinController:self];
 }
+
 #pragma mark data loading
 -(void)loadData
 {

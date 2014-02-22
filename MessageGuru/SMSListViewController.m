@@ -13,6 +13,7 @@
 #import "Constants.h"
 #import "Favorite.h"
 #import "Toast+UIView.h"
+#import "Flurry.h"
 
 NSString *CellIdentifier = @"SMSMessageCell";
 
@@ -103,11 +104,17 @@ NSString *CellIdentifier = @"SMSMessageCell";
 
 -(void)add2Favorite:(id)sender withMessage:(RMSMS *)msg
 {
+    NSDictionary* dict = [NSDictionary dictionaryWithObject:msg.content forKey:kSaveSMS];
+    [Flurry logEvent:kSaveSMS withParameters:dict];
+    
     [Favorite addToSMSFavorite:msg];
     [self.view makeToast:NSLocalizedString(@"Add2FavoriteToast", "") duration:CSToastDefaultDuration position:CSToastCenterPosition];
 }
 
 - (void)showShareView:(id)sender withText:(NSString*)text withImage:(UIImage*)image{
+    NSDictionary* dict = [NSDictionary dictionaryWithObject:text forKey:kSNSShareEvent];
+    [Flurry logEvent:kSNSShareEvent withParameters:dict];
+    
     //如果需要分享回调，请将delegate对象设置self，并实现下面的回调方法
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:CP_UMeng_App_Key
@@ -132,8 +139,9 @@ NSString *CellIdentifier = @"SMSMessageCell";
     //根据`responseCode`得到发送结果,如果分享成功
     if(response.responseCode == UMSResponseCodeSuccess)
     {
-//        NSString* snsName = [[response.data allKeys] objectAtIndex:0];
-//        NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:snsName,kSNSPlatformKey, nil];
+        NSString* snsName = [[response.data allKeys] objectAtIndex:0];
+        NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:snsName,kSNSPlatformKey, nil];
+        [Flurry logEvent:kShareBySNSResponseEvent withParameters:dict];
     }
 }
 

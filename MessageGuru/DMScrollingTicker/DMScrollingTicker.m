@@ -14,6 +14,7 @@
 
 #pragma mark - LPScrollingTicker
 
+#define kInfiniteLoopsNumber -1
 // Space between each subview item
 #define kLPScrollingTickerHSpace                2.0f
 // Default animation speed
@@ -58,7 +59,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         scrollViewDirection = LPScrollingDirection_FromRight;
-        numberOfLoops = 0; // infinite scrolling = 0
+        numberOfLoops = kInfiniteLoopsNumber;
         
         isAnimating = NO;
         tickerSubViews = nil;
@@ -105,7 +106,9 @@
     }
     
     [self layoutTickerSubviewsWithItems:views];
-    [self beginAnimation];
+    if (numberOfLoops!=0) {
+        [self beginAnimation];
+    }
 }
 
 - (void) beginAnimationWithLazyViews:(LPScrollingTickerLazyLoadingHandler) dataSource
@@ -163,7 +166,7 @@
                      } completion:^(BOOL finished) {
                          if (finished) {
                              isAnimating = NO;
-                             BOOL restartAnimation = (numberOfLoops == 0 || loopsDone <= numberOfLoops);
+                             BOOL restartAnimation = (numberOfLoops == kInfiniteLoopsNumber || loopsDone <= numberOfLoops);
                              
                              animationCompletitionHandler((loopsDone+1),!restartAnimation);
                              

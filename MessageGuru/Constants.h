@@ -50,6 +50,8 @@
 #define kOpenIAPListInDetailViewEvent @"kOpenIAPListInDetailViewEvent"
 #define kOpenRateInSettingEvent @"kOpenRateInSettingEvent"
 #define kOpenRecommendAdInDetailViewEvent @"kOpenRecommendAdInDetailViewEvent"
+#define kOpenSMSCategory @"OpenSMSCategory"//进入短信类别
+#define kSaveSMS @"kSaveSMS"//收藏短信
 
 //金币变更事件，将记录变更前后的金币数量
 #define kCoinsChangeEvent @"CoinsChangeEvent"

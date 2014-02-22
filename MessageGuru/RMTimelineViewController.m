@@ -9,18 +9,18 @@
 #import "RMTimelineViewController.h"
 #import "RMDataCenter.h"
 #import "RMCategory.h"
-#import "RMCategoryItem.h"
 #import "SMSListViewController.h"
 #import "RMSmsDataCenter.h"
 #import "Constants.h"
 #import "DMScrollingTicker.h"
 #import "PulsingHaloLayer.h"
+#import "Flurry.h"
 
 const NSUInteger kMonthNumber= 12;//一年12个月份
 
 //右侧标题显示效果，跑马灯动画相关
 const NSUInteger kFreezing = 1;
-const NSUInteger kMaxAnimationNumber = 1000;//动画播放次数
+const NSUInteger kMaxAnimationNumber = 0;//动画播放次数
 const CGFloat kLeftTextViewTextOffsetY= 10.0f;
 
 @interface RMTimelineViewController ()
@@ -150,7 +150,7 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     {
         [scrollingTicker beginAnimationWithViews:l
                                    direction:LPScrollingDirection_FromRight
-                                       speed:20.0f
+                                       speed:10.0f
                                        loops:kMaxAnimationNumber
                                 completition:^(NSUInteger loopsDone, BOOL isFinished) {
                                     NSLog(@"loop %d, finished? %d",loopsDone,isFinished);
@@ -275,18 +275,26 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
     [self openItemController:item.imageTitle];
 }
+
 - (void) openItemController:(NSString *)title
 {
+    [RMTimelineViewController openItemController:[self categoryItemForItem:title] withinController:self];
+}
+
+//进入指定类别的详细列表
++ (void) openItemController:(RMCategoryItem *)categoryItem withinController:(UIViewController*)controller
+{
+    NSDictionary* dict = [NSDictionary dictionaryWithObject:categoryItem.name forKey:kOpenSMSCategory];
+    [Flurry logEvent:kOpenSMSCategory withParameters:dict];
+    
     NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
     SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
     
-    RMCategoryItem* categoryItem = [self categoryItemForItem:title];
     detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];
     
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
-    detailMsgViewController.navigationItem.title = title;
+    detailMsgViewController.navigationItem.title = categoryItem.name;
     
-    [self presentViewController:navi animated:YES completion:nil];
+    [controller presentViewController:navi animated:YES completion:nil];
 }
-
 @end
