@@ -170,7 +170,7 @@
             UIView* rightCell = [self.dataSource rightCellForRow:i];
             rightCell.frame = CGRectMake(80, i*50, 200, 30);
             
-            [rightCell setUserInteractionEnabled:NO];
+//            [rightCell setUserInteractionEnabled:NO];
             [massageViewArray addObject:rightCell];
             
             [scrollView addSubview:rightCell];
@@ -268,7 +268,7 @@
         {
             [[massageViewArray objectAtIndex:i] setFrame:CGRectMake(80, 0+i*50, 200, 30)];
             [[massageViewArray objectAtIndex:i] setBackgroundColor:[UIColor clearColor]];
-            [[massageViewArray objectAtIndex:i] setUserInteractionEnabled:NO];
+//            [[massageViewArray objectAtIndex:i] setUserInteractionEnabled:NO];
             
             
             [[timelineRoundbuttonArray objectAtIndex:i] setFrame:CGRectMake(46, 0+i*50, 30, 30)];
@@ -288,7 +288,7 @@
     {
         [[massageViewArray objectAtIndex:i] setFrame:CGRectMake(80, yOffset+i*50, 200, 30)];
         [[massageViewArray objectAtIndex:i] setBackgroundColor:[UIColor clearColor]];
-        [[massageViewArray objectAtIndex:i] setUserInteractionEnabled:NO];
+//        [[massageViewArray objectAtIndex:i] setUserInteractionEnabled:NO];
         UIView *view = [massageViewArray objectAtIndex:i];
         CABasicAnimation *positionAnim=[CABasicAnimation animationWithKeyPath:@"position"];
         [positionAnim setFromValue:[NSValue valueWithCGPoint:CGPointMake(view.center.x, view.center.y-200)]];

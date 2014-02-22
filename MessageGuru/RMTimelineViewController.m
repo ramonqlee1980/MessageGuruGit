@@ -13,12 +13,19 @@
 #import "SMSListViewController.h"
 #import "RMSmsDataCenter.h"
 #import "Constants.h"
+#import "DMScrollingTicker.h"
 
 const NSUInteger kMonthNumber= 12;//一年12个月份
+
+//右侧标题显示效果，跑马灯动画相关
+const NSUInteger kFreezing = 1;
+const NSUInteger kMaxAnimationNumber = 100;//动画播放次数
+const CGFloat kLeftTextViewTextOffsetY= 10.0f;
 
 @interface RMTimelineViewController ()
 {
     NSMutableArray* itemsAscByDateArray;//12个月的数组，废弃第0个，启动第12个；每个里面是一个数组，记录具体的信息
+    DMScrollingTicker* scrollingTicker;
 }
 @end
 
@@ -65,35 +72,88 @@ const NSUInteger kMonthNumber= 12;//一年12个月份
     monthlabel.backgroundColor = [UIColor clearColor];
     return monthlabel;
 }
-
+#if 1
+- (void)singleTapAnimationView:(id)sender
+{
+    LPScrollingTickerLabelItem *label = (LPScrollingTickerLabelItem *)sender;
+    
+    [self openItemController:label.titleLabel.text];
+}
+#else
+- (void)singleTapAnimationView:(UITapGestureRecognizer *)gesture
+{
+    NSLog(@"tap viewid:%d",gesture.view.tag);
+    LPScrollingTickerLabelItem *label = (LPScrollingTickerLabelItem *)gesture.view;
+    
+    [self openItemController:label.titleLabel.text];
+}
+#endif
+//缺省显示第一个节日，点击可以跑马灯效果滚动，点击停止
 - (UIView *)rightCellForRow:(NSUInteger)index//右边的view
 {
-    UIView* massageView = [[[UIView alloc]initWithFrame:CGRectMake(80, 0, 200, 30)]autorelease];
+    scrollingTicker = [[DMScrollingTicker alloc] initWithFrame:CGRectMake(80, 0, 200, 30)];
+//    scrollingTicker.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:scrollingTicker];
+    NSMutableArray *l = [[NSMutableArray alloc] init];
+    NSMutableArray *sizes = [[NSMutableArray alloc] init];
     
-    massageView.backgroundColor = [UIColor clearColor];
-    UILabel* label = [[[UILabel alloc]initWithFrame:CGRectMake(0, 0, massageView.bounds.size.width, 30)]autorelease];
-    label.textAlignment= 1;
-    
-    NSMutableString* stringBuilder = [[NSMutableString new]autorelease];
     id list = [itemsAscByDateArray objectAtIndex:index+1];
     if (list) {
         NSArray* listItems = (NSArray*)list;
         for (RMCategoryItem* item in listItems) {
-            NSString *dateString = [NSDateFormatter localizedStringFromDate:item.date
-                                                                  dateStyle:NSDateFormatterShortStyle
-                                                                  timeStyle:NSDateFormatterShortStyle];
-            NSLog(@"%@",dateString);
-            [stringBuilder appendString:[NSString stringWithFormat:@"%@ %@\n",dateString,item.name]];
+            NSString *currentDateStr = @"";
+            if (item.date) {
+                NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+                [dateFormat setDateFormat:@"(M/d)"];//设定时间格式,这里可以设置成自己需要的格式
+                currentDateStr = [dateFormat stringFromDate:item.date];
+            }
+            
+            LPScrollingTickerLabelItem *label = [[LPScrollingTickerLabelItem alloc] initWithTitle:item.name
+                                                                                      description:currentDateStr];
+
+            [label layoutSubviews];
+            
+            CGRect frame = label.frame;
+            frame.origin.y = kLeftTextViewTextOffsetY;
+            label.frame = frame;
+            
+            //添加点击时间相应
+            label.userInteractionEnabled = YES;
+#if 1
+            [label addTarget:self action:@selector(singleTapAnimationView:) forControlEvents:UIControlEventTouchUpInside];
+#else
+            UITapGestureRecognizer *single_tap_recognizer = [[[UITapGestureRecognizer alloc]
+                                                              initWithTarget : self
+                                                              action         : @selector(singleTapAnimationView:)]
+                                                             autorelease];
+            
+            [single_tap_recognizer setNumberOfTouchesRequired : 1];
+            [label addGestureRecognizer : single_tap_recognizer];
+#endif
+
+            
+            [sizes addObject:[NSValue valueWithCGSize:label.frame.size]];
+            [l addObject:label];
         }
     }
+
     
-    [label setText:stringBuilder];
-    label.font = [UIFont fontWithName:@"Noteworthy-Light" size:10];
-    label.backgroundColor = [UIColor clearColor];
+    if(scrollingTicker.tag==kFreezing)
+    {
+        [scrollingTicker scrollToOffset:CGPointMake(80, 0) animate:YES];
+    }
+    else
+    {
+        [scrollingTicker beginAnimationWithViews:l
+                                   direction:LPScrollingDirection_FromRight
+                                       speed:20.0f
+                                       loops:kMaxAnimationNumber
+                                completition:^(NSUInteger loopsDone, BOOL isFinished) {
+                                    NSLog(@"loop %d, finished? %d",loopsDone,isFinished);
+                                }];
+    }
     
-    [massageView addSubview:label];
-    
-    return massageView;
+    return scrollingTicker;
 }
 
 - (UIView *)detailCellForRow:(NSUInteger)index//展开后的view，缺省状态下隐藏
@@ -209,13 +269,18 @@ const NSUInteger kMonthNumber= 12;//一年12个月份
 - (void) didSelectItem:(ListItem *)item
 {
     NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
+    [self openItemController:item.imageTitle];
+}
+- (void) openItemController:(NSString *)title
+{
+    NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
     SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
     
-    RMCategoryItem* categoryItem = [self categoryItemForItem:item.imageTitle];
+    RMCategoryItem* categoryItem = [self categoryItemForItem:title];
     detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];
     
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
-    detailMsgViewController.navigationItem.title = item.imageTitle;
+    detailMsgViewController.navigationItem.title = title;
     
     [self presentViewController:navi animated:YES completion:nil];
 }
