@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		3042CB5C18B982A600ABCF1C /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB5B18B982A600ABCF1C /* copy.png */; };
 		3042CB6018B985BF00ABCF1C /* folder-favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB5F18B985BF00ABCF1C /* folder-favorites.png */; };
+		3042CB6E18B9931C00ABCF1C /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6518B9931C00ABCF1C /* Icon-iPad.png */; };
+		3042CB6F18B9931C00ABCF1C /* Icon-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6618B9931C00ABCF1C /* Icon-iPad@2x.png */; };
+		3042CB7018B9931C00ABCF1C /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6718B9931C00ABCF1C /* Icon-Small-50.png */; };
+		3042CB7118B9931C00ABCF1C /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6818B9931C00ABCF1C /* Icon-Small.png */; };
+		3042CB7218B9931C00ABCF1C /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6918B9931C00ABCF1C /* Icon-Small@2x.png */; };
+		3042CB7318B9931C00ABCF1C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6A18B9931C00ABCF1C /* Icon.png */; };
+		3042CB7418B9931C00ABCF1C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6B18B9931C00ABCF1C /* Icon@2x.png */; };
+		3042CB7818B994CA00ABCF1C /* icon_76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB7518B994CA00ABCF1C /* icon_76x76.png */; };
+		3042CB7918B994CA00ABCF1C /* icon_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB7618B994CA00ABCF1C /* icon_120x120.png */; };
+		3042CB7A18B994CA00ABCF1C /* icon_152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB7718B994CA00ABCF1C /* icon_152x152.png */; };
 		304C2DFD18AF7BAB006B4A59 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 304C2D1518AF7BAB006B4A59 /* iRate.bundle */; };
 		304C2DFE18AF7BAB006B4A59 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 304C2D1718AF7BAB006B4A59 /* iRate.m */; };
 		304C2DFF18AF7BAB006B4A59 /* JMStaticContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 304C2D1B18AF7BAB006B4A59 /* JMStaticContentTableViewCell.m */; };
@@ -26,7 +36,6 @@
 		304C2E1718AF7BAB006B4A59 /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304C2D4318AF7BAB006B4A59 /* libUMFeedback.a */; };
 		304C2E1818AF7BAB006B4A59 /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 304C2D4418AF7BAB006B4A59 /* umFeedback.bundle */; };
 		304C2E1918AF7BAB006B4A59 /* 开发指南.html in Resources */ = {isa = PBXBuildFile; fileRef = 304C2D4618AF7BAB006B4A59 /* 开发指南.html */; };
-		304C2EA518AF7C34006B4A59 /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304C2EA418AF7C34006B4A59 /* libFlurry_4.2.3.a */; };
 		304C2F2118AF7C60006B4A59 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304C2EA818AF7C5F006B4A59 /* UMSocialLocalizable.strings */; };
 		304C2F2218AF7C60006B4A59 /* libWeChatSDK_armv7_armv7s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304C2EAC18AF7C5F006B4A59 /* libWeChatSDK_armv7_armv7s.a */; };
 		304C2F2318AF7C60006B4A59 /* libUMSocial_Sdk_2.2.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304C2EBA18AF7C60006B4A59 /* libUMSocial_Sdk_2.2.1.1.a */; };
@@ -229,6 +238,7 @@
 		30BBF5311893BDD600631F6E /* SMSListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF5301893BDD600631F6E /* SMSListViewController.m */; };
 		30CE801518B813230073A48D /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE801418B813230073A48D /* DMScrollingTicker.m */; };
 		30CE801918B959230073A48D /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE801818B959230073A48D /* PulsingHaloLayer.m */; };
+		30D2306318B9AFB8005BED10 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D2306218B9AFB8005BED10 /* libFlurry_4.3.2.a */; };
 		30EE961C18B2C94300E76697 /* cell_like_on_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EE961818B2C94300E76697 /* cell_like_on_white.png */; };
 		30EE961D18B2C94300E76697 /* cell_like_on_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EE961918B2C94300E76697 /* cell_like_on_white@2x.png */; };
 		30EE961E18B2C94300E76697 /* cell_share_normal_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EE961A18B2C94300E76697 /* cell_share_normal_white.png */; };
@@ -249,6 +259,16 @@
 /* Begin PBXFileReference section */
 		3042CB5B18B982A600ABCF1C /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
 		3042CB5F18B985BF00ABCF1C /* folder-favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder-favorites.png"; sourceTree = "<group>"; };
+		3042CB6518B9931C00ABCF1C /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
+		3042CB6618B9931C00ABCF1C /* Icon-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad@2x.png"; sourceTree = "<group>"; };
+		3042CB6718B9931C00ABCF1C /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		3042CB6818B9931C00ABCF1C /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		3042CB6918B9931C00ABCF1C /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		3042CB6A18B9931C00ABCF1C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3042CB6B18B9931C00ABCF1C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3042CB7518B994CA00ABCF1C /* icon_76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_76x76.png; sourceTree = "<group>"; };
+		3042CB7618B994CA00ABCF1C /* icon_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120x120.png; sourceTree = "<group>"; };
+		3042CB7718B994CA00ABCF1C /* icon_152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_152x152.png; sourceTree = "<group>"; };
 		304C2D1518AF7BAB006B4A59 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		304C2D1618AF7BAB006B4A59 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		304C2D1718AF7BAB006B4A59 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
@@ -281,8 +301,6 @@
 		304C2D4418AF7BAB006B4A59 /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
 		304C2D4518AF7BAB006B4A59 /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
 		304C2D4618AF7BAB006B4A59 /* 开发指南.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "开发指南.html"; sourceTree = "<group>"; };
-		304C2EA318AF7C34006B4A59 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		304C2EA418AF7C34006B4A59 /* libFlurry_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.3.a; sourceTree = "<group>"; };
 		304C2EA918AF7C5F006B4A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		304C2EAC18AF7C5F006B4A59 /* libWeChatSDK_armv7_armv7s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK_armv7_armv7s.a; sourceTree = "<group>"; };
 		304C2EAD18AF7C5F006B4A59 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -525,6 +543,8 @@
 		30CE801418B813230073A48D /* DMScrollingTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScrollingTicker.m; sourceTree = "<group>"; };
 		30CE801718B959230073A48D /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
 		30CE801818B959230073A48D /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
+		30D2306118B9AFB8005BED10 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		30D2306218B9AFB8005BED10 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
 		30EE961818B2C94300E76697 /* cell_like_on_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_like_on_white.png; sourceTree = "<group>"; };
 		30EE961918B2C94300E76697 /* cell_like_on_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_like_on_white@2x.png"; sourceTree = "<group>"; };
 		30EE961A18B2C94300E76697 /* cell_share_normal_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_share_normal_white.png; sourceTree = "<group>"; };
@@ -539,12 +559,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				304C2F2418AF7C60006B4A59 /* libUMSocial_Sdk_Comment_2.2.1.1.a in Frameworks */,
+				30D2306318B9AFB8005BED10 /* libFlurry_4.3.2.a in Frameworks */,
 				30A8E6681895C07100DE7D99 /* SystemConfiguration.framework in Frameworks */,
 				30A8E5281893FD4800DE7D99 /* libsqlite3.dylib in Frameworks */,
 				304C2F2218AF7C60006B4A59 /* libWeChatSDK_armv7_armv7s.a in Frameworks */,
 				30BBF4641891491F00631F6E /* CoreGraphics.framework in Frameworks */,
 				304C2E1718AF7BAB006B4A59 /* libUMFeedback.a in Frameworks */,
-				304C2EA518AF7C34006B4A59 /* libFlurry_4.2.3.a in Frameworks */,
 				30BBF4661891491F00631F6E /* UIKit.framework in Frameworks */,
 				30BBF4621891491F00631F6E /* Foundation.framework in Frameworks */,
 				304C2F2318AF7C60006B4A59 /* libUMSocial_Sdk_2.2.1.1.a in Frameworks */,
@@ -564,6 +584,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3042CB6118B9931C00ABCF1C /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3042CB6418B9931C00ABCF1C /* iOS */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		3042CB6418B9931C00ABCF1C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3042CB7518B994CA00ABCF1C /* icon_76x76.png */,
+				3042CB7618B994CA00ABCF1C /* icon_120x120.png */,
+				3042CB7718B994CA00ABCF1C /* icon_152x152.png */,
+				3042CB6518B9931C00ABCF1C /* Icon-iPad.png */,
+				3042CB6618B9931C00ABCF1C /* Icon-iPad@2x.png */,
+				3042CB6718B9931C00ABCF1C /* Icon-Small-50.png */,
+				3042CB6818B9931C00ABCF1C /* Icon-Small.png */,
+				3042CB6918B9931C00ABCF1C /* Icon-Small@2x.png */,
+				3042CB6A18B9931C00ABCF1C /* Icon.png */,
+				3042CB6B18B9931C00ABCF1C /* Icon@2x.png */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		304C2D1418AF7BAB006B4A59 /* iRate */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,15 +681,6 @@
 				304C2D4618AF7BAB006B4A59 /* 开发指南.html */,
 			);
 			path = UMFeedback_iOS_1.4;
-			sourceTree = "<group>";
-		};
-		304C2EA218AF7C34006B4A59 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				304C2EA318AF7C34006B4A59 /* Flurry.h */,
-				304C2EA418AF7C34006B4A59 /* libFlurry_4.2.3.a */,
-			);
-			path = Flurry;
 			sourceTree = "<group>";
 		};
 		304C2EA618AF7C5F006B4A59 /* UMSocial_Sdk_All_2.2.1.1 */ = {
@@ -907,13 +943,13 @@
 		30A8E55E1894760500DE7D99 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				30D2306018B9AFB8005BED10 /* Flurry */,
 				30CE801618B959230073A48D /* PulsingHalo */,
 				30CE801218B813230073A48D /* DMScrollingTicker */,
 				3096EAB718B63247004B5B8F /* timeline */,
 				30EE962018B2C9B700E76697 /* Toast */,
 				304C2F7218AF7D68006B4A59 /* BaseViewController */,
 				304C2EA618AF7C5F006B4A59 /* UMSocial_Sdk_All_2.2.1.1 */,
-				304C2EA218AF7C34006B4A59 /* Flurry */,
 				304C2D1418AF7BAB006B4A59 /* iRate */,
 				304C2D1818AF7BAB006B4A59 /* JMStaticContentTableViewController */,
 				304C2D2F18AF7BAB006B4A59 /* POHorizontalList */,
@@ -1032,6 +1068,7 @@
 		30BBF4FB18915A3C00631F6E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3042CB6118B9931C00ABCF1C /* Icons */,
 				304C2FE518B0FFBB006B4A59 /* 七夕节.jpg */,
 				304C2FE618B0FFBB006B4A59 /* 中元节.jpg */,
 				304C2FE718B0FFBB006B4A59 /* 中秋节.jpeg */,
@@ -1156,6 +1193,16 @@
 			path = PulsingHalo;
 			sourceTree = "<group>";
 		};
+		30D2306018B9AFB8005BED10 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				30D2306118B9AFB8005BED10 /* Flurry.h */,
+				30D2306218B9AFB8005BED10 /* libFlurry_4.3.2.a */,
+			);
+			name = Flurry;
+			path = "../../iOS_Lib/Flurry-iOS-4.3.2/Flurry";
+			sourceTree = "<group>";
+		};
 		30EE962018B2C9B700E76697 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -1214,6 +1261,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = iDreems;
 				TargetAttributes = {
+					30BBF45D1891491F00631F6E = {
+						DevelopmentTeam = QBJ9PY6FYT;
+					};
 					30BBF4781891491F00631F6E = {
 						TestTargetID = 30BBF45D1891491F00631F6E;
 					};
@@ -1258,6 +1308,7 @@
 				304C300E18B0FFBB006B4A59 /* 建党节.jpeg in Resources */,
 				304C2F4918AF7C60006B4A59 /* UMSocialDataDelegate.html in Resources */,
 				304C2F4318AF7C60006B4A59 /* class_grath.png in Resources */,
+				3042CB7818B994CA00ABCF1C /* icon_76x76.png in Resources */,
 				30A8E5071893C72E00DE7D99 /* pic_plank_up.png in Resources */,
 				304C2F9818B0F72C006B4A59 /* 开业短信.jpg in Resources */,
 				304C301218B0FFBB006B4A59 /* 教师节.jpeg in Resources */,
@@ -1271,6 +1322,9 @@
 				304C2FC618B0FB5F006B4A59 /* 圣诞节.jpeg in Resources */,
 				304C2F4618AF7C60006B4A59 /* library_background.png in Resources */,
 				30A8E5881895BDB200DE7D99 /* Localizable.strings in Resources */,
+				3042CB7018B9931C00ABCF1C /* Icon-Small-50.png in Resources */,
+				3042CB6E18B9931C00ABCF1C /* Icon-iPad.png in Resources */,
+				3042CB7218B9931C00ABCF1C /* Icon-Small@2x.png in Resources */,
 				304C2F4A18AF7C60006B4A59 /* UMSocialUIDelegate.html in Resources */,
 				304C2F3418AF7C60006B4A59 /* UMSocialControllerServiceComment.html in Resources */,
 				304C2F9618B0F72C006B4A59 /* 乔迁短信.jpg in Resources */,
@@ -1306,6 +1360,7 @@
 				304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */,
 				304C301518B0FFBB006B4A59 /* 清明节.jpeg in Resources */,
 				304C2F7A18B0E466006B4A59 /* 西方传统节日.sqlite in Resources */,
+				3042CB6F18B9931C00ABCF1C /* Icon-iPad@2x.png in Resources */,
 				304C2FAF18B0F8B2006B4A59 /* 父亲节.jpeg in Resources */,
 				304C2FE118B0FCAC006B4A59 /* 爱情诗句.jpg in Resources */,
 				304C2FA618B0F8B2006B4A59 /* 万圣节.jpg in Resources */,
@@ -1319,6 +1374,7 @@
 				304C2FE318B0FCAC006B4A59 /* 经典情话.jpg in Resources */,
 				304C300A18B0FFBB006B4A59 /* 劳动节.jpeg in Resources */,
 				304C301618B0FFBB006B4A59 /* 祈福日.jpg in Resources */,
+				3042CB7918B994CA00ABCF1C /* icon_120x120.png in Resources */,
 				304C2F2818AF7C60006B4A59 /* UMShareEditViewController.xib in Resources */,
 				304C2F3818AF7C60006B4A59 /* UMSocialExtConfig.html in Resources */,
 				30A8E4FC1893C72E00DE7D99 /* ico_reply@2x.png in Resources */,
@@ -1358,8 +1414,10 @@
 				3096EAC018B63247004B5B8F /* timeline_button.png in Resources */,
 				304C2F4118AF7C60006B4A59 /* hierarchy.html in Resources */,
 				304C2F7C18B0E73A006B4A59 /* 贺词大全.sqlite in Resources */,
+				3042CB7118B9931C00ABCF1C /* Icon-Small.png in Resources */,
 				304C2F8518B0F3E2006B4A59 /* 囧糗事.jpg in Resources */,
 				304C2FD518B0FB5F006B4A59 /* 送别短信.jpg in Resources */,
+				3042CB7318B9931C00ABCF1C /* Icon.png in Resources */,
 				304C2F4018AF7C60006B4A59 /* stylesPrint.css in Resources */,
 				304C2FAB18B0F8B2006B4A59 /* 情人节.jpg in Resources */,
 				30A8E5041893C72E00DE7D99 /* pic_plank_among@2x.png in Resources */,
@@ -1379,6 +1437,7 @@
 				30BBF52E18915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png in Resources */,
 				304C2FCF18B0FB5F006B4A59 /* 求婚短信.jpg in Resources */,
 				304C2F2118AF7C60006B4A59 /* UMSocialLocalizable.strings in Resources */,
+				3042CB7418B9931C00ABCF1C /* Icon@2x.png in Resources */,
 				30A8E4FA1893C72E00DE7D99 /* ico_people@2x.png in Resources */,
 				304C2F3018AF7C60006B4A59 /* UMSocialBar.html in Resources */,
 				304C2F7818B03CFC006B4A59 /* 日常问候.sqlite in Resources */,
@@ -1399,6 +1458,7 @@
 				304C2FE018B0FCAC006B4A59 /* 爱情宣言.jpg in Resources */,
 				304C2F2618AF7C60006B4A59 /* UMSCommentInputController.xib in Resources */,
 				30EE961F18B2C94300E76697 /* cell_share_normal_white@2x.png in Resources */,
+				3042CB7A18B994CA00ABCF1C /* icon_152x152.png in Resources */,
 				304C2F6418AF7C60006B4A59 /* ios-social-sdk-comment-quick.html in Resources */,
 				30A8E4F91893C72E00DE7D99 /* ico_people.png in Resources */,
 				304C300B18B0FFBB006B4A59 /* 国庆节.jpeg in Resources */,
@@ -1601,10 +1661,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ming Li (6ZAM6HQ2F7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageGuru/MessageGuru-Prefix.pch";
 				INFOPLIST_FILE = "MessageGuru/MessageGuru-Info.plist";
@@ -1623,8 +1683,11 @@
 					/Volumes/SSD/workspace/MessageGuruGit/MessageGuru/Flurry,
 					/Volumes/SSD/workspace/MessageGuruGit/MessageGuru/UMSocial_Sdk_2.2.1.1/frameworks/Wechat,
 					/Volumes/SSD/workspace/MessageGuruGit/MessageGuru/UMSocial_Sdk_2.2.1.1,
+					"/Volumes/SSD/workspace/iOS_Lib/Flurry-iOS-4.3.2/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B78982A1-6F75-4BF8-8D00-8B282718A427";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1634,10 +1697,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ming Li (6ZAM6HQ2F7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ming Li (QBJ9PY6FYT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageGuru/MessageGuru-Prefix.pch";
 				INFOPLIST_FILE = "MessageGuru/MessageGuru-Info.plist";
@@ -1656,8 +1719,11 @@
 					/Volumes/SSD/workspace/MessageGuruGit/MessageGuru/Flurry,
 					/Volumes/SSD/workspace/MessageGuruGit/MessageGuru/UMSocial_Sdk_2.2.1.1/frameworks/Wechat,
 					/Volumes/SSD/workspace/MessageGuruGit/MessageGuru/UMSocial_Sdk_2.2.1.1,
+					"/Volumes/SSD/workspace/iOS_Lib/Flurry-iOS-4.3.2/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B78982A1-6F75-4BF8-8D00-8B282718A427";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};

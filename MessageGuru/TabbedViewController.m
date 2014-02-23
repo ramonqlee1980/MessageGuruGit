@@ -44,7 +44,7 @@
 
 -(void)willAppearIn:(UINavigationController *)navigationController
 {
-    [self addCenterButtonWithImage:[UIImage imageNamed:@"camera_button_take.png"] highlightImage:[UIImage imageNamed:@"tabBar_cameraButton_ready_matte.png"]];
+//    [self addCenterButtonWithImage:[UIImage imageNamed:@"camera_button_take.png"] highlightImage:[UIImage imageNamed:@"tabBar_cameraButton_ready_matte.png"]];
 }
 
 - (void)viewDidLoad
@@ -54,7 +54,7 @@
     self.viewControllers = [NSArray arrayWithObjects:
                             [self hotViewController],
                             [self categoryController],
-                            [self viewControllerWithTabTitle:@"" image:nil],
+//                            [self viewControllerWithTabTitle:@"" image:nil],
                             [self favoriteController],
                             [self aboutController], nil];
 }
