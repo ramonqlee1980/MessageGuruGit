@@ -10,6 +10,8 @@
 #import "TimelineLine.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define kRightMessageTipViewOffsetX 80.0f
+
 @interface TimelineViewController ()
 {
     UIImageView *backgroundImageView;
@@ -20,10 +22,9 @@
 @property (strong, nonatomic) UIButton *timelineRoundButton;
 
 //动态array
-@property (strong, nonatomic) NSMutableArray *massageViewArray;
+@property (strong, nonatomic) NSMutableArray *rightMessageTipViewArray;
 @property (strong, nonatomic) NSMutableArray *timelineRoundbuttonArray;
 @property (strong, nonatomic) NSMutableArray *leftCellViewArray;
-@property (strong, nonatomic) NSMutableArray *allPhotoArrayArray;
 @property (strong, nonatomic) UIImageView * animationImageView;
 @property (strong, nonatomic) UIImageView *timelineLineImageView;
 @property (strong, nonatomic) CATransition *timelineLineAnimation;
@@ -37,7 +38,7 @@
 //@synthesize imageView;
 @synthesize scrollView;
 @synthesize timelineRoundButton;
-@synthesize massageViewArray;
+@synthesize rightMessageTipViewArray;
 @synthesize timelineRoundbuttonArray;
 @synthesize leftCellViewArray;
 @synthesize previousPos;
@@ -96,7 +97,7 @@
     if (self.scrollView) {
         return;
     }
-    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 370)];
+    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor clearColor];
     scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, number*50+200);
@@ -165,16 +166,16 @@
 //添加初始的右边页面
 -(void)addInitRightViews:(int)number
 {
-    self.massageViewArray = [[NSMutableArray alloc]initWithCapacity:10];
+    self.rightMessageTipViewArray = [[NSMutableArray alloc]initWithCapacity:10];
     
     for (int i = 0; i < number; i++)
     {
         if (self.dataSource) {
             UIView* rightCell = [self.dataSource rightCellForRow:i];
-            rightCell.frame = CGRectMake(80, i*50, 200, 30);
+            rightCell.frame = CGRectMake(kRightMessageTipViewOffsetX, i*50, 200, 30);
             
 //            [rightCell setUserInteractionEnabled:NO];
-            [massageViewArray addObject:rightCell];
+            [rightMessageTipViewArray addObject:rightCell];
             
             [scrollView addSubview:rightCell];
         }
@@ -230,7 +231,7 @@
     [scrollView addSubview:timelineLineImageView];
     
     //实例化弹出界面
-    [[massageViewArray objectAtIndex:button.tag] setFrame:CGRectMake(80, button.tag*50, 200, 200)];
+    [[rightMessageTipViewArray objectAtIndex:button.tag] setFrame:CGRectMake(kRightMessageTipViewOffsetX, button.tag*50, 200, 200)];
     
     CATransition *animation = [CATransition animation];
     animation.delegate =self;
@@ -238,9 +239,9 @@
     animation.timingFunction = UIViewAnimationCurveEaseInOut;
     animation.type = kCATransitionMoveIn;
     animation.subtype = kCATransition;
-    [[[massageViewArray objectAtIndex:button.tag] layer] addAnimation:animation forKey:@"animation"];
-    [[massageViewArray objectAtIndex:button.tag] setUserInteractionEnabled:YES];
-    UIView *view = [massageViewArray objectAtIndex:button.tag];
+    [[[rightMessageTipViewArray objectAtIndex:button.tag] layer] addAnimation:animation forKey:@"animation"];
+    [[rightMessageTipViewArray objectAtIndex:button.tag] setUserInteractionEnabled:YES];
+    UIView *view = [rightMessageTipViewArray objectAtIndex:button.tag];
     [view.layer setShadowColor:[UIColor blackColor].CGColor];
     [view.layer setShadowOffset:CGSizeMake(10, 10)];
     [view.layer setShadowOpacity:0.5];
@@ -251,12 +252,13 @@
     [[leftCellViewArray objectAtIndex:button.tag] setFrame:CGRectMake(5, button.tag*50, 40, 30)];
     
     //add new view
-    UIView* cellView = [massageViewArray objectAtIndex:button.tag];
-    [cellView setFrame:CGRectMake(80, button.tag*50, 200, 200)];
+    UIView* cellView = [rightMessageTipViewArray objectAtIndex:button.tag];
+    [cellView setFrame:CGRectMake(kRightMessageTipViewOffsetX, button.tag*50, 200, 200)];
     if (self.dataSource) {
         detailCell = [self.dataSource detailCellForRow:button.tag];
         CGRect frame =detailCell.frame;
-        frame.origin.y = 50;//TODO::调整到合适的位置
+        frame.origin.y = 50;//调整到合适的位置
+        frame.origin.x = -10;
         detailCell.frame = frame;
         
         [cellView addSubview:detailCell];
@@ -269,8 +271,8 @@
     {
         for (int i = 0; i < button.tag; i++)
         {
-            [[massageViewArray objectAtIndex:i] setFrame:CGRectMake(80, 0+i*50, 200, 30)];
-            [[massageViewArray objectAtIndex:i] setBackgroundColor:[UIColor clearColor]];
+            [[rightMessageTipViewArray objectAtIndex:i] setFrame:CGRectMake(kRightMessageTipViewOffsetX, 0+i*50, 200, 30)];
+            [[rightMessageTipViewArray objectAtIndex:i] setBackgroundColor:[UIColor clearColor]];
 //            [[massageViewArray objectAtIndex:i] setUserInteractionEnabled:NO];
             
             
@@ -280,19 +282,19 @@
             
         }
         
-        [[massageViewArray objectAtIndex:button.tag-1] setFrame:CGRectMake(80, (button.tag-1)*50, 200, 30)];
+        [[rightMessageTipViewArray objectAtIndex:button.tag-1] setFrame:CGRectMake(kRightMessageTipViewOffsetX, (button.tag-1)*50, 200, 30)];
         [[timelineRoundbuttonArray objectAtIndex:button.tag-1] setFrame:CGRectMake(46, (button.tag-1)*50, 30, 30)];
         [[leftCellViewArray objectAtIndex:button.tag-1] setFrame:CGRectMake(5, (button.tag-1)*50, 40, 30)];
         
     }
    
     //点击处下面的
-    for (int i = button.tag + 1; i < [massageViewArray count]; i++)
+    for (int i = button.tag + 1; i < [rightMessageTipViewArray count]; i++)
     {
-        [[massageViewArray objectAtIndex:i] setFrame:CGRectMake(80, yOffset+i*50, 200, 30)];
-        [[massageViewArray objectAtIndex:i] setBackgroundColor:[UIColor clearColor]];
+        [[rightMessageTipViewArray objectAtIndex:i] setFrame:CGRectMake(kRightMessageTipViewOffsetX, yOffset+i*50, 200, 30)];
+        [[rightMessageTipViewArray objectAtIndex:i] setBackgroundColor:[UIColor clearColor]];
 //        [[massageViewArray objectAtIndex:i] setUserInteractionEnabled:NO];
-        UIView *view = [massageViewArray objectAtIndex:i];
+        UIView *view = [rightMessageTipViewArray objectAtIndex:i];
         CABasicAnimation *positionAnim=[CABasicAnimation animationWithKeyPath:@"position"];
         [positionAnim setFromValue:[NSValue valueWithCGPoint:CGPointMake(view.center.x, view.center.y-200)]];
         [positionAnim setToValue:[NSValue valueWithCGPoint:CGPointMake(view.center.x, view.center.y)]];
