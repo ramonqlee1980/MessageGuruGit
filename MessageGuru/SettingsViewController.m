@@ -126,7 +126,7 @@ NSString* reuseIdentifier = @"UITableViewCellStyleDefault";
 #if 1
     [Flurry logEvent:kOpenFeedbackEvent];
     
-    [UMFeedback showFeedback:self withAppkey:CP_UMeng_App_Key];
+    [UMFeedback showFeedback:self withAppkey:kUMeng_App_Key];
 #else
     Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     if (mailClass != nil)

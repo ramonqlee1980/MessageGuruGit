@@ -122,7 +122,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
     
     //如果需要分享回调，请将delegate对象设置self，并实现下面的回调方法
     [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:CP_UMeng_App_Key
+                                         appKey:kUMeng_App_Key
                                       shareText:text
                                      shareImage:image
                                 shareToSnsNames:[NSArray arrayWithObjects:UMShareToSms,UMShareToEmail,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,UMShareToQzone,UMShareToFacebook,UMShareToTwitter,nil]
@@ -134,6 +134,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
 //    if ([platformName isEqualToString:UMShareToWechatSession] ||
 //        [platformName isEqualToString:UMShareToWechatTimeline] ) {
 //        socialData.extConfig.wxMessageType = UMSocialWXMessageTypeApp;
+//        socialData.extConfig.title = NSLocalizedString(@"Title", @"");
 //        socialData.extConfig.appUrl = [NSString stringWithFormat:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%@&mt=8",kAppleId];
 //    }
 }

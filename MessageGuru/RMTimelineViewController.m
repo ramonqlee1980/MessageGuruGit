@@ -90,8 +90,8 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
 {
     UILabel* monthlabel = [[UILabel alloc]initWithFrame:CGRectMake(0, index*50, 40, 30)];
     monthlabel.text = [NSString stringWithFormat:@"%d月",index+1];//[arrayMonths objectAtIndex:i];
-    monthlabel.font = [UIFont fontWithName:@"Noteworthy-Light" size:10];
-    monthlabel.textAlignment = 1;
+    monthlabel.font = [UIFont fontWithName:@"Noteworthy-Light" size:13];
+    monthlabel.textAlignment = NSTextAlignmentRight;
     monthlabel.backgroundColor = [UIColor clearColor];
     return monthlabel;
 }

@@ -25,8 +25,8 @@
 
 #warning online resources,including icons,etc
 /**************** 应用采用的id  ********************/
-#define CP_Weixin_App_Id @"wx6582d481655eb966"
-#define CP_UMeng_App_Key @"52e43f5a56240b921b0f1a2c"
+#define kWeixin_App_Id @"wx6582d481655eb966"
+#define kUMeng_App_Key @"52e43f5a56240b921b0f1a2c"
 #define kFlurryAppId @"SZ4XVCHNNBXYRS53YV9N"
 #define kAppleId @"807749462"
 

@@ -300,7 +300,7 @@
         [positionAnim setToValue:[NSValue valueWithCGPoint:CGPointMake(view.center.x, view.center.y)]];
         [positionAnim setDelegate:self];
         [positionAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-        [positionAnim setDuration:0.5f];
+        [positionAnim setDuration:0.1f];
         [view.layer addAnimation:positionAnim forKey:@"positon"];
         [view setCenter:CGPointMake(view.center.x, view.center.y)];
         

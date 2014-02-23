@@ -8,6 +8,10 @@
 
 #import "RMAppDelegate.h"
 #import "TabbedViewController.h"
+#import "WXApi.h"
+#include "UMSocial.h"
+#include "Constants.h"
+#include "Flurry.h"
 
 @implementation RMAppDelegate
 
@@ -26,7 +30,22 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self initExtra];
     return YES;
+}
+-(void)initExtra
+{
+    //向微信注册
+    [WXApi registerApp:kWeixin_App_Id];
+    
+    //设置友盟appkey
+    [UMSocialData setAppKey:kUMeng_App_Key];
+    
+    //flurry initialization
+    [Flurry startSession:kAppleId];
+    [Flurry setSecureTransportEnabled:YES];
+    [Flurry setCrashReportingEnabled:YES];
 }
 
 - (void)navigationController:(UINavigationController *)navController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
