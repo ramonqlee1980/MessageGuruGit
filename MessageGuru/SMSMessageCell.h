@@ -25,4 +25,5 @@
 
 -(IBAction)shareBySNS:(id)sender;
 -(IBAction)add2Favorite:(id)sender;
+-(IBAction)copy2Pasteboard:(id)sender;
 @end

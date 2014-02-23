@@ -16,6 +16,7 @@
 {
     UIImageView *backgroundImageView;
     UIView* detailCell;
+    CGRect viewFrame;
 }
 
 @property (strong, nonatomic) UIScrollView *scrollView;
@@ -55,6 +56,12 @@
         // Custom initialization
         self.title = @"Time line";
     }
+    return self;
+}
+-(id)initWithRect:(CGRect)rc
+{
+    self = [super init];
+    viewFrame = rc;
     return self;
 }
 
@@ -97,7 +104,8 @@
     if (self.scrollView) {
         return;
     }
-    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    CGRect rc = CGRectMake(0, 0, viewFrame.size.width, viewFrame.size.height);
+    self.scrollView = [[[UIScrollView alloc]initWithFrame:rc]autorelease];
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor clearColor];
     scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, number*50+200);

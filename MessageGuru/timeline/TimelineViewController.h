@@ -40,6 +40,7 @@
 
 @property (strong, nonatomic) id<RMTimelineViewDataSource> dataSource;
 
+-(id)initWithRect:(CGRect)rc;
 -(void)setBackground:(UIImage*)backgroundImage;//设置背景页面
 
 @end

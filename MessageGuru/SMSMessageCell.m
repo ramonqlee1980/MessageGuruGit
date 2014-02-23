@@ -7,6 +7,7 @@
 //
 
 #import "SMSMessageCell.h"
+#import "Toast+UIView.h"
 
 @implementation SMSMessageCell
 @synthesize fromUrl;
@@ -40,6 +41,14 @@
         [self.delegate add2Favorite:sender withMessage:[self getMessage]];
     }
 }
+-(IBAction)copy2Pasteboard:(id)sender
+{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = [self getMessage].content;
+    
+    [self makeToast:NSLocalizedString(@"copy2Pasteboard", "") duration:CSToastDefaultDuration position:CSToastCenterPosition];
+}
+
 -(RMSMS*)getMessage
 {
     RMSMS* message = [[RMSMS new]autorelease];

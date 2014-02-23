@@ -48,7 +48,11 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self loadData];
-    TimelineViewController *childViewController = [[[TimelineViewController alloc]initWithNibName:nil bundle:nil]autorelease];
+    
+    
+    CGRect rc = CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height-self.tabBarController.tabBar.frame.size.height);
+    
+    TimelineViewController *childViewController = [[[TimelineViewController alloc]initWithRect:rc]autorelease];//[[[TimelineViewController alloc]initWithNibName:nil bundle:nil]autorelease];
     childViewController.dataSource = self;
     [self addChildViewController:childViewController];
     [self.view addSubview:childViewController.view];

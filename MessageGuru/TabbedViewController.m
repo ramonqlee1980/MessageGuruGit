@@ -62,11 +62,7 @@
 #pragma mark view controllers
 -(UIViewController*)hotViewController
 {
-#if 0
-    HotViewController* categoryViewController = [[HotViewController alloc]initWithNibName:NSStringFromClass ([AllSMSViewController class]) bundle:nil];
-#else
     RMTimelineViewController* categoryViewController = [RMTimelineViewController new];
-#endif
     categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"热门" image:[UIImage imageNamed:@"tab_live"] tag:0] autorelease];
     
     return categoryViewController;

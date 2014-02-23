@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b7q-qa-g1W">
-                        <rect key="frame" x="232" y="98" width="64" height="18"/>
+                        <rect key="frame" x="238" y="98" width="64" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" image="cell_share_normal_white.png">
@@ -45,14 +45,25 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KbH-mC-NBr">
-                        <rect key="frame" x="28" y="98" width="64" height="18"/>
+                        <rect key="frame" x="118" y="97" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <state key="normal" image="cell_like_on_white.png">
+                        <state key="normal" image="folder-favorites.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="add2Favorite:" destination="40" eventType="touchUpInside" id="X7v-VC-o4N"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10c-XU-u8M">
+                        <rect key="frame" x="191" y="96" width="22" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" image="copy.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="copy2Pasteboard:" destination="40" eventType="touchUpInside" id="Kz9-8s-wTe"/>
                         </connections>
                     </button>
                 </subviews>
@@ -65,8 +76,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="cell_like_on_white.png" width="18" height="18"/>
         <image name="cell_share_normal_white.png" width="18" height="18"/>
+        <image name="copy.png" width="48" height="48"/>
+        <image name="folder-favorites.png" width="128" height="128"/>
         <image name="pic_plank_among.png" width="320" height="5"/>
         <image name="pic_plank_down.png" width="320" height="33"/>
         <image name="pic_plank_up.png" width="320" height="5"/>
