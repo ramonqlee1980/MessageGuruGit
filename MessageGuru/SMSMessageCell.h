@@ -12,8 +12,11 @@
 #define kMessageCellHeight 127.0f
 
 @protocol MessageCellDelegate <NSObject>
+
 -(void)share:(id)sender withText:(RMSMS*)msg;
 -(void)add2Favorite:(id)sender withMessage:(RMSMS*)msg;
+-(void)sendCard:(id)sender withMessage:(RMSMS*)msg;
+
 @end
 
 @interface SMSMessageCell : UITableViewCell
@@ -26,4 +29,5 @@
 -(IBAction)shareBySNS:(id)sender;
 -(IBAction)add2Favorite:(id)sender;
 -(IBAction)copy2Pasteboard:(id)sender;
+-(IBAction)sendCard:(id)sender;
 @end

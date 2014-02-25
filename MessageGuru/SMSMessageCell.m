@@ -48,6 +48,12 @@
     
     [self makeToast:NSLocalizedString(@"copy2Pasteboard", "") duration:CSToastDefaultDuration position:CSToastCenterPosition];
 }
+-(IBAction)sendCard:(id)sender
+{
+    if (self.delegate) {
+        [self.delegate sendCard:sender withMessage:[self getMessage]];
+    }
+}
 
 -(RMSMS*)getMessage
 {

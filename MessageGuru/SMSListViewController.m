@@ -14,6 +14,7 @@
 #import "Favorite.h"
 #import "Toast+UIView.h"
 #import "Flurry.h"
+#import "Card/RMCardEditorController.h"
 
 NSString *CellIdentifier = @"SMSMessageCell";
 
@@ -102,6 +103,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark delegate methods
 -(void)share:(id)sender withText:(RMSMS*)message
 {
     [self showShareView:sender withText:message.content withImage:nil];
@@ -115,7 +117,18 @@ NSString *CellIdentifier = @"SMSMessageCell";
     [Favorite addToSMSFavorite:msg];
     [self.view makeToast:NSLocalizedString(@"Add2FavoriteToast", "") duration:CSToastDefaultDuration position:CSToastCenterPosition];
 }
+-(void)sendCard:(id)sender withMessage:(RMSMS*)msg
+{
+    RMCardEditorController* cardController = [RMCardEditorController new];
+    
+    UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:cardController];
+    cardController.msg = msg.content;
+//    cardController.background = nil;
+    
+    [self  presentViewController:navi animated:YES completion:nil];
+}
 
+#pragma mark util methods
 - (void)showShareView:(id)sender withText:(NSString*)text withImage:(UIImage*)image{
     NSDictionary* dict = [NSDictionary dictionaryWithObject:text forKey:kSNSShareEvent];
     [Flurry logEvent:kSNSShareEvent withParameters:dict];

@@ -7,7 +7,6 @@
 //
 
 #import "AllSMSViewController.h"
-#import "SMSListViewController.h"
 #import "RMDataCenter.h"
 #import "RMCategory.h"
 #import "RMCategoryItem.h"
