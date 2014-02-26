@@ -26,10 +26,32 @@
     }
     return self;
 }
+-(void)loadEx
+{
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [self.msgTextView addGestureRecognizer:pan];
+    [pan release];
+}
+
+/* 识别拖动 */
+- (void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer {
+    CGPoint translatedPoint = [gestureRecognizer translationInView:self.view];
+    NSLog(@"gesture translatedPoint  is %@", NSStringFromCGPoint(translatedPoint));
+    CGFloat x = gestureRecognizer.view.center.x + translatedPoint.x;
+    CGFloat y = gestureRecognizer.view.center.y + translatedPoint.y;
+    
+    gestureRecognizer.view.center = CGPointMake(x, y);
+    
+    NSLog(@"pan gesture testPanView moving  is %@,%@", NSStringFromCGPoint(gestureRecognizer.view.center), NSStringFromCGRect(gestureRecognizer.view.frame));
+    
+    [gestureRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self loadEx];
+    
     // Do any additional setup after loading the view from its nib.
     if (self.msgTextView) {
         [self.msgTextView setText:msg];
@@ -64,6 +86,9 @@
 #pragma mark navigation action
 -(void)sendCard
 {
+    //hide keyboard
+    [self.msgTextView resignFirstResponder];
+    
     UIImage* cardShot = [self generateScreenShot];
     
     //显示分享界面，发送

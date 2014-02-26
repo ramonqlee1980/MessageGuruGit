@@ -291,7 +291,6 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     NSDictionary* dict = [NSDictionary dictionaryWithObject:categoryItem.name forKey:kOpenSMSCategory];
     [Flurry logEvent:kOpenSMSCategory withParameters:dict];
     
-    NSLog(@"Horizontal List Item %@ selected", item.imageTitle);
     SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
     
     detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];

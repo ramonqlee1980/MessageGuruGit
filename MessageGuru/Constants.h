@@ -4,7 +4,7 @@
 #define kMaxLoadingNumber 1000//最大加载短信数
 /**************    调试    ************************/
 
-#define NEED_OUTPUT_LOG 0
+#define NEED_OUTPUT_LOG 1
 
 #if NEED_OUTPUT_LOG
 #define SLog(xx,...)	NSLog(xx,##__VA_ARGS__)
