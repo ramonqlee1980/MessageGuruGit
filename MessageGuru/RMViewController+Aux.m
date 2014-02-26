@@ -21,7 +21,7 @@
     // Dispose of any resources that can be recreated.
     if (!leftButtonItem) {
         self.navigationItem.leftBarButtonItem =
-        [[[UIBarButtonItem alloc] initWithTitle:@"返回"
+        [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", @"")
                                           style:UIBarButtonItemStylePlain
                                          target:self
                                          action:@selector(back)] autorelease];

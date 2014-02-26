@@ -23,6 +23,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
 @end
 
 @implementation SMSListViewController
+
 @synthesize smsArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -123,7 +124,8 @@ NSString *CellIdentifier = @"SMSMessageCell";
     
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:cardController];
     cardController.msg = msg.content;
-//    cardController.background = nil;
+    UIImage* background = [UIImage imageNamed:@"chris.jpg"];
+    cardController.background = background;
     
     [self  presentViewController:navi animated:YES completion:nil];
 }

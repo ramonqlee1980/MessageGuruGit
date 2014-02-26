@@ -175,6 +175,7 @@
 		30842D2518BD50E8002AFF48 /* RMCardEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2318BD50E8002AFF48 /* RMCardEditorController.m */; };
 		30842D2618BD50E8002AFF48 /* RMCardEditorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */; };
 		30842D2918BD5677002AFF48 /* RMViewController+Aux.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2818BD5677002AFF48 /* RMViewController+Aux.m */; };
+		30842D2D18BE9F36002AFF48 /* chris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2C18BE9F36002AFF48 /* chris.jpg */; };
 		3096EABF18B63247004B5B8F /* TimelineLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABB18B63247004B5B8F /* TimelineLine.m */; };
 		3096EAC018B63247004B5B8F /* timeline_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3096EABC18B63247004B5B8F /* timeline_button.png */; };
 		3096EAC118B63247004B5B8F /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABE18B63247004B5B8F /* TimelineViewController.m */; };
@@ -226,8 +227,6 @@
 		30BBF4FA189159AE00631F6E /* AllSMSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF4F6189159AE00631F6E /* AllSMSViewController.xib */; };
 		30BBF52118915A3C00631F6E /* camera_button_take.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50818915A3C00631F6E /* camera_button_take.png */; };
 		30BBF52218915A3C00631F6E /* camera_button_take@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50918915A3C00631F6E /* camera_button_take@2x.png */; };
-		30BBF52318915A3C00631F6E /* DailyBoothIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50A18915A3C00631F6E /* DailyBoothIcon.png */; };
-		30BBF52418915A3C00631F6E /* DailyBoothIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50B18915A3C00631F6E /* DailyBoothIcon@2x.png */; };
 		30BBF52518915A3C00631F6E /* tab_feed.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50C18915A3C00631F6E /* tab_feed.png */; };
 		30BBF52618915A3C00631F6E /* tab_feed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50D18915A3C00631F6E /* tab_feed@2x.png */; };
 		30BBF52718915A3C00631F6E /* tab_feed_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF50E18915A3C00631F6E /* tab_feed_profile.png */; };
@@ -236,8 +235,6 @@
 		30BBF52A18915A3C00631F6E /* tab_live@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF51118915A3C00631F6E /* tab_live@2x.png */; };
 		30BBF52B18915A3C00631F6E /* tab_messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF51218915A3C00631F6E /* tab_messages.png */; };
 		30BBF52C18915A3C00631F6E /* tab_messages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF51318915A3C00631F6E /* tab_messages@2x.png */; };
-		30BBF52D18915A3C00631F6E /* tabBar_cameraButton_ready_matte.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF51418915A3C00631F6E /* tabBar_cameraButton_ready_matte.png */; };
-		30BBF52E18915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BBF51518915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png */; };
 		30BBF5311893BDD600631F6E /* SMSListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BBF5301893BDD600631F6E /* SMSListViewController.m */; };
 		30CE801518B813230073A48D /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE801418B813230073A48D /* DMScrollingTicker.m */; };
 		30CE801918B959230073A48D /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE801818B959230073A48D /* PulsingHaloLayer.m */; };
@@ -459,6 +456,7 @@
 		30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RMCardEditorController.xib; path = Card/RMCardEditorController.xib; sourceTree = "<group>"; };
 		30842D2718BD5677002AFF48 /* RMViewController+Aux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMViewController+Aux.h"; sourceTree = "<group>"; };
 		30842D2818BD5677002AFF48 /* RMViewController+Aux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMViewController+Aux.m"; sourceTree = "<group>"; };
+		30842D2C18BE9F36002AFF48 /* chris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chris.jpg; sourceTree = "<group>"; };
 		3096EAB918B63247004B5B8F /* MakeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLine.h; sourceTree = "<group>"; };
 		3096EABA18B63247004B5B8F /* TimelineLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineLine.h; sourceTree = "<group>"; };
 		3096EABB18B63247004B5B8F /* TimelineLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineLine.m; sourceTree = "<group>"; };
@@ -533,8 +531,6 @@
 		30BBF4F6189159AE00631F6E /* AllSMSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllSMSViewController.xib; sourceTree = "<group>"; };
 		30BBF50818915A3C00631F6E /* camera_button_take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_button_take.png; sourceTree = "<group>"; };
 		30BBF50918915A3C00631F6E /* camera_button_take@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_button_take@2x.png"; sourceTree = "<group>"; };
-		30BBF50A18915A3C00631F6E /* DailyBoothIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DailyBoothIcon.png; sourceTree = "<group>"; };
-		30BBF50B18915A3C00631F6E /* DailyBoothIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DailyBoothIcon@2x.png"; sourceTree = "<group>"; };
 		30BBF50C18915A3C00631F6E /* tab_feed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_feed.png; sourceTree = "<group>"; };
 		30BBF50D18915A3C00631F6E /* tab_feed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_feed@2x.png"; sourceTree = "<group>"; };
 		30BBF50E18915A3C00631F6E /* tab_feed_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_feed_profile.png; sourceTree = "<group>"; };
@@ -543,8 +539,6 @@
 		30BBF51118915A3C00631F6E /* tab_live@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_live@2x.png"; sourceTree = "<group>"; };
 		30BBF51218915A3C00631F6E /* tab_messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_messages.png; sourceTree = "<group>"; };
 		30BBF51318915A3C00631F6E /* tab_messages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_messages@2x.png"; sourceTree = "<group>"; };
-		30BBF51418915A3C00631F6E /* tabBar_cameraButton_ready_matte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBar_cameraButton_ready_matte.png; sourceTree = "<group>"; };
-		30BBF51518915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar_cameraButton_ready_matte@2x.png"; sourceTree = "<group>"; };
 		30BBF52F1893BDD600631F6E /* SMSListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSListViewController.h; sourceTree = "<group>"; };
 		30BBF5301893BDD600631F6E /* SMSListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSListViewController.m; sourceTree = "<group>"; };
 		30CE801318B813230073A48D /* DMScrollingTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScrollingTicker.h; sourceTree = "<group>"; };
@@ -890,6 +884,99 @@
 			name = Card;
 			sourceTree = "<group>";
 		};
+		30842D2A18BE9E56002AFF48 /* smsicons */ = {
+			isa = PBXGroup;
+			children = (
+				304C2FE518B0FFBB006B4A59 /* 七夕节.jpg */,
+				304C2FE618B0FFBB006B4A59 /* 中元节.jpg */,
+				304C2FE718B0FFBB006B4A59 /* 中秋节.jpeg */,
+				304C2FE818B0FFBB006B4A59 /* 五路财神日.jpg */,
+				304C2FE918B0FFBB006B4A59 /* 佛诞日.jpg */,
+				304C2FEA18B0FFBB006B4A59 /* 儿童节.jpg */,
+				304C2FEB18B0FFBB006B4A59 /* 元宵节.jpeg */,
+				304C2FEC18B0FFBB006B4A59 /* 元旦.jpg */,
+				304C2FED18B0FFBB006B4A59 /* 劳动节.jpeg */,
+				304C2FEE18B0FFBB006B4A59 /* 国庆节.jpeg */,
+				304C2FEF18B0FFBB006B4A59 /* 妇女节.jpeg */,
+				304C2FF018B0FFBB006B4A59 /* 小年.jpg */,
+				304C2FF118B0FFBB006B4A59 /* 建党节.jpeg */,
+				304C2FF218B0FFBB006B4A59 /* 建军节.jpeg */,
+				304C2FF318B0FFBB006B4A59 /* 扫尘日.jpg */,
+				304C2FF418B0FFBB006B4A59 /* 护士节.jpg */,
+				304C2FF518B0FFBB006B4A59 /* 教师节.jpeg */,
+				304C2FF618B0FFBB006B4A59 /* 春节.jpeg */,
+				304C2FF718B0FFBB006B4A59 /* 植树节.jpg */,
+				304C2FF818B0FFBB006B4A59 /* 清明节.jpeg */,
+				304C2FF918B0FFBB006B4A59 /* 祈福日.jpg */,
+				304C2FFA18B0FFBB006B4A59 /* 端午节.jpeg */,
+				304C2FFB18B0FFBB006B4A59 /* 腊八节.jpg */,
+				304C2FFC18B0FFBB006B4A59 /* 记者节.jpg */,
+				304C2FFD18B0FFBB006B4A59 /* 送穷日.jpg */,
+				304C2FFE18B0FFBB006B4A59 /* 重阳节.jpg */,
+				304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */,
+				304C300018B0FFBB006B4A59 /* 青年节.jpeg */,
+				304C300118B0FFBB006B4A59 /* 龙抬头.jpg */,
+				304C2FD718B0FCAC006B4A59 /* 感人的情话.jpg */,
+				304C2FD818B0FCAC006B4A59 /* 浪漫的情话.jpg */,
+				304C2FD918B0FCAC006B4A59 /* 爱情宣言.jpg */,
+				304C2FDA18B0FCAC006B4A59 /* 爱情诗句.jpg */,
+				304C2FDB18B0FCAC006B4A59 /* 爱情语录.jpg */,
+				304C2FDC18B0FCAC006B4A59 /* 经典情话.jpg */,
+				304C2FDD18B0FCAC006B4A59 /* 肉麻的情话.jpg */,
+				304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */,
+				304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */,
+				304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */,
+				304C2FB518B0FB5F006B4A59 /* 开业短信.jpeg */,
+				304C2FB618B0FB5F006B4A59 /* 思念短信.jpg */,
+				304C2FB718B0FB5F006B4A59 /* 情话短信.jpg */,
+				304C2FB818B0FB5F006B4A59 /* 感谢短信.jpg */,
+				304C2FB918B0FB5F006B4A59 /* 日常祝福.jpg */,
+				304C2FBA18B0FB5F006B4A59 /* 早安祝福.jpg */,
+				304C2FBB18B0FB5F006B4A59 /* 晚安祝福.jpg */,
+				304C2FBC18B0FB5F006B4A59 /* 求婚短信.jpg */,
+				304C2FBD18B0FB5F006B4A59 /* 爱情短信.jpg */,
+				304C2FBE18B0FB5F006B4A59 /* 生日祝福.jpg */,
+				304C2FBF18B0FB5F006B4A59 /* 生活短信.jpg */,
+				304C2FC018B0FB5F006B4A59 /* 生病问候.jpg */,
+				304C2FC118B0FB5F006B4A59 /* 表白短信.jpg */,
+				304C2FC218B0FB5F006B4A59 /* 送别短信.jpg */,
+				304C2FC318B0FB5F006B4A59 /* 道歉短信.jpg */,
+				304C2F9B18B0F8B2006B4A59 /* 万圣节.jpg */,
+				304C2F9C18B0F8B2006B4A59 /* 圣诞节.jpg */,
+				304C2F9D18B0F8B2006B4A59 /* 复活节.jpg */,
+				304C2F9E18B0F8B2006B4A59 /* 平安夜.jpg */,
+				304C2FA018B0F8B2006B4A59 /* 情人节.jpg */,
+				304C2FA118B0F8B2006B4A59 /* 愚人节.jpg */,
+				304C2FA218B0F8B2006B4A59 /* 感恩节.jpg */,
+				304C2FA318B0F8B2006B4A59 /* 母亲节.jpeg */,
+				304C2FA418B0F8B2006B4A59 /* 父亲节.jpeg */,
+				304C2FA518B0F8B2006B4A59 /* 高考.jpeg */,
+				304C2F9118B0F72C006B4A59 /* 乔迁短信.jpg */,
+				304C2F9218B0F72C006B4A59 /* 升职短信.jpg */,
+				304C2F9318B0F72C006B4A59 /* 开业短信.jpg */,
+				304C2F9418B0F72C006B4A59 /* 暑假快乐.jpg */,
+				304C2F9518B0F72C006B4A59 /* 高考.jpg */,
+				304C2F8918B0F625006B4A59 /* 喜得贵子.jpg */,
+				304C2F8A18B0F625006B4A59 /* 开学短信.jpg */,
+				304C2F8B18B0F625006B4A59 /* 毕业短信.jpg */,
+				304C2F8C18B0F625006B4A59 /* 结婚短信.jpg */,
+				304C2F8118B0F3E2006B4A59 /* 囧糗事.jpg */,
+				304C2F8218B0F3E2006B4A59 /* 爆笑口误.jpg */,
+				304C2F8318B0F3E2006B4A59 /* 调侃短信.jpg */,
+				304C2F8418B0F3E2006B4A59 /* 趣味短信.jpg */,
+				304C2F7F18B0F2B2006B4A59 /* lengxiaohua.jpg */,
+			);
+			name = smsicons;
+			sourceTree = "<group>";
+		};
+		30842D2B18BE9F36002AFF48 /* card */ = {
+			isa = PBXGroup;
+			children = (
+				30842D2C18BE9F36002AFF48 /* chris.jpg */,
+			);
+			path = card;
+			sourceTree = "<group>";
+		};
 		3096EAB718B63247004B5B8F /* timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -1097,85 +1184,9 @@
 		30BBF4FB18915A3C00631F6E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				30842D2B18BE9F36002AFF48 /* card */,
+				30842D2A18BE9E56002AFF48 /* smsicons */,
 				3042CB6118B9931C00ABCF1C /* Icons */,
-				304C2FE518B0FFBB006B4A59 /* 七夕节.jpg */,
-				304C2FE618B0FFBB006B4A59 /* 中元节.jpg */,
-				304C2FE718B0FFBB006B4A59 /* 中秋节.jpeg */,
-				304C2FE818B0FFBB006B4A59 /* 五路财神日.jpg */,
-				304C2FE918B0FFBB006B4A59 /* 佛诞日.jpg */,
-				304C2FEA18B0FFBB006B4A59 /* 儿童节.jpg */,
-				304C2FEB18B0FFBB006B4A59 /* 元宵节.jpeg */,
-				304C2FEC18B0FFBB006B4A59 /* 元旦.jpg */,
-				304C2FED18B0FFBB006B4A59 /* 劳动节.jpeg */,
-				304C2FEE18B0FFBB006B4A59 /* 国庆节.jpeg */,
-				304C2FEF18B0FFBB006B4A59 /* 妇女节.jpeg */,
-				304C2FF018B0FFBB006B4A59 /* 小年.jpg */,
-				304C2FF118B0FFBB006B4A59 /* 建党节.jpeg */,
-				304C2FF218B0FFBB006B4A59 /* 建军节.jpeg */,
-				304C2FF318B0FFBB006B4A59 /* 扫尘日.jpg */,
-				304C2FF418B0FFBB006B4A59 /* 护士节.jpg */,
-				304C2FF518B0FFBB006B4A59 /* 教师节.jpeg */,
-				304C2FF618B0FFBB006B4A59 /* 春节.jpeg */,
-				304C2FF718B0FFBB006B4A59 /* 植树节.jpg */,
-				304C2FF818B0FFBB006B4A59 /* 清明节.jpeg */,
-				304C2FF918B0FFBB006B4A59 /* 祈福日.jpg */,
-				304C2FFA18B0FFBB006B4A59 /* 端午节.jpeg */,
-				304C2FFB18B0FFBB006B4A59 /* 腊八节.jpg */,
-				304C2FFC18B0FFBB006B4A59 /* 记者节.jpg */,
-				304C2FFD18B0FFBB006B4A59 /* 送穷日.jpg */,
-				304C2FFE18B0FFBB006B4A59 /* 重阳节.jpg */,
-				304C2FFF18B0FFBB006B4A59 /* 除夕.jpg */,
-				304C300018B0FFBB006B4A59 /* 青年节.jpeg */,
-				304C300118B0FFBB006B4A59 /* 龙抬头.jpg */,
-				304C2FD718B0FCAC006B4A59 /* 感人的情话.jpg */,
-				304C2FD818B0FCAC006B4A59 /* 浪漫的情话.jpg */,
-				304C2FD918B0FCAC006B4A59 /* 爱情宣言.jpg */,
-				304C2FDA18B0FCAC006B4A59 /* 爱情诗句.jpg */,
-				304C2FDB18B0FCAC006B4A59 /* 爱情语录.jpg */,
-				304C2FDC18B0FCAC006B4A59 /* 经典情话.jpg */,
-				304C2FDD18B0FCAC006B4A59 /* 肉麻的情话.jpg */,
-				304C2FB218B0FB5F006B4A59 /* 健康短信.jpg */,
-				304C2FB318B0FB5F006B4A59 /* 圣诞节.jpeg */,
-				304C2FB418B0FB5F006B4A59 /* 幽默祝福.jpg */,
-				304C2FB518B0FB5F006B4A59 /* 开业短信.jpeg */,
-				304C2FB618B0FB5F006B4A59 /* 思念短信.jpg */,
-				304C2FB718B0FB5F006B4A59 /* 情话短信.jpg */,
-				304C2FB818B0FB5F006B4A59 /* 感谢短信.jpg */,
-				304C2FB918B0FB5F006B4A59 /* 日常祝福.jpg */,
-				304C2FBA18B0FB5F006B4A59 /* 早安祝福.jpg */,
-				304C2FBB18B0FB5F006B4A59 /* 晚安祝福.jpg */,
-				304C2FBC18B0FB5F006B4A59 /* 求婚短信.jpg */,
-				304C2FBD18B0FB5F006B4A59 /* 爱情短信.jpg */,
-				304C2FBE18B0FB5F006B4A59 /* 生日祝福.jpg */,
-				304C2FBF18B0FB5F006B4A59 /* 生活短信.jpg */,
-				304C2FC018B0FB5F006B4A59 /* 生病问候.jpg */,
-				304C2FC118B0FB5F006B4A59 /* 表白短信.jpg */,
-				304C2FC218B0FB5F006B4A59 /* 送别短信.jpg */,
-				304C2FC318B0FB5F006B4A59 /* 道歉短信.jpg */,
-				304C2F9B18B0F8B2006B4A59 /* 万圣节.jpg */,
-				304C2F9C18B0F8B2006B4A59 /* 圣诞节.jpg */,
-				304C2F9D18B0F8B2006B4A59 /* 复活节.jpg */,
-				304C2F9E18B0F8B2006B4A59 /* 平安夜.jpg */,
-				304C2FA018B0F8B2006B4A59 /* 情人节.jpg */,
-				304C2FA118B0F8B2006B4A59 /* 愚人节.jpg */,
-				304C2FA218B0F8B2006B4A59 /* 感恩节.jpg */,
-				304C2FA318B0F8B2006B4A59 /* 母亲节.jpeg */,
-				304C2FA418B0F8B2006B4A59 /* 父亲节.jpeg */,
-				304C2FA518B0F8B2006B4A59 /* 高考.jpeg */,
-				304C2F9118B0F72C006B4A59 /* 乔迁短信.jpg */,
-				304C2F9218B0F72C006B4A59 /* 升职短信.jpg */,
-				304C2F9318B0F72C006B4A59 /* 开业短信.jpg */,
-				304C2F9418B0F72C006B4A59 /* 暑假快乐.jpg */,
-				304C2F9518B0F72C006B4A59 /* 高考.jpg */,
-				304C2F8918B0F625006B4A59 /* 喜得贵子.jpg */,
-				304C2F8A18B0F625006B4A59 /* 开学短信.jpg */,
-				304C2F8B18B0F625006B4A59 /* 毕业短信.jpg */,
-				304C2F8C18B0F625006B4A59 /* 结婚短信.jpg */,
-				304C2F8118B0F3E2006B4A59 /* 囧糗事.jpg */,
-				304C2F8218B0F3E2006B4A59 /* 爆笑口误.jpg */,
-				304C2F8318B0F3E2006B4A59 /* 调侃短信.jpg */,
-				304C2F8418B0F3E2006B4A59 /* 趣味短信.jpg */,
-				304C2F7F18B0F2B2006B4A59 /* lengxiaohua.jpg */,
 				30BBF50718915A3C00631F6E /* DailyBooth */,
 			);
 			path = Images;
@@ -1188,8 +1199,6 @@
 				3042CB5B18B982A600ABCF1C /* copy.png */,
 				30BBF50818915A3C00631F6E /* camera_button_take.png */,
 				30BBF50918915A3C00631F6E /* camera_button_take@2x.png */,
-				30BBF50A18915A3C00631F6E /* DailyBoothIcon.png */,
-				30BBF50B18915A3C00631F6E /* DailyBoothIcon@2x.png */,
 				30BBF50C18915A3C00631F6E /* tab_feed.png */,
 				30BBF50D18915A3C00631F6E /* tab_feed@2x.png */,
 				30BBF50E18915A3C00631F6E /* tab_feed_profile.png */,
@@ -1198,8 +1207,6 @@
 				30BBF51118915A3C00631F6E /* tab_live@2x.png */,
 				30BBF51218915A3C00631F6E /* tab_messages.png */,
 				30BBF51318915A3C00631F6E /* tab_messages@2x.png */,
-				30BBF51418915A3C00631F6E /* tabBar_cameraButton_ready_matte.png */,
-				30BBF51518915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png */,
 			);
 			path = DailyBooth;
 			sourceTree = "<group>";
@@ -1325,7 +1332,6 @@
 				30BBF46C1891491F00631F6E /* InfoPlist.strings in Resources */,
 				304C301118B0FFBB006B4A59 /* 护士节.jpg in Resources */,
 				304C2E1818AF7BAB006B4A59 /* umFeedback.bundle in Resources */,
-				30BBF52418915A3C00631F6E /* DailyBoothIcon@2x.png in Resources */,
 				30A8E5031893C72E00DE7D99 /* pic_plank_among.png in Resources */,
 				304C2FCC18B0FB5F006B4A59 /* 日常祝福.jpg in Resources */,
 				30A8E4CA1893C70000DE7D99 /* SMSMessageCell.xib in Resources */,
@@ -1364,6 +1370,7 @@
 				304C2FDF18B0FCAC006B4A59 /* 浪漫的情话.jpg in Resources */,
 				304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */,
 				30A8E5051893C72E00DE7D99 /* pic_plank_down.png in Resources */,
+				30842D2D18BE9F36002AFF48 /* chris.jpg in Resources */,
 				304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */,
 				304C2FA718B0F8B2006B4A59 /* 圣诞节.jpg in Resources */,
 				304C2FC818B0FB5F006B4A59 /* 开业短信.jpeg in Resources */,
@@ -1452,7 +1459,6 @@
 				30A8E5041893C72E00DE7D99 /* pic_plank_among@2x.png in Resources */,
 				30BBF52618915A3C00631F6E /* tab_feed@2x.png in Resources */,
 				30BBF4FA189159AE00631F6E /* AllSMSViewController.xib in Resources */,
-				30BBF52318915A3C00631F6E /* DailyBoothIcon.png in Resources */,
 				30BBF52218915A3C00631F6E /* camera_button_take@2x.png in Resources */,
 				304C300718B0FFBB006B4A59 /* 儿童节.jpg in Resources */,
 				304C2FAD18B0F8B2006B4A59 /* 感恩节.jpg in Resources */,
@@ -1463,7 +1469,6 @@
 				304C2FC918B0FB5F006B4A59 /* 思念短信.jpg in Resources */,
 				304C301B18B0FFBB006B4A59 /* 重阳节.jpg in Resources */,
 				304C2F3618AF7C60006B4A59 /* UMSocialData.html in Resources */,
-				30BBF52E18915A3C00631F6E /* tabBar_cameraButton_ready_matte@2x.png in Resources */,
 				304C2FCF18B0FB5F006B4A59 /* 求婚短信.jpg in Resources */,
 				304C2F2118AF7C60006B4A59 /* UMSocialLocalizable.strings in Resources */,
 				3042CB7418B9931C00ABCF1C /* Icon@2x.png in Resources */,
@@ -1475,7 +1480,6 @@
 				304C300918B0FFBB006B4A59 /* 元旦.jpg in Resources */,
 				30BBF52518915A3C00631F6E /* tab_feed.png in Resources */,
 				304C2F2518AF7C60006B4A59 /* UMSCommentDetailController.xib in Resources */,
-				30BBF52D18915A3C00631F6E /* tabBar_cameraButton_ready_matte.png in Resources */,
 				304C300518B0FFBB006B4A59 /* 五路财神日.jpg in Resources */,
 				30A8E5081893C72E00DE7D99 /* pic_plank_up@2x.png in Resources */,
 				30BBF52718915A3C00631F6E /* tab_feed_profile.png in Resources */,

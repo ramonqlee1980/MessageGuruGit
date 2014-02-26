@@ -10,8 +10,9 @@
 //2.发送给好友
 //3.返回之前的界面
 #import <UIKit/UIKit.h>
+#import "UMSocial.h"
 
-@interface RMCardEditorController : UIViewController
+@interface RMCardEditorController : UIViewController<UMSocialUIDelegate>
 
 @property(nonatomic,copy)NSString* msg;//信息文本
 @property(nonatomic,copy)UIImage* background;//信息背景
