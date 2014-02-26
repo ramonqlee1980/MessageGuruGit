@@ -62,20 +62,38 @@
     }
     
     //TODO::左右button，左边返回，右边发送
-    UIBarButtonItem * rigthBarButtonItem =
-    [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Send", @"")
-                                      style:UIBarButtonItemStylePlain
-                                     target:self
-                                     action:@selector(sendCard)] autorelease];
+    //选择按钮
+    NSArray *buttonNames = [NSArray arrayWithObjects:NSLocalizedString(@"Setting", @""), NSLocalizedString(@"Send", @""), nil];
+    UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
+    [segmentedControl setFrame:CGRectMake(0, 0, 100, 40)];
+    segmentedControl.selectedSegmentIndex=1;
+    
+    //添加事件
+    [segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+    UIBarButtonItem* customBarButtonItem = [[[UIBarButtonItem alloc]initWithCustomView:segmentedControl]autorelease];
+    [segmentedControl release];
+    
     
     SEL selector = @selector(addNavigationButton:withRightButton:);
     if ([self respondsToSelector:selector]) {
-        [self addNavigationButton:nil withRightButton:rigthBarButtonItem];
+        [self addNavigationButton:nil withRightButton:customBarButtonItem];
     }
     
     [self textViewBoundingBox:NO];
 }
-
+-(void)segmentAction:(UISegmentedControl *)Seg{
+    NSInteger Index = Seg.selectedSegmentIndex;
+//    const NSUInteger kSettingButtonIndex = 0;
+    const NSUInteger kSendButtonIndex = 1;
+    if (Index==kSendButtonIndex) {
+        [self sendCard];
+    }
+    else
+    {
+        [self setting];
+    }
+    NSLog(@"Seg.selectedSegmentIndex:%d",Index);
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -93,6 +111,10 @@
     
     //显示分享界面，发送
     [self showShareView:self withText:@"" withImage:cardShot];
+}
+-(void)setting
+{
+    
 }
 #pragma mark util methods
 //textview 边框
