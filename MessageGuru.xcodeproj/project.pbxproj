@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3004699318BFFD3F007C10EB /* PPRevealSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3004699218BFFD3F007C10EB /* PPRevealSideViewController.m */; };
 		3042CB5C18B982A600ABCF1C /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB5B18B982A600ABCF1C /* copy.png */; };
 		3042CB6018B985BF00ABCF1C /* folder-favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB5F18B985BF00ABCF1C /* folder-favorites.png */; };
 		3042CB6E18B9931C00ABCF1C /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6518B9931C00ABCF1C /* Icon-iPad.png */; };
@@ -176,6 +177,10 @@
 		30842D2618BD50E8002AFF48 /* RMCardEditorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */; };
 		30842D2918BD5677002AFF48 /* RMViewController+Aux.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2818BD5677002AFF48 /* RMViewController+Aux.m */; };
 		30842D2D18BE9F36002AFF48 /* chris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2C18BE9F36002AFF48 /* chris.jpg */; };
+		30842D3718BEB08E002AFF48 /* REMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D3018BEB08E002AFF48 /* REMenu.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		30842D3818BEB08E002AFF48 /* REMenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D3218BEB08E002AFF48 /* REMenuContainerView.m */; };
+		30842D3918BEB08E002AFF48 /* REMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D3418BEB08E002AFF48 /* REMenuItem.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		30842D3A18BEB08E002AFF48 /* REMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D3618BEB08E002AFF48 /* REMenuItemView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		3096EABF18B63247004B5B8F /* TimelineLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABB18B63247004B5B8F /* TimelineLine.m */; };
 		3096EAC018B63247004B5B8F /* timeline_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3096EABC18B63247004B5B8F /* timeline_button.png */; };
 		3096EAC118B63247004B5B8F /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABE18B63247004B5B8F /* TimelineViewController.m */; };
@@ -257,6 +262,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3004699118BFFD3F007C10EB /* PPRevealSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRevealSideViewController.h; sourceTree = "<group>"; };
+		3004699218BFFD3F007C10EB /* PPRevealSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRevealSideViewController.m; sourceTree = "<group>"; };
 		3042CB5B18B982A600ABCF1C /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
 		3042CB5F18B985BF00ABCF1C /* folder-favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder-favorites.png"; sourceTree = "<group>"; };
 		3042CB6518B9931C00ABCF1C /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
@@ -457,6 +464,14 @@
 		30842D2718BD5677002AFF48 /* RMViewController+Aux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMViewController+Aux.h"; sourceTree = "<group>"; };
 		30842D2818BD5677002AFF48 /* RMViewController+Aux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMViewController+Aux.m"; sourceTree = "<group>"; };
 		30842D2C18BE9F36002AFF48 /* chris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chris.jpg; sourceTree = "<group>"; };
+		30842D2F18BEB08E002AFF48 /* REMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenu.h; sourceTree = "<group>"; };
+		30842D3018BEB08E002AFF48 /* REMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenu.m; sourceTree = "<group>"; };
+		30842D3118BEB08E002AFF48 /* REMenuContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuContainerView.h; sourceTree = "<group>"; };
+		30842D3218BEB08E002AFF48 /* REMenuContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuContainerView.m; sourceTree = "<group>"; };
+		30842D3318BEB08E002AFF48 /* REMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuItem.h; sourceTree = "<group>"; };
+		30842D3418BEB08E002AFF48 /* REMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuItem.m; sourceTree = "<group>"; };
+		30842D3518BEB08E002AFF48 /* REMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuItemView.h; sourceTree = "<group>"; };
+		30842D3618BEB08E002AFF48 /* REMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuItemView.m; sourceTree = "<group>"; };
 		3096EAB918B63247004B5B8F /* MakeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLine.h; sourceTree = "<group>"; };
 		3096EABA18B63247004B5B8F /* TimelineLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineLine.h; sourceTree = "<group>"; };
 		3096EABB18B63247004B5B8F /* TimelineLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineLine.m; sourceTree = "<group>"; };
@@ -586,6 +601,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3004699018BFFD3F007C10EB /* PPRevealSideviewController */ = {
+			isa = PBXGroup;
+			children = (
+				3004699118BFFD3F007C10EB /* PPRevealSideViewController.h */,
+				3004699218BFFD3F007C10EB /* PPRevealSideViewController.m */,
+			);
+			name = PPRevealSideviewController;
+			path = ../../iOS_Lib/PPRevealSideviewController;
+			sourceTree = "<group>";
+		};
 		3042CB6118B9931C00ABCF1C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,6 +1002,21 @@
 			path = card;
 			sourceTree = "<group>";
 		};
+		30842D2E18BEB08E002AFF48 /* REMenu */ = {
+			isa = PBXGroup;
+			children = (
+				30842D2F18BEB08E002AFF48 /* REMenu.h */,
+				30842D3018BEB08E002AFF48 /* REMenu.m */,
+				30842D3118BEB08E002AFF48 /* REMenuContainerView.h */,
+				30842D3218BEB08E002AFF48 /* REMenuContainerView.m */,
+				30842D3318BEB08E002AFF48 /* REMenuItem.h */,
+				30842D3418BEB08E002AFF48 /* REMenuItem.m */,
+				30842D3518BEB08E002AFF48 /* REMenuItemView.h */,
+				30842D3618BEB08E002AFF48 /* REMenuItemView.m */,
+			);
+			path = REMenu;
+			sourceTree = "<group>";
+		};
 		3096EAB718B63247004B5B8F /* timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,6 +1110,8 @@
 		30A8E55E1894760500DE7D99 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				3004699018BFFD3F007C10EB /* PPRevealSideviewController */,
+				30842D2E18BEB08E002AFF48 /* REMenu */,
 				30D2306018B9AFB8005BED10 /* Flurry */,
 				30CE801618B959230073A48D /* PulsingHalo */,
 				30CE801218B813230073A48D /* DMScrollingTicker */,
@@ -1534,8 +1576,11 @@
 			files = (
 				30BBF46E1891491F00631F6E /* main.m in Sources */,
 				30A8E5181893D40800DE7D99 /* Utils.m in Sources */,
+				30842D3918BEB08E002AFF48 /* REMenuItem.m in Sources */,
 				30BBF4F9189159AE00631F6E /* AllSMSViewController.m in Sources */,
 				30A8E5261893FBC000DE7D99 /* RMSmsDataCenter.m in Sources */,
+				30842D3A18BEB08E002AFF48 /* REMenuItemView.m in Sources */,
+				3004699318BFFD3F007C10EB /* PPRevealSideViewController.m in Sources */,
 				304C2E0118AF7BAB006B4A59 /* JMStaticContentTableViewSection.m in Sources */,
 				30CE801918B959230073A48D /* PulsingHaloLayer.m in Sources */,
 				304C2F7118AF7C82006B4A59 /* BaseViewController.m in Sources */,
@@ -1555,6 +1600,7 @@
 				30842D2918BD5677002AFF48 /* RMViewController+Aux.m in Sources */,
 				30A8E51E1893DC5B00DE7D99 /* RMCategory.m in Sources */,
 				30A8E56518947C1E00DE7D99 /* RMSMS.m in Sources */,
+				30842D3718BEB08E002AFF48 /* REMenu.m in Sources */,
 				304C2E1318AF7BAB006B4A59 /* NSString+HTML.m in Sources */,
 				304C2E1418AF7BAB006B4A59 /* NSString+StringThatFits.m in Sources */,
 				3096EAC418B63297004B5B8F /* RMTimelineViewController.m in Sources */,
@@ -1566,6 +1612,7 @@
 				30A8E5151893D38700DE7D99 /* RMDataCenter.m in Sources */,
 				3096EABF18B63247004B5B8F /* TimelineLine.m in Sources */,
 				304C2E1218AF7BAB006B4A59 /* GTMNSString+HTML.m in Sources */,
+				30842D3818BEB08E002AFF48 /* REMenuContainerView.m in Sources */,
 				30A8E50D1893C80600DE7D99 /* SMSMessageCell.m in Sources */,
 				30BBF5311893BDD600631F6E /* SMSListViewController.m in Sources */,
 				30A8E575189546D500DE7D99 /* RMFavoriteViewController.m in Sources */,

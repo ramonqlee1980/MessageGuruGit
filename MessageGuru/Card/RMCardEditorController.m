@@ -10,9 +10,14 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Flurry.h"
 #import "Constants.h"
+#import "REMenuItem.h"
+#import "REMenu.h"
+#import "PPRevealSideViewController.h"
 
 @interface RMCardEditorController ()
-
+{
+    REMenu* _menu;
+}
 @end
 
 @implementation RMCardEditorController
@@ -114,9 +119,46 @@
 }
 -(void)setting
 {
-    
+    [self showMenu];
 }
+
 #pragma mark util methods
+- (void)showMenu
+{
+    if (_menu.isOpen)
+        return [_menu close];
+    
+    // Sample icons from http://icons8.com/download-free-icons-for-ios-tab-bar
+    //
+    
+    REMenuItem *fontItem = [[REMenuItem alloc] initWithTitle:@"Font"
+                                                    subtitle:@"Return to Home Screen"
+                                                       image:[UIImage imageNamed:@"Icon_Home"]
+                                            highlightedImage:nil
+                                                      action:^(REMenuItem *item) {
+                                                          NSLog(@"Item: %@", item);
+                                                      }];
+    
+    REMenuItem *imageItem = [[REMenuItem alloc] initWithTitle:@"Background"
+                                                       subtitle:@"Explore 47 additional options"
+                                                          image:[UIImage imageNamed:@"Icon_Explore"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                         }];
+    
+    fontItem.tag = 0;
+    imageItem.tag = 1;
+    
+    _menu = [[REMenu alloc] initWithItems:@[fontItem, imageItem]];
+    _menu.cornerRadius = 4;
+    _menu.shadowColor = [UIColor blackColor];
+    _menu.shadowOffset = CGSizeMake(0, 1);
+    _menu.shadowOpacity = 1;
+    _menu.imageOffset = CGSizeMake(5, -1);
+    
+    [_menu showFromNavigationController:self.navigationController];
+}
 //textview 边框
 -(void)textViewBoundingBox:(BOOL)visible
 {
