@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "UMSocial.h"
 
-@interface RMCardEditorController : UIViewController<UMSocialUIDelegate>
+@interface RMCardEditorController : UIViewController<UMSocialUIDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,copy)NSString* msg;//信息文本
 @property(nonatomic,copy)UIImage* background;//信息背景

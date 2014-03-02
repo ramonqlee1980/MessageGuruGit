@@ -12,7 +12,6 @@
 #import "Constants.h"
 #import "REMenuItem.h"
 #import "REMenu.h"
-#import "PPRevealSideViewController.h"
 
 @interface RMCardEditorController ()
 {
@@ -36,6 +35,30 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.msgTextView addGestureRecognizer:pan];
     [pan release];
+    
+    [self loadBottomSettingView];
+}
+
+-(void)loadBottomSettingView
+{
+    const static NSUInteger kBottomBarMargin = 30;
+    const static NSUInteger kBottomBarHeight = 60;
+
+    UITableView *table  = [[UITableView alloc] initWithFrame:CGRectMake(0, 60, 60, 480)];
+    table.backgroundColor = [UIColor whiteColor];
+    [table.layer setAnchorPoint:CGPointMake(0.0, 0.0)];
+    table.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    table.showsVerticalScrollIndicator = NO;
+    
+    CGRect frame = self.view.frame;
+    
+    table.frame = CGRectMake(0, frame.size.height-kBottomBarMargin-kBottomBarHeight,frame.size.width, kBottomBarHeight);
+    table.rowHeight = 60.0;
+    NSLog(@"%f,%f,%f,%f",table.frame.origin.x,table.frame.origin.y,table.frame.size.width,table.frame.size.height);
+    table.delegate = self;
+    table.dataSource = self;
+    [self.view addSubview:table];
+    [table release];
 }
 
 /* 识别拖动 */
@@ -66,38 +89,20 @@
         self.backgroundImageView.image = self.background;
     }
     
-    //TODO::左右button，左边返回，右边发送
-    //选择按钮
-    NSArray *buttonNames = [NSArray arrayWithObjects:NSLocalizedString(@"Setting", @""), NSLocalizedString(@"Send", @""), nil];
-    UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
-    [segmentedControl setFrame:CGRectMake(0, 0, 100, 40)];
-    segmentedControl.selectedSegmentIndex=1;
-    
-    //添加事件
-    [segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    UIBarButtonItem* customBarButtonItem = [[[UIBarButtonItem alloc]initWithCustomView:segmentedControl]autorelease];
-    [segmentedControl release];
+    //左右button，左边返回，右边发送
+    UIBarButtonItem * rigthBarButtonItem =
+    [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Send", @"")
+                                      style:UIBarButtonItemStylePlain
+                                     target:self
+                                     action:@selector(sendCard)] autorelease];
     
     
     SEL selector = @selector(addNavigationButton:withRightButton:);
     if ([self respondsToSelector:selector]) {
-        [self addNavigationButton:nil withRightButton:customBarButtonItem];
+        [self addNavigationButton:nil withRightButton:rigthBarButtonItem];
     }
     
     [self textViewBoundingBox:NO];
-}
--(void)segmentAction:(UISegmentedControl *)Seg{
-    NSInteger Index = Seg.selectedSegmentIndex;
-//    const NSUInteger kSettingButtonIndex = 0;
-    const NSUInteger kSendButtonIndex = 1;
-    if (Index==kSendButtonIndex) {
-        [self sendCard];
-    }
-    else
-    {
-        [self setting];
-    }
-    NSLog(@"Seg.selectedSegmentIndex:%d",Index);
 }
 
 - (void)didReceiveMemoryWarning
@@ -117,48 +122,7 @@
     //显示分享界面，发送
     [self showShareView:self withText:@"" withImage:cardShot];
 }
--(void)setting
-{
-    [self showMenu];
-}
 
-#pragma mark util methods
-- (void)showMenu
-{
-    if (_menu.isOpen)
-        return [_menu close];
-    
-    // Sample icons from http://icons8.com/download-free-icons-for-ios-tab-bar
-    //
-    
-    REMenuItem *fontItem = [[REMenuItem alloc] initWithTitle:@"Font"
-                                                    subtitle:@"Return to Home Screen"
-                                                       image:[UIImage imageNamed:@"Icon_Home"]
-                                            highlightedImage:nil
-                                                      action:^(REMenuItem *item) {
-                                                          NSLog(@"Item: %@", item);
-                                                      }];
-    
-    REMenuItem *imageItem = [[REMenuItem alloc] initWithTitle:@"Background"
-                                                       subtitle:@"Explore 47 additional options"
-                                                          image:[UIImage imageNamed:@"Icon_Explore"]
-                                               highlightedImage:nil
-                                                         action:^(REMenuItem *item) {
-                                                             NSLog(@"Item: %@", item);
-                                                         }];
-    
-    fontItem.tag = 0;
-    imageItem.tag = 1;
-    
-    _menu = [[REMenu alloc] initWithItems:@[fontItem, imageItem]];
-    _menu.cornerRadius = 4;
-    _menu.shadowColor = [UIColor blackColor];
-    _menu.shadowOffset = CGSizeMake(0, 1);
-    _menu.shadowOpacity = 1;
-    _menu.imageOffset = CGSizeMake(5, -1);
-    
-    [_menu showFromNavigationController:self.navigationController];
-}
 //textview 边框
 -(void)textViewBoundingBox:(BOOL)visible
 {
@@ -216,5 +180,28 @@
     }
 }
 
+#pragma mark tableview datasource & delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 16;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:CellIdentifier] autorelease];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.backgroundColor = [UIColor redColor];
+        cell.textLabel.transform = CGAffineTransformMakeRotation(M_PI_2);
+    }
+    cell.backgroundColor = [UIColor yellowColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"--------->%d",indexPath.row);
+}
 
 @end
