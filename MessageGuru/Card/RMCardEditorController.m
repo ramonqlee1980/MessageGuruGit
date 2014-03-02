@@ -10,12 +10,10 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Flurry.h"
 #import "Constants.h"
-#import "REMenuItem.h"
-#import "REMenu.h"
 
 @interface RMCardEditorController ()
 {
-    REMenu* _menu;
+    UITableView *bottomTableview;
 }
 @end
 
@@ -37,28 +35,6 @@
     [pan release];
     
     [self loadBottomSettingView];
-}
-
--(void)loadBottomSettingView
-{
-    const static NSUInteger kBottomBarMargin = 30;
-    const static NSUInteger kBottomBarHeight = 60;
-
-    UITableView *table  = [[UITableView alloc] initWithFrame:CGRectMake(0, 60, 60, 480)];
-    table.backgroundColor = [UIColor whiteColor];
-    [table.layer setAnchorPoint:CGPointMake(0.0, 0.0)];
-    table.transform = CGAffineTransformMakeRotation(-M_PI_2);
-    table.showsVerticalScrollIndicator = NO;
-    
-    CGRect frame = self.view.frame;
-    
-    table.frame = CGRectMake(0, frame.size.height-kBottomBarMargin-kBottomBarHeight,frame.size.width, kBottomBarHeight);
-    table.rowHeight = 60.0;
-    NSLog(@"%f,%f,%f,%f",table.frame.origin.x,table.frame.origin.y,table.frame.size.width,table.frame.size.height);
-    table.delegate = self;
-    table.dataSource = self;
-    [self.view addSubview:table];
-    [table release];
 }
 
 /* 识别拖动 */
@@ -136,11 +112,16 @@
 //TODO::获取指定区域的截图，生成贺卡
 -(UIImage*)generateScreenShot
 {
+    if (bottomTableview) {
+        bottomTableview.hidden = YES;
+    }
     UIGraphicsBeginImageContext(self.view.frame.size);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *aImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
+    if (bottomTableview) {
+        bottomTableview.hidden = NO;
+    }
     return aImage;
 }
 
@@ -178,6 +159,30 @@
         NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:snsName,kSNSPlatformKey, nil];
         [Flurry logEvent:kShareBySNSResponseEvent withParameters:dict];
     }
+}
+
+#pragma mark load bottom view
+-(void)loadBottomSettingView
+{
+    const static NSUInteger kBottomBarMargin = 30;
+    const static NSUInteger kBottomBarHeight = 60;
+    
+    bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 60, 60, 480)];
+    bottomTableview.backgroundColor = [UIColor whiteColor];
+    [bottomTableview.layer setAnchorPoint:CGPointMake(0.0, 0.0)];
+    bottomTableview.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    bottomTableview.showsVerticalScrollIndicator = NO;
+    
+    CGRect frame = self.view.frame;
+    
+    bottomTableview.frame = CGRectMake(0, frame.size.height-kBottomBarMargin-kBottomBarHeight,frame.size.width, kBottomBarHeight);
+    bottomTableview.rowHeight = 60.0;
+    NSLog(@"%f,%f,%f,%f",bottomTableview.frame.origin.x,bottomTableview.frame.origin.y,bottomTableview.frame.size.width,bottomTableview.frame.size.height);
+
+    bottomTableview.delegate = self;
+    bottomTableview.dataSource = self;
+    [self.view addSubview:bottomTableview];
+    [bottomTableview release];
 }
 
 #pragma mark tableview datasource & delegate
