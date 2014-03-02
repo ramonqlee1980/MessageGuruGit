@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3029BB7418C3E5B80034DEA2 /* b1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB6E18C3E5B80034DEA2 /* b1.jpg */; };
+		3029BB7518C3E5B80034DEA2 /* b2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB6F18C3E5B80034DEA2 /* b2.jpg */; };
+		3029BB7618C3E5B80034DEA2 /* b3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7018C3E5B80034DEA2 /* b3.jpg */; };
+		3029BB7718C3E5B80034DEA2 /* b4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7118C3E5B80034DEA2 /* b4.jpg */; };
+		3029BB7818C3E5B80034DEA2 /* b5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7218C3E5B80034DEA2 /* b5.jpg */; };
+		3029BB7918C3E5B80034DEA2 /* b6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7318C3E5B80034DEA2 /* b6.jpg */; };
 		3042CB5C18B982A600ABCF1C /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB5B18B982A600ABCF1C /* copy.png */; };
 		3042CB6018B985BF00ABCF1C /* folder-favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB5F18B985BF00ABCF1C /* folder-favorites.png */; };
 		3042CB6E18B9931C00ABCF1C /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3042CB6518B9931C00ABCF1C /* Icon-iPad.png */; };
@@ -257,6 +263,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3029BB6E18C3E5B80034DEA2 /* b1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b1.jpg; sourceTree = "<group>"; };
+		3029BB6F18C3E5B80034DEA2 /* b2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b2.jpg; sourceTree = "<group>"; };
+		3029BB7018C3E5B80034DEA2 /* b3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b3.jpg; sourceTree = "<group>"; };
+		3029BB7118C3E5B80034DEA2 /* b4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b4.jpg; sourceTree = "<group>"; };
+		3029BB7218C3E5B80034DEA2 /* b5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b5.jpg; sourceTree = "<group>"; };
+		3029BB7318C3E5B80034DEA2 /* b6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b6.jpg; sourceTree = "<group>"; };
 		3042CB5B18B982A600ABCF1C /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
 		3042CB5F18B985BF00ABCF1C /* folder-favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder-favorites.png"; sourceTree = "<group>"; };
 		3042CB6518B9931C00ABCF1C /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad.png"; sourceTree = "<group>"; };
@@ -972,6 +984,12 @@
 		30842D2B18BE9F36002AFF48 /* card */ = {
 			isa = PBXGroup;
 			children = (
+				3029BB6E18C3E5B80034DEA2 /* b1.jpg */,
+				3029BB6F18C3E5B80034DEA2 /* b2.jpg */,
+				3029BB7018C3E5B80034DEA2 /* b3.jpg */,
+				3029BB7118C3E5B80034DEA2 /* b4.jpg */,
+				3029BB7218C3E5B80034DEA2 /* b5.jpg */,
+				3029BB7318C3E5B80034DEA2 /* b6.jpg */,
 				30842D2C18BE9F36002AFF48 /* chris.jpg */,
 			);
 			path = card;
@@ -1342,6 +1360,7 @@
 				304C300C18B0FFBB006B4A59 /* 妇女节.jpeg in Resources */,
 				304C300E18B0FFBB006B4A59 /* 建党节.jpeg in Resources */,
 				304C2F4918AF7C60006B4A59 /* UMSocialDataDelegate.html in Resources */,
+				3029BB7718C3E5B80034DEA2 /* b4.jpg in Resources */,
 				304C2F4318AF7C60006B4A59 /* class_grath.png in Resources */,
 				3042CB7818B994CA00ABCF1C /* icon_76x76.png in Resources */,
 				30A8E5071893C72E00DE7D99 /* pic_plank_up.png in Resources */,
@@ -1373,6 +1392,7 @@
 				30842D2D18BE9F36002AFF48 /* chris.jpg in Resources */,
 				304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */,
 				304C2FA718B0F8B2006B4A59 /* 圣诞节.jpg in Resources */,
+				3029BB7618C3E5B80034DEA2 /* b3.jpg in Resources */,
 				304C2FC818B0FB5F006B4A59 /* 开业短信.jpeg in Resources */,
 				304C2F2C18AF7C60006B4A59 /* UMSShareListController.xib in Resources */,
 				304C2F3E18AF7C60006B4A59 /* UMSocialUrlResource.html in Resources */,
@@ -1392,6 +1412,7 @@
 				304C2FCE18B0FB5F006B4A59 /* 晚安祝福.jpg in Resources */,
 				304C300618B0FFBB006B4A59 /* 佛诞日.jpg in Resources */,
 				304C2F8F18B0F625006B4A59 /* 毕业短信.jpg in Resources */,
+				3029BB7518C3E5B80034DEA2 /* b2.jpg in Resources */,
 				30A8E50F1893CC7000DE7D99 /* readme.rtf in Resources */,
 				304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */,
 				304C301518B0FFBB006B4A59 /* 清明节.jpeg in Resources */,
@@ -1431,6 +1452,7 @@
 				304C2F8E18B0F625006B4A59 /* 开学短信.jpg in Resources */,
 				3042CB5C18B982A600ABCF1C /* copy.png in Resources */,
 				304C2F9A18B0F72C006B4A59 /* 高考.jpg in Resources */,
+				3029BB7818C3E5B80034DEA2 /* b5.jpg in Resources */,
 				304C2F8D18B0F625006B4A59 /* 喜得贵子.jpg in Resources */,
 				304C2F7E18B0EC04006B4A59 /* 笑话.sqlite in Resources */,
 				304C2F3C18AF7C60006B4A59 /* UMSocialSnsPlatformManager.html in Resources */,
@@ -1454,6 +1476,7 @@
 				304C2F8518B0F3E2006B4A59 /* 囧糗事.jpg in Resources */,
 				304C2FD518B0FB5F006B4A59 /* 送别短信.jpg in Resources */,
 				3042CB7318B9931C00ABCF1C /* Icon.png in Resources */,
+				3029BB7418C3E5B80034DEA2 /* b1.jpg in Resources */,
 				304C2F4018AF7C60006B4A59 /* stylesPrint.css in Resources */,
 				304C2FAB18B0F8B2006B4A59 /* 情人节.jpg in Resources */,
 				30A8E5041893C72E00DE7D99 /* pic_plank_among@2x.png in Resources */,
@@ -1509,6 +1532,7 @@
 				304C2F3F18AF7C60006B4A59 /* styles.css in Resources */,
 				30A8E5021893C72E00DE7D99 /* pic_icon_fresh@2x.png in Resources */,
 				304C2F6618AF7C60006B4A59 /* ios-social-sdk-login-detail.html in Resources */,
+				3029BB7918C3E5B80034DEA2 /* b6.jpg in Resources */,
 				304C2F4818AF7C60006B4A59 /* index.html in Resources */,
 				304C300318B0FFBB006B4A59 /* 中元节.jpg in Resources */,
 				304C2FD418B0FB5F006B4A59 /* 表白短信.jpg in Resources */,

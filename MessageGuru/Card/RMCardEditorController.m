@@ -11,6 +11,7 @@
 #import "Flurry.h"
 #import "Constants.h"
 
+
 @interface RMCardEditorController ()
 {
     UITableView *bottomTableview;
@@ -19,6 +20,11 @@
 
 @implementation RMCardEditorController
 @synthesize msg,background;
+
++(NSArray*)getBackgroundFiles
+{
+    return [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -78,7 +84,7 @@
         [self addNavigationButton:nil withRightButton:rigthBarButtonItem];
     }
     
-    [self textViewBoundingBox:NO];
+    [self setTextViewBoundingBox:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,7 +106,7 @@
 }
 
 //textview 边框
--(void)textViewBoundingBox:(BOOL)visible
+-(void)setTextViewBoundingBox:(BOOL)visible
 {
     CGColorRef colr = visible?[UIColor grayColor].CGColor:[UIColor clearColor].CGColor;
     
@@ -164,7 +170,7 @@
 #pragma mark load bottom view
 -(void)loadBottomSettingView
 {
-    const static NSUInteger kBottomBarMargin = 30;
+    const static NSUInteger kBottomBarMargin = 40;
     const static NSUInteger kBottomBarHeight = 60;
     
     bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 60, 60, 480)];
@@ -185,9 +191,10 @@
     [bottomTableview release];
 }
 
+
 #pragma mark tableview datasource & delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 16;
+    return 7;//背景图//和字体设置
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
@@ -196,17 +203,27 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:CellIdentifier] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.textLabel.backgroundColor = [UIColor redColor];
-        cell.textLabel.transform = CGAffineTransformMakeRotation(M_PI_2);
+        cell.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+        cell.imageView.contentMode = UIViewContentModeScaleToFill;
     }
-    cell.backgroundColor = [UIColor yellowColor];
+    cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
+    
+    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles]objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:backgroundFileName];
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"--------->%d",indexPath.row);
+    //TODO::暂时仅加入背景图替换，测试效果
+    //获取背景图文件名，预览效果，其中0代表恢复初始效果
+    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles]objectAtIndex:indexPath.row];
+    
+    UIImage* image = [UIImage imageNamed:backgroundFileName];
+    if (self.background && image) {
+        self.backgroundImageView.image = image;
+    }
 }
 
 @end
