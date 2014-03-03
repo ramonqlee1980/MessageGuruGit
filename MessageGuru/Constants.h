@@ -22,6 +22,7 @@
 #define kDBSMSMessageColumn @"M1"
 #define kDBSMSKeyColumn @"url"
 #define kChannelUrl @"http://www.idreams.com"
+#define kDBSMSCategoryColumn @"category"
 
 #warning online resources,including icons,etc
 /**************** 应用采用的id  ********************/

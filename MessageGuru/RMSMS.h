@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface RMSMS : NSObject
+@property(nonatomic,copy)NSString* category;
 @property(nonatomic,copy)NSString* content;
 @property(nonatomic,copy)NSString* url;
 @end

@@ -14,6 +14,7 @@
 
 @interface RMCardEditorController : UIViewController<UMSocialUIDelegate,UITableViewDataSource,UITableViewDelegate>
 
+@property(nonatomic,copy)NSString* category;//类别
 @property(nonatomic,copy)NSString* msg;//信息文本
 @property(nonatomic,copy)UIImage* background;//信息背景
 

@@ -23,7 +23,16 @@ Impl_Singleton(RMSmsDataCenter)
 -(NSArray*)sms:(NSString*)tableName fromDb:(NSString*)dbName startFrom:(NSUInteger)start tillEnd:(NSUInteger)end
 {
     NSString* query = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
-    return [RMSmsDataCenter getSqlData:dbName withSQL:query];
+    NSArray* ret = [RMSmsDataCenter getSqlData:dbName withSQL:query];
+    
+    //set category
+    if ([ret isKindOfClass:[NSMutableArray class]]) {
+        NSMutableArray* mut = (NSMutableArray*)ret;
+        for (RMSMS* message in mut) {
+            message.category = tableName;
+        }
+    }
+    return ret;
 }
 
 +(NSArray*)getSqlData:(NSString*)dbName withSQL:(NSString*)query
@@ -53,6 +62,7 @@ Impl_Singleton(RMSmsDataCenter)
             if (msg && ((NSString*)msg).length!=0) {
                 NSString* url = [row objectForKey:@"PageUrl"];
                 RMSMS* message= [[RMSMS new]autorelease];
+                message.category = dbName;
                 message.content = msg;
                 //remove duplicate bug(bug when collecting data)
                 NSString* prefix = [message.content substringToIndex:MIN(kDupPrefixLength, message.content.length-1)];
@@ -61,6 +71,7 @@ Impl_Singleton(RMSmsDataCenter)
                     message.content = [message.content substringFromIndex:r.location];
                 }
                 message.url = url;
+                
                 [data addObject:message];
             }
         }

@@ -19,10 +19,14 @@
 @end
 
 @implementation RMCardEditorController
-@synthesize msg,background;
+@synthesize msg,background,category;
 
-+(NSArray*)getBackgroundFiles
+//TODO::不同类别返回对应的背景图，有缺省背景图
++(NSArray*)getBackgroundFiles:(NSString*)categoryName
 {
+    if (categoryName==nil||categoryName.length==0) {
+        return [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
+    }
     return [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
 }
 
@@ -209,7 +213,7 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles]objectAtIndex:indexPath.row];
+    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles:self.category]objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:backgroundFileName];
     return cell;
 }
@@ -218,7 +222,7 @@
     NSLog(@"--------->%d",indexPath.row);
     //TODO::暂时仅加入背景图替换，测试效果
     //获取背景图文件名，预览效果，其中0代表恢复初始效果
-    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles]objectAtIndex:indexPath.row];
+    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles:self.category]objectAtIndex:indexPath.row];
     
     UIImage* image = [UIImage imageNamed:backgroundFileName];
     if (self.background && image) {

@@ -19,8 +19,8 @@
     SQLiteManager* dbManager = [[[SQLiteManager alloc] initWithDatabaseNamed:FAVORITE_DB_NAME]autorelease];
     
     NSString *sql = [NSString stringWithFormat:
-                     @"INSERT INTO '%@' ('%@','%@') VALUES ('%@','%@')",
-                     kDBTableName, kDBSMSMessageColumn,kDBSMSKeyColumn,message.content,message.url];
+                     @"INSERT INTO '%@' ('%@','%@','%@') VALUES ('%@','%@','%@')",
+                     kDBTableName, kDBSMSMessageColumn,kDBSMSKeyColumn,kDBSMSCategoryColumn,message.content,message.url,message.category];
     [dbManager doQuery:sql];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:kFavoriteDBChangedEvent object:nil];
@@ -31,7 +31,7 @@
     if (![dbManager openDatabase]) {
         //create table
         
-        NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (%@ TEXT,%@ TEXT  PRIMARY KEY)",kDBTableName,kDBSMSMessageColumn,kDBSMSKeyColumn];
+        NSString *sqlCreateTable = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (%@ TEXT,%@ TEXT  PRIMARY KEY,%@ TEXT)",kDBTableName,kDBSMSMessageColumn,kDBSMSKeyColumn,kDBSMSCategoryColumn];
         [dbManager doQuery:sqlCreateTable];
         
         [dbManager closeDatabase];
@@ -67,11 +67,11 @@
        
         message.content = [item objectForKey:kDBSMSMessageColumn];
         message.url = [item objectForKey:kDBSMSKeyColumn];
+        message.category = [item objectForKey:kDBSMSCategoryColumn];
         //
         if (!message.url|| message.url.length==0) {
             message.url = kChannelUrl;
         }
-        
         message.url = [message.url sqliteUnescape];
         message.content = [message.content sqliteUnescape];
         [data addObject:message];

@@ -81,13 +81,15 @@ NSString *CellIdentifier = @"SMSMessageCell";
 {
     SMSMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.delegate = self;
+    RMSMS* message = [self getMessage:indexPath];
     // Configure the cell...
 #ifdef kEnableData
     cell.detailLabel.text = [NSString stringWithFormat:@"text no %d",indexPath.row];
 #else
-    cell.detailLabel.text = [self getMessage:indexPath].content;
+    cell.detailLabel.text = message.content;
 #endif
-    cell.fromUrl = [self getMessage:indexPath].url;
+    cell.fromUrl = message.url;
+    cell.category = message.category;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,7 +99,10 @@ NSString *CellIdentifier = @"SMSMessageCell";
 #pragma mark util methods
 -(RMSMS*)getMessage:(NSIndexPath*)indexPath
 {
-    return [self.smsArray objectAtIndex:indexPath.row];
+    RMSMS* message = [self.smsArray objectAtIndex:indexPath.row];
+//    message.category = self.categroy;
+    
+    return message;
 }
 #pragma mark dismiss selector
 -(IBAction)back{
@@ -124,6 +129,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
     
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:cardController];
     cardController.msg = msg.content;
+    cardController.category = msg.category;
     UIImage* background = [UIImage imageNamed:@"chris.jpg"];
     cardController.background = background;
     

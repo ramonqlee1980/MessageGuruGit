@@ -25,6 +25,7 @@
 @property(nonatomic,retain)IBOutlet UILabel* detailLabel;
 @property(nonatomic,copy)NSString* fromUrl;
 @property(nonatomic,retain)IBOutlet UIButton* favoriteButton;
+@property(nonatomic,copy)NSString* category;
 
 -(IBAction)shareBySNS:(id)sender;
 -(IBAction)add2Favorite:(id)sender;

@@ -12,6 +12,6 @@
 
 //#define kEnableData
 @interface SMSListViewController : UITableViewController<MessageCellDelegate,UMSocialUIDelegate>
-
+//@property(nonatomic,copy)NSString* categroy;
 @property(nonatomic,retain)NSArray* smsArray;
 @end

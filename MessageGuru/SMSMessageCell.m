@@ -60,6 +60,7 @@
     RMSMS* message = [[RMSMS new]autorelease];
     message.content = self.detailLabel.text;
     message.url = self.fromUrl;
+    message.category = self.category;
     return message;
 }
 @end

@@ -9,5 +9,5 @@
 #import "RMSMS.h"
 
 @implementation RMSMS
-@synthesize content,url;
+@synthesize content,url,category;
 @end
