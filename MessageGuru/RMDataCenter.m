@@ -43,6 +43,11 @@ Impl_Singleton(RMDataCenter)
         }
     }
 }
+
+-(NSArray*)cards:(NSString*)tableName
+{
+    //TODO::某个具体类别的背景图数组
+}
 -(NSArray*)category:(NSString*)rootName
 {
     [self loadJsonFile];

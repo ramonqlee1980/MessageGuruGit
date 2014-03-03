@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Flurry.h"
 #import "Constants.h"
+#import "RMDataCenter.h"
 
 
 @interface RMCardEditorController ()
@@ -24,10 +25,14 @@
 //TODO::不同类别返回对应的背景图，有缺省背景图
 +(NSArray*)getBackgroundFiles:(NSString*)categoryName
 {
+    NSArray* defaultRet = [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
     if (categoryName==nil||categoryName.length==0) {
-        return [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
+        return defaultRet;
     }
-    return [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
+    
+    NSArray* ret = [[RMDataCenter sharedInstance]cards:categoryName];
+
+    return (ret==nil||ret.count==0)?defaultRet:ret;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

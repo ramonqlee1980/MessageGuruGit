@@ -294,7 +294,6 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     SMSListViewController* detailMsgViewController = [[SMSListViewController new]autorelease];
     
     detailMsgViewController.smsArray = [[RMSmsDataCenter sharedInstance]sms:categoryItem.tablename fromDb:categoryItem.fromFile startFrom:0 tillEnd:kMaxLoadingNumber];
-//    detailMsgViewController.categroy = categoryItem.tablename;
     
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:detailMsgViewController];
     detailMsgViewController.navigationItem.title = categoryItem.name;

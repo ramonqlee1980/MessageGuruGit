@@ -14,4 +14,5 @@
 @interface RMDataCenter : NSObject
 Decl_Singleton(RMDataCenter);
 -(NSArray*)category:(NSString*)rootName;
+-(NSArray*)cards:(NSString*)tableName;//某个具体类别的背景图数组
 @end

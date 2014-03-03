@@ -7,7 +7,8 @@
                  "name": "冷笑话",
                  "tablename": "冷笑话",
                  "icon": "lengxiaohua.jpg",
-                 "file": "笑话.sqlite"
+                 "file": "笑话.sqlite",
+                 "card":"b1.jpg;b2.jpg",
                  },
                  {
                  "name": "调侃短信",

@@ -14,6 +14,7 @@
 @property(nonatomic,copy)NSString* tablename;//表名
 @property(nonatomic,copy)NSString* fromFile;//来源db文件
 @property(nonatomic,copy)NSDate* date;
+@property(nonatomic,retain)NSMutableArray* cards;//背景图数组
 
 +(id)initWithJson:(NSDictionary*)data;
 @end

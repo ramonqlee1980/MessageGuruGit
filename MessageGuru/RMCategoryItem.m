@@ -9,7 +9,7 @@
 #import "RMCategoryItem.h"
 
 @implementation RMCategoryItem
-@synthesize name,fromFile,tablename,icon,date;
+@synthesize name,fromFile,tablename,icon,date,cards;
 +(id)initWithJson:(NSDictionary*)data
 {
     RMCategoryItem* ret = [[RMCategoryItem new]autorelease];
@@ -32,6 +32,14 @@
         ret.date = [dateFormatter dateFromString:(NSString*)d];
     }
     
+    //TODO::解析card，保存到数组中
+    NSString* cards = [data objectForKey:@"card"];
+    if(!ret.cards)
+    {
+        ret.cards = [NSMutableArray new];
+    }
+    [ret.cards addObject:@"b1.jpg"];
+        
     return ret;
 }
 @end
