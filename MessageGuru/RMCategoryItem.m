@@ -10,6 +10,7 @@
 
 @implementation RMCategoryItem
 @synthesize name,fromFile,tablename,icon,date,cards;
+
 +(id)initWithJson:(NSDictionary*)data
 {
     RMCategoryItem* ret = [[RMCategoryItem new]autorelease];
@@ -34,12 +35,14 @@
     
     //TODO::解析card，保存到数组中
     NSString* cards = [data objectForKey:@"card"];
-    if(!ret.cards)
+    if(cards)
     {
-        ret.cards = [NSMutableArray new];
+        ret.cards = [[NSMutableArray alloc]init];
+        // "card":"b1.jpg;b2.jpg",
+        [ret.cards addObjectsFromArray:[cards componentsSeparatedByString:@";"]];
     }
-    [ret.cards addObject:@"b1.jpg"];
-        
+    
+    
     return ret;
 }
 @end

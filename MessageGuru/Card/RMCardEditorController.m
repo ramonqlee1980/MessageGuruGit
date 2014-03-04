@@ -16,23 +16,18 @@
 @interface RMCardEditorController ()
 {
     UITableView *bottomTableview;
+    NSArray* backgroundImages;
 }
+@property(nonatomic,retain)NSArray* backgroundImages;
 @end
 
 @implementation RMCardEditorController
-@synthesize msg,background,category;
+@synthesize msg,background,category,backgroundImages;
 
 //TODO::不同类别返回对应的背景图，有缺省背景图
 +(NSArray*)getBackgroundFiles:(NSString*)categoryName
 {
-    NSArray* defaultRet = [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
-    if (categoryName==nil||categoryName.length==0) {
-        return defaultRet;
-    }
-    
-    NSArray* ret = [[RMDataCenter sharedInstance]cards:categoryName];
-
-    return (ret==nil||ret.count==0)?defaultRet:ret;
+    return [[RMDataCenter sharedInstance]cards:categoryName];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -94,8 +89,12 @@
     }
     
     [self setTextViewBoundingBox:NO];
+    self.backgroundImages = [RMCardEditorController getBackgroundFiles:self.category];
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -203,7 +202,7 @@
 
 #pragma mark tableview datasource & delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 7;//背景图//和字体设置
+    return backgroundImages.count;//背景图//和字体设置
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
@@ -218,7 +217,7 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles:self.category]objectAtIndex:indexPath.row];
+    NSString* backgroundFileName = [backgroundImages objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:backgroundFileName];
     return cell;
 }

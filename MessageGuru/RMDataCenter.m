@@ -13,6 +13,7 @@
 @interface RMDataCenter()
 {
     NSMutableDictionary* rootDict;
+    NSMutableDictionary* categoryItems;
 }
 @end
 @implementation RMDataCenter
@@ -46,8 +47,43 @@ Impl_Singleton(RMDataCenter)
 
 -(NSArray*)cards:(NSString*)tableName
 {
+    //default backgrounds
+    NSArray* defaultRet = [NSArray arrayWithObjects:@"chris.jpg",@"b1.jpg",@"b2.jpg",@"b3.jpg",@"b4.jpg",@"b5.jpg",@"b6.jpg",nil];
+    if (tableName==nil||tableName.length==0)
+    {
+        return defaultRet;
+    }
+    
+    //make sure json file loaded
+    [self loadJsonFile];
+    
+    //cache rmcategoryitems with name as key
+    if(!categoryItems)
+    {
+        categoryItems = [NSMutableDictionary new];
+    }
     //TODO::某个具体类别的背景图数组
+    //find cache first
+    id obj = [categoryItems objectForKey:tableName];
+    if (obj) {
+        NSArray* cards = ((RMCategoryItem*)obj).cards;
+        return (cards&&cards.count>0)?cards:defaultRet;
+    }
+    
+    //search and cache items
+    for (NSString* rootKey in [rootDict allKeys]) {
+        for (RMCategory* category in [rootDict objectForKey:rootKey]) {
+            for (RMCategoryItem* item in category.itemArray) {
+                [categoryItems setValue:item forKey:item.name];
+                if ([tableName isEqualToString:item.name]) {
+                    return (item.cards && item.cards.count>0)?item.cards:defaultRet;
+                }
+            }
+        }
+    }
+    return defaultRet;
 }
+
 -(NSArray*)category:(NSString*)rootName
 {
     [self loadJsonFile];
