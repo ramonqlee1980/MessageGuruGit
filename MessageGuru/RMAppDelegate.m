@@ -8,10 +8,11 @@
 
 #import "RMAppDelegate.h"
 #import "TabbedViewController.h"
-#import "WXApi.h"
 #include "UMSocial.h"
 #include "Constants.h"
 #include "Flurry.h"
+#import "UMSocialWechatHandler.h"
+#import "MobiSageSDK.h"
 
 @implementation RMAppDelegate
 
@@ -37,10 +38,16 @@
 -(void)initExtra
 {
     //向微信注册
-    [WXApi registerApp:kWeixin_App_Id];
+//    [WXApi registerApp:kWeixin_App_Id];
+    //设置微信AppId，url地址传nil，将默认使用友盟的网址
+    [UMSocialWechatHandler setWXAppId:kWeixin_App_Id url:nil];
     
     //设置友盟appkey
     [UMSocialData setAppKey:kUMeng_App_Key];
+
+    //mobisage global setting
+    [[MobiSageManager getInstance] setPublisherID:kMobisagePublisherId];
+    [[MobiSageManager getInstance] showStoreInApp:YES];
     
     //flurry initialization
     [Flurry startSession:kAppleId];

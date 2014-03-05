@@ -18,5 +18,5 @@
 @interface UIViewController(RMViewController_Aux)
 
 - (void)addNavigationButton:(UIBarButtonItem*)leftButtonItem withRightButton:(UIBarButtonItem*)rightButtonItem;
-
+-(UIView*)getMobisageBanner;
 @end

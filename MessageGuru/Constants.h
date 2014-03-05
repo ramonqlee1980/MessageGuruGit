@@ -30,7 +30,7 @@
 #define kUMeng_App_Key @"52e43f5a56240b921b0f1a2c"
 #define kFlurryAppId @"SZ4XVCHNNBXYRS53YV9N"
 #define kAppleId @"807749462"
-
+#define kMobisagePublisherId @"620d94c9d3594cd88352a9efff1f48e6"//to be changed(暂用 精致)
 
 /**************** flurry event ********************/
 #define kShareBySNSResponseEvent @"ShareBySNSResponse"

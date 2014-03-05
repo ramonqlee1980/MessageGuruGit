@@ -16,6 +16,8 @@
 
 
 @interface AllSMSViewController ()
+{
+}
 @end
 
 @implementation AllSMSViewController
@@ -39,6 +41,7 @@
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
     [self loadData];
+    [self addMobisageBanner];
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,4 +127,12 @@
         }
     }
 }
+#pragma mark mobisage banner
+-(void)addMobisageBanner
+{
+    UIView* banner = [self getMobisageBanner];
+    self.tableView.tableFooterView = banner;
+    [self.tableView setSeparatorStyle:(UITableViewCellSeparatorStyleNone)];
+}
+
 @end

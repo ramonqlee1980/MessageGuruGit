@@ -9,7 +9,6 @@
 #import "SMSListViewController.h"
 #import "SMSMessageCell.h"
 #import "UMSocialControllerService.h"
-#import "WXApi.h"
 #import "Constants.h"
 #import "Favorite.h"
 #import "Toast+UIView.h"
@@ -48,8 +47,14 @@ NSString *CellIdentifier = @"SMSMessageCell";
     
     // 注册自定义Cell的到TableView中，并设置cell标识符为CellIdentifier
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifier bundle:nil] forCellReuseIdentifier:CellIdentifier];
+    [self addMobisageBanner];
 }
-
+-(void)addMobisageBanner
+{
+    UIView* banner = [self getMobisageBanner];
+    self.tableView.tableHeaderView = banner;
+    [self.tableView setSeparatorStyle:(UITableViewCellSeparatorStyleNone)];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
