@@ -63,21 +63,21 @@
 -(UIViewController*)hotViewController
 {
     RMTimelineViewController* categoryViewController = [RMTimelineViewController new];
-    categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"热门" image:[UIImage imageNamed:@"tab_live"] tag:0] autorelease];
+    categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"热门" image:[UIImage imageNamed:@"popular_topic-32"] tag:0] autorelease];
     
     return categoryViewController;
 }
 -(UIViewController*)aboutController
 {
     SettingsViewController* ret = [[SettingsViewController new]autorelease];
-    ret.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"关于" image:[UIImage imageNamed:@"tab_messages.png"] tag:0] autorelease];
+    ret.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"关于" image:[UIImage imageNamed:@"about-32"] tag:0] autorelease];
     return ret;
 }
 
 -(UIViewController*)categoryController
 {
     AllSMSViewController* categoryViewController = [[AllSMSViewController alloc]initWithNibName:NSStringFromClass ([AllSMSViewController class]) bundle:nil];
-    categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"短信大全" image:[UIImage imageNamed:@"tab_feed.png"] tag:0] autorelease];
+    categoryViewController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"短信大全" image:[UIImage imageNamed:@"home-32"] tag:0] autorelease];
     
     return categoryViewController;
 }
@@ -85,7 +85,7 @@
 -(UIViewController*)favoriteController
 {
     RMFavoriteViewController* favoriteController = [[RMFavoriteViewController new]autorelease];
-    favoriteController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"收藏" image:[UIImage imageNamed:@"tab_feed_profile.png"] tag:0] autorelease];
+    favoriteController.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"收藏" image:[UIImage imageNamed:@"collect-32"] tag:0] autorelease];
     return favoriteController;
 }
 

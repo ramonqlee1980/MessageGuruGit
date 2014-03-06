@@ -151,7 +151,8 @@ NSString *CellIdentifier = @"SMSMessageCell";
                                          appKey:kUMeng_App_Key
                                       shareText:text
                                      shareImage:image
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSms,UMShareToEmail,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,UMShareToQzone,UMShareToFacebook,UMShareToTwitter,nil]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSms,UMShareToEmail,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToTencent,
+                                                 /*UMShareToYXSession,UMShareToYXTimeline,UMShareToLWSession,UMShareToLWTimeline,*/UMShareToRenren,UMShareToDouban,UMShareToQzone,UMShareToFacebook,UMShareToTwitter,nil]
                                        delegate:self];
 }
 -(void)didSelectSocialPlatform:(NSString *)platformName withSocialData:(UMSocialData *)socialData
