@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3029BB7418C3E5B80034DEA2 /* b1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB6E18C3E5B80034DEA2 /* b1.jpg */; };
-		3029BB7518C3E5B80034DEA2 /* b2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB6F18C3E5B80034DEA2 /* b2.jpg */; };
-		3029BB7618C3E5B80034DEA2 /* b3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7018C3E5B80034DEA2 /* b3.jpg */; };
-		3029BB7718C3E5B80034DEA2 /* b4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7118C3E5B80034DEA2 /* b4.jpg */; };
-		3029BB7818C3E5B80034DEA2 /* b5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7218C3E5B80034DEA2 /* b5.jpg */; };
-		3029BB7918C3E5B80034DEA2 /* b6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3029BB7318C3E5B80034DEA2 /* b6.jpg */; };
 		303DAB1518C68D84003832E9 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 303DAAED18C68D84003832E9 /* UMSocialLocalizable.strings */; };
 		303DAB1618C68D84003832E9 /* libUMSocial_Sdk_3.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303DAAFB18C68D84003832E9 /* libUMSocial_Sdk_3.3.5.a */; };
 		303DAB1718C68D84003832E9 /* libUMSocial_Sdk_Comment_3.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303DAAFC18C68D84003832E9 /* libUMSocial_Sdk_Comment_3.3.5.a */; };
@@ -165,10 +159,10 @@
 		305D98C718C8ADFC00791945 /* collect-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 305D98C618C8ADFC00791945 /* collect-32@2x.png */; };
 		305D98CA18C8AE8B00791945 /* about-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 305D98C818C8AE8B00791945 /* about-32.png */; };
 		305D98CB18C8AE8B00791945 /* about-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 305D98C918C8AE8B00791945 /* about-32@2x.png */; };
+		305D98CD18C8B53100791945 /* card in Resources */ = {isa = PBXBuildFile; fileRef = 305D98CC18C8B53100791945 /* card */; };
 		30842D2518BD50E8002AFF48 /* RMCardEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2318BD50E8002AFF48 /* RMCardEditorController.m */; };
 		30842D2618BD50E8002AFF48 /* RMCardEditorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */; };
 		30842D2918BD5677002AFF48 /* RMViewController+Aux.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2818BD5677002AFF48 /* RMViewController+Aux.m */; };
-		30842D2D18BE9F36002AFF48 /* chris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2C18BE9F36002AFF48 /* chris.jpg */; };
 		3096EABF18B63247004B5B8F /* TimelineLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABB18B63247004B5B8F /* TimelineLine.m */; };
 		3096EAC018B63247004B5B8F /* timeline_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3096EABC18B63247004B5B8F /* timeline_button.png */; };
 		3096EAC118B63247004B5B8F /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3096EABE18B63247004B5B8F /* TimelineViewController.m */; };
@@ -240,12 +234,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3029BB6E18C3E5B80034DEA2 /* b1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b1.jpg; sourceTree = "<group>"; };
-		3029BB6F18C3E5B80034DEA2 /* b2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b2.jpg; sourceTree = "<group>"; };
-		3029BB7018C3E5B80034DEA2 /* b3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b3.jpg; sourceTree = "<group>"; };
-		3029BB7118C3E5B80034DEA2 /* b4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b4.jpg; sourceTree = "<group>"; };
-		3029BB7218C3E5B80034DEA2 /* b5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b5.jpg; sourceTree = "<group>"; };
-		3029BB7318C3E5B80034DEA2 /* b6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b6.jpg; sourceTree = "<group>"; };
 		303DAAEE18C68D84003832E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		303DAAF018C68D84003832E9 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		303DAAF118C68D84003832E9 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -432,12 +420,12 @@
 		305D98C618C8ADFC00791945 /* collect-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect-32@2x.png"; sourceTree = "<group>"; };
 		305D98C818C8AE8B00791945 /* about-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-32.png"; sourceTree = "<group>"; };
 		305D98C918C8AE8B00791945 /* about-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-32@2x.png"; sourceTree = "<group>"; };
+		305D98CC18C8B53100791945 /* card */ = {isa = PBXFileReference; lastKnownFileType = folder; name = card; path = Images/card; sourceTree = "<group>"; };
 		30842D2218BD50E8002AFF48 /* RMCardEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMCardEditorController.h; path = Card/RMCardEditorController.h; sourceTree = "<group>"; };
 		30842D2318BD50E8002AFF48 /* RMCardEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMCardEditorController.m; path = Card/RMCardEditorController.m; sourceTree = "<group>"; };
 		30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RMCardEditorController.xib; path = Card/RMCardEditorController.xib; sourceTree = "<group>"; };
 		30842D2718BD5677002AFF48 /* RMViewController+Aux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMViewController+Aux.h"; sourceTree = "<group>"; };
 		30842D2818BD5677002AFF48 /* RMViewController+Aux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMViewController+Aux.m"; sourceTree = "<group>"; };
-		30842D2C18BE9F36002AFF48 /* chris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chris.jpg; sourceTree = "<group>"; };
 		3096EAB918B63247004B5B8F /* MakeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeLine.h; sourceTree = "<group>"; };
 		3096EABA18B63247004B5B8F /* TimelineLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineLine.h; sourceTree = "<group>"; };
 		3096EABB18B63247004B5B8F /* TimelineLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineLine.m; sourceTree = "<group>"; };
@@ -912,20 +900,6 @@
 			name = smsicons;
 			sourceTree = "<group>";
 		};
-		30842D2B18BE9F36002AFF48 /* card */ = {
-			isa = PBXGroup;
-			children = (
-				3029BB6E18C3E5B80034DEA2 /* b1.jpg */,
-				3029BB6F18C3E5B80034DEA2 /* b2.jpg */,
-				3029BB7018C3E5B80034DEA2 /* b3.jpg */,
-				3029BB7118C3E5B80034DEA2 /* b4.jpg */,
-				3029BB7218C3E5B80034DEA2 /* b5.jpg */,
-				3029BB7318C3E5B80034DEA2 /* b6.jpg */,
-				30842D2C18BE9F36002AFF48 /* chris.jpg */,
-			);
-			path = card;
-			sourceTree = "<group>";
-		};
 		3096EAB718B63247004B5B8F /* timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -1101,6 +1075,7 @@
 		30BBF4681891491F00631F6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				305D98CC18C8B53100791945 /* card */,
 				30A8E51F1893E27D00DE7D99 /* Constants.h */,
 				30A8E5931895BE8500DE7D99 /* resConstants.h */,
 				30A8E5101893D33000DE7D99 /* data.json */,
@@ -1140,7 +1115,6 @@
 		30BBF4FB18915A3C00631F6E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				30842D2B18BE9F36002AFF48 /* card */,
 				30842D2A18BE9E56002AFF48 /* smsicons */,
 				3042CB6118B9931C00ABCF1C /* Icons */,
 				30BBF50718915A3C00631F6E /* DailyBooth */,
@@ -1297,7 +1271,6 @@
 				304C300C18B0FFBB006B4A59 /* 妇女节.jpeg in Resources */,
 				304C300E18B0FFBB006B4A59 /* 建党节.jpeg in Resources */,
 				305D98CB18C8AE8B00791945 /* about-32@2x.png in Resources */,
-				3029BB7718C3E5B80034DEA2 /* b4.jpg in Resources */,
 				3042CB7818B994CA00ABCF1C /* icon_76x76.png in Resources */,
 				30A8E5071893C72E00DE7D99 /* pic_plank_up.png in Resources */,
 				303DAB1B18C68D84003832E9 /* UMShareEditViewController.xib in Resources */,
@@ -1320,12 +1293,10 @@
 				304C2FDF18B0FCAC006B4A59 /* 浪漫的情话.jpg in Resources */,
 				304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */,
 				30A8E5051893C72E00DE7D99 /* pic_plank_down.png in Resources */,
-				30842D2D18BE9F36002AFF48 /* chris.jpg in Resources */,
 				305D98C418C8AD7D00791945 /* popular_topic-32.png in Resources */,
 				304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */,
 				303DAB1918C68D84003832E9 /* UMSCommentInputController.xib in Resources */,
 				304C2FA718B0F8B2006B4A59 /* 圣诞节.jpg in Resources */,
-				3029BB7618C3E5B80034DEA2 /* b3.jpg in Resources */,
 				304C2FC818B0FB5F006B4A59 /* 开业短信.jpeg in Resources */,
 				304C2F8018B0F2B2006B4A59 /* lengxiaohua.jpg in Resources */,
 				304C2FAC18B0F8B2006B4A59 /* 愚人节.jpg in Resources */,
@@ -1341,7 +1312,6 @@
 				304C2FCE18B0FB5F006B4A59 /* 晚安祝福.jpg in Resources */,
 				304C300618B0FFBB006B4A59 /* 佛诞日.jpg in Resources */,
 				304C2F8F18B0F625006B4A59 /* 毕业短信.jpg in Resources */,
-				3029BB7518C3E5B80034DEA2 /* b2.jpg in Resources */,
 				30A8E50F1893CC7000DE7D99 /* readme.rtf in Resources */,
 				304C2F7718B03CFC006B4A59 /* 情话.sqlite in Resources */,
 				303DAB1A18C68D84003832E9 /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -1367,6 +1337,7 @@
 				304C301E18B0FFBB006B4A59 /* 龙抬头.jpg in Resources */,
 				304C2FE418B0FCAC006B4A59 /* 肉麻的情话.jpg in Resources */,
 				304C301718B0FFBB006B4A59 /* 端午节.jpeg in Resources */,
+				305D98CD18C8B53100791945 /* card in Resources */,
 				304C2FC518B0FB5F006B4A59 /* 健康短信.jpg in Resources */,
 				304C301318B0FFBB006B4A59 /* 春节.jpeg in Resources */,
 				304C301D18B0FFBB006B4A59 /* 青年节.jpeg in Resources */,
@@ -1374,7 +1345,6 @@
 				3042CB5C18B982A600ABCF1C /* copy.png in Resources */,
 				304C2F9A18B0F72C006B4A59 /* 高考.jpg in Resources */,
 				305D989418C8AACF00791945 /* copy-32.png in Resources */,
-				3029BB7818C3E5B80034DEA2 /* b5.jpg in Resources */,
 				303DAB2018C68D84003832E9 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				304C2F8D18B0F625006B4A59 /* 喜得贵子.jpg in Resources */,
 				304C2F7E18B0EC04006B4A59 /* 笑话.sqlite in Resources */,
@@ -1399,7 +1369,6 @@
 				304C2FD518B0FB5F006B4A59 /* 送别短信.jpg in Resources */,
 				305D98CA18C8AE8B00791945 /* about-32.png in Resources */,
 				3042CB7318B9931C00ABCF1C /* Icon.png in Resources */,
-				3029BB7418C3E5B80034DEA2 /* b1.jpg in Resources */,
 				304C2FAB18B0F8B2006B4A59 /* 情人节.jpg in Resources */,
 				30A8E5041893C72E00DE7D99 /* pic_plank_among@2x.png in Resources */,
 				30BBF4FA189159AE00631F6E /* AllSMSViewController.xib in Resources */,
@@ -1435,7 +1404,6 @@
 				304C300418B0FFBB006B4A59 /* 中秋节.jpeg in Resources */,
 				304C301418B0FFBB006B4A59 /* 植树节.jpg in Resources */,
 				30A8E5021893C72E00DE7D99 /* pic_icon_fresh@2x.png in Resources */,
-				3029BB7918C3E5B80034DEA2 /* b6.jpg in Resources */,
 				304C300318B0FFBB006B4A59 /* 中元节.jpg in Resources */,
 				304C2FD418B0FB5F006B4A59 /* 表白短信.jpg in Resources */,
 				304C2F7418B034FB006B4A59 /* 中国传统节日.sqlite in Resources */,

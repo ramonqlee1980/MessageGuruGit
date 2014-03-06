@@ -34,6 +34,7 @@
     }
     
     //TODO::解析card，保存到数组中
+#if 0//deprecated
     NSString* cards = [data objectForKey:@"card"];
     if(cards)
     {
@@ -41,8 +42,39 @@
         // "card":"b1.jpg;b2.jpg",
         [ret.cards addObjectsFromArray:[cards componentsSeparatedByString:@";"]];
     }
+#endif
+    
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString *homeDir = [bundle resourcePath];
+    homeDir = [NSString stringWithFormat:@"%@/card/%@/",homeDir,ret.name];
+    NSArray* allFiles = [RMCategoryItem getFilenamelistOfType:@"" fromDirPath:homeDir];
+    if (allFiles&&allFiles.count>0) {
+        ret.cards = [[NSMutableArray alloc]init];
+        [ret.cards addObjectsFromArray:allFiles];
+    }
     
     
     return ret;
+}
++(NSArray *)getFilenamelistOfType:(NSString *)type fromDirPath:(NSString *)dirPath
+{
+    NSMutableArray *filenamelist = [NSMutableArray arrayWithCapacity:10];
+    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
+    
+    for (NSString *filename in tmplist) {
+        NSString *fullpath = [dirPath stringByAppendingPathComponent:filename];
+        if ([self isFileExistAtPath:fullpath]) {
+            if ((type==nil||type.length==0)||[[filename pathExtension] isEqualToString:type]) {
+                [filenamelist  addObject:fullpath];
+            }
+        }
+    }
+    
+    return filenamelist;
+}
++(BOOL)isFileExistAtPath:(NSString*)fileFullPath {
+    BOOL isExist = NO;
+    isExist = [[NSFileManager defaultManager] fileExistsAtPath:fileFullPath];
+    return isExist;
 }
 @end
