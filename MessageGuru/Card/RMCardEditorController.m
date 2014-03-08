@@ -15,7 +15,7 @@
 
 const NSUInteger kCellHeight = 44;
 
-@interface RMCardEditorController ()
+@interface RMCardEditorController ()<UITextViewDelegate>
 {
     UITableView *bottomTableview;
     NSArray* backgroundImages;
@@ -60,6 +60,7 @@ const NSUInteger kCellHeight = 44;
     _backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     _textView = [[UITextView alloc]init];
+    _textView.delegate = self;
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.textView addGestureRecognizer:pan];
@@ -69,6 +70,9 @@ const NSUInteger kCellHeight = 44;
     
     if (self.textView) {
         [self.textView setText:msg];
+        CGRect frame = self.textView.frame;
+        frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
+        self.textView.frame = frame;
     }
     
     if (self.background) {
@@ -111,7 +115,6 @@ const NSUInteger kCellHeight = 44;
         [self addNavigationButton:nil withRightButton:rigthBarButtonItem];
     }
     
-    [self setTextViewBoundingBox:NO];
     self.backgroundImages = [RMCardEditorController getBackgroundFiles:self.category];
     if(self.backgroundImages.count)
     {
@@ -141,16 +144,6 @@ const NSUInteger kCellHeight = 44;
     [self showShareView:self withText:@"" withImage:cardShot];
 }
 
-//textview 边框
--(void)setTextViewBoundingBox:(BOOL)visible
-{
-    CGColorRef colr = visible?[UIColor grayColor].CGColor:[UIColor clearColor].CGColor;
-    
-    self.textView.layer.borderColor = colr;
-    self.textView.layer.borderWidth = 2.0;
-    self.textView.layer.cornerRadius =5.0;
-    self.textView.backgroundColor = [UIColor clearColor];
-}
 //TODO::获取指定区域的截图，生成贺卡
 -(UIImage*)generateScreenShot:(UIView*)view
 {
@@ -339,5 +332,35 @@ const NSUInteger kCellHeight = 44;
     
     
     return image;
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (![_textView isExclusiveTouch]) {
+        [_textView resignFirstResponder];
+    }
+}
+#pragma mark uitextviewdelegate
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if (!textView) {
+        return;
+    }
+    //resize it
+    CGRect frame = textView.frame;
+    frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
+    textView.frame = frame;
+}
+#pragma mark text bounding box
++(CGSize)boundingSize:(UIFont*)font withText:(NSString*)text withinView:(UIView*)view
+{
+    CGSize constraint = CGSizeMake(view.frame.size.width, 20000.0f);
+    
+    NSDictionary * attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
+    NSAttributedString *attributedText =
+    [[NSAttributedString alloc]
+     initWithString:text
+     attributes:attributes];
+    return [attributedText boundingRectWithSize:constraint
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil].size;
 }
 @end
