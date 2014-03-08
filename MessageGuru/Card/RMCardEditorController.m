@@ -52,13 +52,24 @@
 }
 -(void)loadEx
 {
+    _backgroundImageView =[[UIImageView alloc]init];
+    _backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
+    _textView = [[UITextView alloc]init];
+    
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    [self.msgTextView addGestureRecognizer:pan];
+    [self.textView addGestureRecognizer:pan];
     [pan release];
     
-    [self loadBottomSettingView];
+    [self initExtraViews];
+    
+    if (self.textView) {
+        [self.textView setText:msg];
+    }
+    
+    if (self.background) {
+        self.backgroundImageView.image = self.background;
+    }
 }
-
 /* 识别拖动 */
 - (void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint translatedPoint = [gestureRecognizer translationInView:self.view];
@@ -72,20 +83,15 @@
     
     [gestureRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     [self loadEx];
     
     // Do any additional setup after loading the view from its nib.
-    if (self.msgTextView) {
-        [self.msgTextView setText:msg];
-    }
-    
-    if (self.background) {
-        self.backgroundImageView.image = self.background;
-    }
+   
     
     //左右button，左边返回，右边发送
     UIBarButtonItem * rigthBarButtonItem =
@@ -102,7 +108,12 @@
     
     [self setTextViewBoundingBox:NO];
     self.backgroundImages = [RMCardEditorController getBackgroundFiles:self.category];
+    if(self.backgroundImages.count)
+    {
+        self.backgroundImageView.image = [RMCardEditorController  getImage:[self.backgroundImages objectAtIndex:0]];
+    }
 }
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -117,9 +128,9 @@
 -(void)sendCard
 {
     //hide keyboard
-    [self.msgTextView resignFirstResponder];
+    [self.textView resignFirstResponder];
     
-    UIImage* cardShot = [self generateScreenShot];
+    UIImage* cardShot = [self generateScreenShot:[self clientView]];
     
     //显示分享界面，发送
     [self showShareView:self withText:@"" withImage:cardShot];
@@ -130,21 +141,29 @@
 {
     CGColorRef colr = visible?[UIColor grayColor].CGColor:[UIColor clearColor].CGColor;
     
-    self.msgTextView.layer.borderColor = colr;
-    self.msgTextView.layer.borderWidth = 2.0;
-    self.msgTextView.layer.cornerRadius =5.0;
-    self.msgTextView.backgroundColor = [UIColor clearColor];
+    self.textView.layer.borderColor = colr;
+    self.textView.layer.borderWidth = 2.0;
+    self.textView.layer.cornerRadius =5.0;
+    self.textView.backgroundColor = [UIColor clearColor];
 }
 //TODO::获取指定区域的截图，生成贺卡
--(UIImage*)generateScreenShot
+-(UIImage*)generateScreenShot:(UIView*)view
 {
     if (bottomTableview) {
         bottomTableview.hidden = YES;
     }
-    UIGraphicsBeginImageContext(self.view.frame.size);
+    //支持retina高分的关键
+    if(UIGraphicsBeginImageContextWithOptions != NULL)
+    {
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
+    } else {
+        UIGraphicsBeginImageContext(view.frame.size);
+    }
+
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *aImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
     if (bottomTableview) {
         bottomTableview.hidden = NO;
     }
@@ -188,27 +207,43 @@
 }
 
 #pragma mark load bottom view
--(void)loadBottomSettingView
+-(void)initExtraViews
 {
-    const static CGFloat kBottomBarMargin = 15;//上下margin
+    const static CGFloat kBottomBarMargin = 0;//上下margin
     const static CGFloat kBottomBarHeight = 60;
     //set backgroundview size
-    CGRect frame = self.view.frame;
+    CGRect frame = [[UIScreen mainScreen]bounds];
     CGRect backgroundFrame = frame;
-    if (self.navigationController) {
-        CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
-        backgroundFrame.size.height -= navigationBarHeight;
-        backgroundFrame.origin.y += navigationBarHeight;
-    }
+    
+    //去除statusbar，navigationbar高度
+    UIView* adapterView = [self clientView];
+    
+    backgroundFrame.size.height = adapterView.frame.size.height;
+    
+    //adapterview for adapt view of ios7 and previous version
     //留出出底部的状态条高度
     backgroundFrame.size.height -= (kBottomBarHeight+2*kBottomBarMargin);
     self.backgroundImageView.frame = backgroundFrame;
+    
+    [self.backgroundImageView removeFromSuperview];
+    self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [adapterView addSubview:self.backgroundImageView];
+    
+    _textView.layer.anchorPoint = CGPointMake(0, 0);
+//    _textView.font = [UIFont fontWithName:@"Arial" size:18.0f];
+    CGRect rect = _textView.frame;
+    rect.origin = CGPointZero;
+    rect.size = backgroundFrame.size;
+    rect.size.height /=  2;
+    _textView.frame = rect;
+    _textView.layer.position = CGPointZero;
+    [adapterView addSubview:_textView];
     
     if (bottomTableview) {
         return;
     }
     bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kBottomBarHeight, self.view.frame.size.width)];
-    bottomTableview.backgroundColor = [UIColor blueColor];
+    bottomTableview.backgroundColor = [UIColor clearColor];
     bottomTableview.showsVerticalScrollIndicator = NO;
     
     
@@ -224,7 +259,9 @@
     
     bottomTableview.delegate = self;
     bottomTableview.dataSource = self;
-    [self.view addSubview:bottomTableview];
+    [bottomTableview removeFromSuperview];
+    [adapterView addSubview:bottomTableview];
+    
     [bottomTableview release];
 }
 
@@ -264,6 +301,7 @@
     if (self.background && image) {
         self.backgroundImageView.image = image;
     }
+    self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 //首先尝试全路径加载，然后尝试从资源目录加载
 +(UIImage*)getImage:(NSString*)fileName

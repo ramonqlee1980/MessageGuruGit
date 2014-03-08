@@ -8,14 +8,45 @@
 
 #import "RMViewController+Aux.h"
 #import "MobiSageSDK.h"
+#import "Constants.h"
+#import <objc/runtime.h>  
 
+NSString* kClientViewKey  = @"kClientView";
 
 @interface UIViewController(RMViewController_Aux_Private)<MobiSageAdBannerDelegate>
-
 @end
 
 @implementation UIViewController(RMViewController_Aux)
+//适配ios7
+-(UIView*)clientView
+{
+    UIView* adapterView = (UIView*)objc_getAssociatedObject(self,&kClientViewKey);
+    
+    if (adapterView) {
+        return adapterView;
+    }
+    
+    CGFloat minusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    if (self.navigationController) {
+        minusHeight += self.navigationController.navigationBar.frame.size.height;
+    }
+    
+    //adapterview，适配ios7
+    adapterView = [[UIView alloc]initWithFrame:CGRectZero];
+    CGRect rect = [[UIScreen mainScreen]bounds];
+    rect.size.height -= minusHeight;
+    if (IOS7) {
+        rect.origin.y += minusHeight;
+    }
+    
+    adapterView.frame = rect;
+    [self.view addSubview:adapterView];
+    [adapterView release];
+    
+    objc_setAssociatedObject(self, &kClientViewKey, adapterView, OBJC_ASSOCIATION_ASSIGN);
 
+    return adapterView;
+}
 - (void)addNavigationButton:(UIBarButtonItem*)leftButtonItem withRightButton:(UIBarButtonItem*)rightButtonItem;
 {
     // Dispose of any resources that can be recreated.

@@ -18,6 +18,6 @@
 @property(nonatomic,copy)NSString* msg;//信息文本
 @property(nonatomic,copy)UIImage* background;//信息背景
 
-@property(nonatomic,retain)IBOutlet UIImageView* backgroundImageView;
-@property(nonatomic,retain)IBOutlet UITextView*  msgTextView;
+@property(nonatomic,retain)UIImageView* backgroundImageView;
+@property(nonatomic,retain)IBOutlet UITextView*  textView;
 @end
