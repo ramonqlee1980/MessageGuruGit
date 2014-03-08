@@ -25,9 +25,21 @@
 @synthesize msg,background,category,backgroundImages;
 
 //TODO::不同类别返回对应的背景图，有缺省背景图
+//并检查图片是否有效
 +(NSArray*)getBackgroundFiles:(NSString*)categoryName
 {
-    return [[RMDataCenter sharedInstance]cards:categoryName];
+    NSArray* array = [[RMDataCenter sharedInstance]cards:categoryName];
+    NSMutableArray* ret = [[[NSMutableArray alloc]initWithCapacity:array.count]autorelease];
+    
+    for (NSString* backgroundFileName  in array) {
+        if(![RMCardEditorController getImage:backgroundFileName])
+        {
+            continue;
+        }
+        [ret addObject:backgroundFileName];
+    }
+    
+    return ret;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -178,21 +190,37 @@
 #pragma mark load bottom view
 -(void)loadBottomSettingView
 {
-    const static NSUInteger kBottomBarMargin = 40;
-    const static NSUInteger kBottomBarHeight = 60;
+    const static CGFloat kBottomBarMargin = 15;//上下margin
+    const static CGFloat kBottomBarHeight = 60;
+    //set backgroundview size
+    CGRect frame = self.view.frame;
+    CGRect backgroundFrame = frame;
+    if (self.navigationController) {
+        CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
+        backgroundFrame.size.height -= navigationBarHeight;
+        backgroundFrame.origin.y += navigationBarHeight;
+    }
+    //留出出底部的状态条高度
+    backgroundFrame.size.height -= (kBottomBarHeight+2*kBottomBarMargin);
+    self.backgroundImageView.frame = backgroundFrame;
     
-    bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 60, 60, 480)];
+    if (bottomTableview) {
+        return;
+    }
+    bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kBottomBarHeight, self.view.frame.size.width)];
     bottomTableview.backgroundColor = [UIColor whiteColor];
-    [bottomTableview.layer setAnchorPoint:CGPointMake(0.0, 0.0)];
-    bottomTableview.transform = CGAffineTransformMakeRotation(-M_PI_2);
     bottomTableview.showsVerticalScrollIndicator = NO;
     
-    CGRect frame = self.view.frame;
     
-    bottomTableview.frame = CGRectMake(0, frame.size.height-kBottomBarMargin-kBottomBarHeight,frame.size.width, kBottomBarHeight);
-    bottomTableview.rowHeight = 60.0;
+    CGFloat y = backgroundFrame.origin.y+backgroundFrame.size.height+kBottomBarHeight+kBottomBarMargin;
+    bottomTableview.frame = CGRectMake(0, 100,kBottomBarHeight,frame.size.width);
+    bottomTableview.rowHeight = kBottomBarHeight;
     NSLog(@"%f,%f,%f,%f",bottomTableview.frame.origin.x,bottomTableview.frame.origin.y,bottomTableview.frame.size.width,bottomTableview.frame.size.height);
 
+    [bottomTableview.layer setAnchorPoint:CGPointMake(0.0, 0.0)];
+    bottomTableview.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    //TODO::旋转坐标系下设定位置
+    
     bottomTableview.delegate = self;
     bottomTableview.dataSource = self;
     [self.view addSubview:bottomTableview];
@@ -218,7 +246,9 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSString* backgroundFileName = [backgroundImages objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:backgroundFileName];
+    UIImage* image = [RMCardEditorController getImage:backgroundFileName];
+    
+    cell.imageView.image = image;
     return cell;
 }
 
@@ -228,10 +258,22 @@
     //获取背景图文件名，预览效果，其中0代表恢复初始效果
     NSString* backgroundFileName = [[RMCardEditorController getBackgroundFiles:self.category]objectAtIndex:indexPath.row];
     
-    UIImage* image = [UIImage imageNamed:backgroundFileName];
+    UIImage* image = [RMCardEditorController getImage:backgroundFileName];
+    
     if (self.background && image) {
         self.backgroundImageView.image = image;
     }
 }
-
+//首先尝试全路径加载，然后尝试从资源目录加载
++(UIImage*)getImage:(NSString*)fileName
+{
+    UIImage* image = [UIImage imageWithContentsOfFile:fileName];
+    if (!image) {
+        image = [UIImage imageNamed:fileName];
+    }
+//    NSLog(@"(%f,%f)",image.size.width,image.size.height);
+    
+    
+    return image;
+}
 @end
