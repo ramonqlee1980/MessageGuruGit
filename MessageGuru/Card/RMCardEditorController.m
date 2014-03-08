@@ -19,6 +19,7 @@ const NSUInteger kCellHeight = 44;
 {
     UITableView *bottomTableview;
     NSArray* backgroundImages;
+    CGRect _inputViewOriginalFrame;
 }
 @property(nonatomic,retain)NSArray* backgroundImages;
 @end
@@ -55,12 +56,14 @@ const NSUInteger kCellHeight = 44;
 
 -(void)loadEx
 {
+    [self registerForKeyboardNotifications];
     _backgroundImageView =[[SWSnapshotStackView alloc]init];
     _backgroundImageView.displayAsStack = YES;
     _backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     _textView = [[UITextView alloc]init];
     _textView.delegate = self;
+    _textView.backgroundColor = [UIColor clearColor];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.textView addGestureRecognizer:pan];
@@ -339,6 +342,13 @@ const NSUInteger kCellHeight = 44;
     }
 }
 #pragma mark uitextviewdelegate
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if (!textView) {
+        return;
+    }
+    
+}
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     if (!textView) {
@@ -349,6 +359,50 @@ const NSUInteger kCellHeight = 44;
     frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
     textView.frame = frame;
 }
+
+#pragma mark textview overlapped by keyboard
+- (void) registerForKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+- (void) keyboardWillShow:(NSNotification *) notification {
+    
+    //取得键盘frame，注意，因为键盘是window的层面弹出来的，所以其frame坐标也是对应window窗口的
+    CGRect endRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGPoint endOrigin = endRect.origin;
+    
+    NSLog(@"keyboard frame = %@",NSStringFromCGRect(endRect));
+    //把键盘的frame坐标转换到与UITextView一致的父view上来
+    UIView* inputView = self.textView;
+    UIView* parentView = [self clientView];
+    _inputViewOriginalFrame = inputView.frame;
+    
+    endOrigin = [parentView convertPoint:endOrigin fromView:[UIApplication sharedApplication].keyWindow];
+    NSLog(@"endOrigin = %@",NSStringFromCGPoint(endOrigin));
+    //调整inputView的位置
+    CGFloat inputView_Y =parentView.frame.size.height - endRect.size.height - inputView.frame.size.height;
+    
+    //move it or not
+    if (inputView_Y>_inputViewOriginalFrame.origin.y) {
+        return;
+    }
+    [UIView beginAnimations:nil context:nil];
+    inputView.frame = CGRectMake(inputView.frame.origin.x, inputView_Y, inputView.frame.size.width, inputView.frame.size.height);
+    [UIView commitAnimations];
+}
+
+- (void) keyboardWillBeHidden:(NSNotification *) notification {
+    [UIView beginAnimations:nil context:nil];
+    self.textView.frame = _inputViewOriginalFrame;
+    [UIView commitAnimations];
+}
+
 #pragma mark text bounding box
 +(CGSize)boundingSize:(UIFont*)font withText:(NSString*)text withinView:(UIView*)view
 {
