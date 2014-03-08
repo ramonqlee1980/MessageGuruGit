@@ -160,6 +160,7 @@
 		305D98CA18C8AE8B00791945 /* about-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 305D98C818C8AE8B00791945 /* about-32.png */; };
 		305D98CB18C8AE8B00791945 /* about-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 305D98C918C8AE8B00791945 /* about-32@2x.png */; };
 		305D98CD18C8B53100791945 /* card in Resources */ = {isa = PBXBuildFile; fileRef = 305D98CC18C8B53100791945 /* card */; };
+		305D98D518CB5D3800791945 /* SWSnapshotStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D98D418CB5D3800791945 /* SWSnapshotStackView.m */; };
 		30842D2518BD50E8002AFF48 /* RMCardEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2318BD50E8002AFF48 /* RMCardEditorController.m */; };
 		30842D2618BD50E8002AFF48 /* RMCardEditorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */; };
 		30842D2918BD5677002AFF48 /* RMViewController+Aux.m in Sources */ = {isa = PBXBuildFile; fileRef = 30842D2818BD5677002AFF48 /* RMViewController+Aux.m */; };
@@ -421,6 +422,8 @@
 		305D98C818C8AE8B00791945 /* about-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-32.png"; sourceTree = "<group>"; };
 		305D98C918C8AE8B00791945 /* about-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-32@2x.png"; sourceTree = "<group>"; };
 		305D98CC18C8B53100791945 /* card */ = {isa = PBXFileReference; lastKnownFileType = folder; name = card; path = Images/card; sourceTree = "<group>"; };
+		305D98D318CB5D3800791945 /* SWSnapshotStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSnapshotStackView.h; sourceTree = "<group>"; };
+		305D98D418CB5D3800791945 /* SWSnapshotStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSnapshotStackView.m; sourceTree = "<group>"; };
 		30842D2218BD50E8002AFF48 /* RMCardEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMCardEditorController.h; path = Card/RMCardEditorController.h; sourceTree = "<group>"; };
 		30842D2318BD50E8002AFF48 /* RMCardEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMCardEditorController.m; path = Card/RMCardEditorController.m; sourceTree = "<group>"; };
 		30842D2418BD50E8002AFF48 /* RMCardEditorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RMCardEditorController.xib; path = Card/RMCardEditorController.xib; sourceTree = "<group>"; };
@@ -783,6 +786,15 @@
 			name = BaseViewController;
 			sourceTree = "<group>";
 		};
+		305D98D218CB5D3800791945 /* SWSnapshotStackView */ = {
+			isa = PBXGroup;
+			children = (
+				305D98D318CB5D3800791945 /* SWSnapshotStackView.h */,
+				305D98D418CB5D3800791945 /* SWSnapshotStackView.m */,
+			);
+			path = SWSnapshotStackView;
+			sourceTree = "<group>";
+		};
 		30842D2018BD5013002AFF48 /* TabControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,6 +1005,7 @@
 		30A8E55E1894760500DE7D99 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				305D98D218CB5D3800791945 /* SWSnapshotStackView */,
 				303DAC4818C69143003832E9 /* MobiSageSDK */,
 				303DAAEB18C68D84003832E9 /* umeng_ios_social_sdk_3.3.5 */,
 				30D2306018B9AFB8005BED10 /* Flurry */,
@@ -1453,6 +1466,7 @@
 				30A8E56518947C1E00DE7D99 /* RMSMS.m in Sources */,
 				304C2E1318AF7BAB006B4A59 /* NSString+HTML.m in Sources */,
 				304C2E1418AF7BAB006B4A59 /* NSString+StringThatFits.m in Sources */,
+				305D98D518CB5D3800791945 /* SWSnapshotStackView.m in Sources */,
 				3096EAC418B63297004B5B8F /* RMTimelineViewController.m in Sources */,
 				304C2E1518AF7BAB006B4A59 /* StringUtil.m in Sources */,
 				30A8E66B1895C4C000DE7D99 /* HotViewController.m in Sources */,

@@ -12,12 +12,15 @@
 #import <UIKit/UIKit.h>
 #import "UMSocial.h"
 
+
+@class SWSnapshotStackView;
+
 @interface RMCardEditorController : UIViewController<UMSocialUIDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,copy)NSString* category;//类别
 @property(nonatomic,copy)NSString* msg;//信息文本
 @property(nonatomic,copy)UIImage* background;//信息背景
 
-@property(nonatomic,retain)UIImageView* backgroundImageView;
+@property(nonatomic,retain)SWSnapshotStackView* backgroundImageView;
 @property(nonatomic,retain)IBOutlet UITextView*  textView;
 @end

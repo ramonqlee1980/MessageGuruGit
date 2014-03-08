@@ -11,7 +11,9 @@
 #import "Flurry.h"
 #import "Constants.h"
 #import "RMDataCenter.h"
+#import "SWSnapshotStackView.h"
 
+const NSUInteger kCellHeight = 44;
 
 @interface RMCardEditorController ()
 {
@@ -50,10 +52,13 @@
     }
     return self;
 }
+
 -(void)loadEx
 {
-    _backgroundImageView =[[UIImageView alloc]init];
+    _backgroundImageView =[[SWSnapshotStackView alloc]init];
+    _backgroundImageView.displayAsStack = YES;
     _backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
     _textView = [[UITextView alloc]init];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -218,11 +223,12 @@
     //去除statusbar，navigationbar高度
     UIView* adapterView = [self clientView];
     
+    
     backgroundFrame.size.height = adapterView.frame.size.height;
     
     //adapterview for adapt view of ios7 and previous version
     //留出出底部的状态条高度
-    backgroundFrame.size.height -= (kBottomBarHeight+2*kBottomBarMargin);
+    backgroundFrame.size.height -= (kBottomBarHeight+kBottomBarMargin);
     self.backgroundImageView.frame = backgroundFrame;
     
     [self.backgroundImageView removeFromSuperview];
@@ -245,7 +251,7 @@
     bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kBottomBarHeight, self.view.frame.size.width)];
     bottomTableview.backgroundColor = [UIColor clearColor];
     bottomTableview.showsVerticalScrollIndicator = NO;
-    
+    bottomTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     CGFloat y = backgroundFrame.origin.y+backgroundFrame.size.height+kBottomBarHeight;
     bottomTableview.frame = CGRectMake(0, 0,kBottomBarHeight,frame.size.width);
@@ -270,23 +276,42 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return backgroundImages.count;//背景图//和字体设置
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kCellHeight;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
+    static const NSUInteger kImageViewTag = 0x1000;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:CellIdentifier] autorelease];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        cell.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
-        cell.imageView.contentMode = UIViewContentModeScaleToFill;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        CGRect frame = cell.frame;
+        frame.origin = CGPointZero;
+        frame.size.width = kCellHeight;
+        frame.size.height = kCellHeight;
+        
+        
+        SWSnapshotStackView* imageView = [[SWSnapshotStackView alloc]initWithFrame:frame];
+        imageView.displayAsStack = NO;
+        imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+        imageView.contentMode = UIViewContentModeScaleToFill;
+        imageView.tag = kImageViewTag;
+        
+        [cell.contentView addSubview:imageView];
+        [imageView release];
     }
+    
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSString* backgroundFileName = [backgroundImages objectAtIndex:indexPath.row];
     UIImage* image = [RMCardEditorController getImage:backgroundFileName];
+    UIImageView* imageView = (UIImageView*)[cell.contentView viewWithTag:kImageViewTag];
+    imageView.image = image;
     
-    cell.imageView.image = image;
     return cell;
 }
 
