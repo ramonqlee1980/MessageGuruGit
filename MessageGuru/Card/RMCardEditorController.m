@@ -208,15 +208,16 @@
         return;
     }
     bottomTableview  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kBottomBarHeight, self.view.frame.size.width)];
-    bottomTableview.backgroundColor = [UIColor whiteColor];
+    bottomTableview.backgroundColor = [UIColor blueColor];
     bottomTableview.showsVerticalScrollIndicator = NO;
     
     
-    CGFloat y = backgroundFrame.origin.y+backgroundFrame.size.height+kBottomBarHeight+kBottomBarMargin;
-    bottomTableview.frame = CGRectMake(0, 100,kBottomBarHeight,frame.size.width);
+    CGFloat y = backgroundFrame.origin.y+backgroundFrame.size.height+kBottomBarHeight;
+    bottomTableview.frame = CGRectMake(0, 0,kBottomBarHeight,frame.size.width);
     bottomTableview.rowHeight = kBottomBarHeight;
     NSLog(@"%f,%f,%f,%f",bottomTableview.frame.origin.x,bottomTableview.frame.origin.y,bottomTableview.frame.size.width,bottomTableview.frame.size.height);
 
+    [bottomTableview.layer setPosition:CGPointMake(0, y)];
     [bottomTableview.layer setAnchorPoint:CGPointMake(0.0, 0.0)];
     bottomTableview.transform = CGAffineTransformMakeRotation(-M_PI_2);
     //TODO::旋转坐标系下设定位置
