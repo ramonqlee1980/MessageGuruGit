@@ -341,24 +341,6 @@ const NSUInteger kCellHeight = 44;
         [_textView resignFirstResponder];
     }
 }
-#pragma mark uitextviewdelegate
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    if (!textView) {
-        return;
-    }
-    
-}
-- (void)textViewDidEndEditing:(UITextView *)textView
-{
-    if (!textView) {
-        return;
-    }
-    //resize it
-    CGRect frame = textView.frame;
-    frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
-    textView.frame = frame;
-}
 
 #pragma mark textview overlapped by keyboard
 - (void) registerForKeyboardNotifications {
@@ -398,6 +380,12 @@ const NSUInteger kCellHeight = 44;
 }
 
 - (void) keyboardWillBeHidden:(NSNotification *) notification {
+    //resize it
+    CGRect frame = self.textView.frame;
+    frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
+    self.textView.frame = frame;
+    
+    //reposition it
     [UIView beginAnimations:nil context:nil];
     self.textView.frame = _inputViewOriginalFrame;
     [UIView commitAnimations];
