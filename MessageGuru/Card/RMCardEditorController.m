@@ -12,6 +12,9 @@
 #import "Constants.h"
 #import "RMDataCenter.h"
 #import "SWSnapshotStackView.h"
+#import "Flurry.h"
+
+
 
 const NSUInteger kCellHeight = 44;
 
@@ -125,6 +128,9 @@ const NSUInteger kCellHeight = 44;
     {
         self.backgroundImageView.image = [RMCardEditorController  getImage:[self.backgroundImages objectAtIndex:0]];
     }
+    
+    //flurry
+    [Flurry logEvent:kEnterSMSCardUI];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -175,7 +181,7 @@ const NSUInteger kCellHeight = 44;
 
 #pragma mark util methods
 - (void)showShareView:(id)sender withText:(NSString*)text withImage:(UIImage*)image{
-    NSDictionary* dict = [NSDictionary dictionaryWithObject:text forKey:kSNSShareEvent];
+    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:text,kSNSShareEvent,@"image",kSNSImageShareEvent, nil];
     [Flurry logEvent:kSNSShareEvent withParameters:dict];
     
     //如果需要分享回调，请将delegate对象设置self，并实现下面的回调方法
@@ -325,6 +331,8 @@ const NSUInteger kCellHeight = 44;
         self.backgroundImageView.image = image;
     }
     self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    [Flurry logEvent:kSwitchBackgroundInCardUI];
 }
 //首先尝试全路径加载，然后尝试从资源目录加载
 +(UIImage*)getImage:(NSString*)fileName

@@ -20,4 +20,7 @@
 - (void)addNavigationButton:(UIBarButtonItem*)leftButtonItem withRightButton:(UIBarButtonItem*)rightButtonItem;
 -(UIView*)getMobisageBanner;
 -(UIView*)clientView;
+//采用一个跳动的view进行装饰当前view
+-(void)pulsingView:(UIView*)decoratedView;
+-(void)pulsingView:(UIView*)decoratedView withRadius:(CGFloat)radius withColor:(UIColor *)color;
 @end

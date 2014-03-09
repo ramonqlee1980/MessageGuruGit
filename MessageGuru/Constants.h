@@ -53,6 +53,9 @@
 #define kOpenRecommendAdInDetailViewEvent @"kOpenRecommendAdInDetailViewEvent"
 #define kOpenSMSCategory @"OpenSMSCategory"//进入短信类别
 #define kSaveSMS @"kSaveSMS"//收藏短信
+#define kEnterSMSCardUI @"EnterSMSCardUI"//进入短信贺卡界面
+#define kSwitchBackgroundInCardUI @"SwitchBackgroundInCardUI"//在贺卡界面切换背景
+#define kSNSImageShareEvent @"ßSNSImageShareEvent"//发送短信贺卡
 
 //金币变更事件，将记录变更前后的金币数量
 #define kCoinsChangeEvent @"CoinsChangeEvent"

@@ -9,10 +9,12 @@
 #import "RMViewController+Aux.h"
 #import "MobiSageSDK.h"
 #import "Constants.h"
-#import <objc/runtime.h>  
+#import <objc/runtime.h>
+#import "PulsingHaloLayer.h"
 
 
-NSString* kClientViewKey  = @"kClientView";
+NSString* kClientViewKey   = @"kClientView";
+NSString* kPulsingHaloKey  = @"kPulsingHaloKey";
 
 @interface UIViewController(RMViewController_Aux_Private)<MobiSageAdBannerDelegate>
 @end
@@ -45,7 +47,7 @@ NSString* kClientViewKey  = @"kClientView";
     [adapterView release];
     
     objc_setAssociatedObject(self, &kClientViewKey, adapterView, OBJC_ASSOCIATION_ASSIGN);
-
+    
     return adapterView;
 }
 - (void)addNavigationButton:(UIBarButtonItem*)leftButtonItem withRightButton:(UIBarButtonItem*)rightButtonItem;
@@ -139,5 +141,36 @@ NSString* kClientViewKey  = @"kClientView";
 - (void)mobiSageAdBannerHideADWindow:(MobiSageAdBanner*)adBanner
 {
     NSLog(@"弹出的LandingSit被关闭");
+}
+
+#pragma mark PulsingHalo
+-(void)pulsingView:(UIView*)decoratedView
+{
+    [self pulsingView:decoratedView withRadius:0.0 withColor:nil];
+}
+-(void)pulsingView:(UIView*)decoratedView withRadius:(CGFloat)radius withColor:(UIColor *)color
+{
+    PulsingHaloLayer* adapterView = (PulsingHaloLayer*)objc_getAssociatedObject(self,&kPulsingHaloKey);
+    
+    if (adapterView) {
+        return;
+    }
+    
+    adapterView = [PulsingHaloLayer layer];
+    adapterView.position = decoratedView.center;
+    [decoratedView.superview.layer insertSublayer:adapterView below:decoratedView.layer];
+    
+    adapterView.radius = (radius<=1.0)?40:radius;
+    if(!color)
+    {
+        color = [UIColor colorWithRed:1.0
+                                green:0
+                                 blue:0
+                                alpha:1.0];
+    }
+    
+    adapterView.backgroundColor = color.CGColor;
+    
+    objc_setAssociatedObject(self, &kPulsingHaloKey, adapterView, OBJC_ASSOCIATION_ASSIGN);
 }
 @end

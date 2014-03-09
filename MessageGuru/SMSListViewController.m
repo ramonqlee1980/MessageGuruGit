@@ -14,6 +14,7 @@
 #import "Toast+UIView.h"
 #import "Flurry.h"
 #import "Card/RMCardEditorController.h"
+#import "Utils.h"
 
 NSString *CellIdentifier = @"SMSMessageCell";
 
@@ -95,7 +96,21 @@ NSString *CellIdentifier = @"SMSMessageCell";
 #endif
     cell.fromUrl = message.url;
     cell.category = message.category;
+    
+    //如果还没有使用过短信贺卡功能，则对第一个的短信贺卡分享按钮添加特效
+    if (indexPath.row==0) {
+        [self decorateSendCardButton:cell];
+    }
     return cell;
+}
+
+-(void)decorateSendCardButton:(SMSMessageCell *)cell
+{
+    //获取是否点击过的标示
+    if ([Utils sendCardTouched]) {
+        return;
+    }
+    [self pulsingView:cell.sendCardButton];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -139,6 +154,8 @@ NSString *CellIdentifier = @"SMSMessageCell";
     cardController.background = background;
     
     [self  presentViewController:navi animated:YES completion:nil];
+    
+    [Utils touchSendCard];
 }
 
 #pragma mark util methods

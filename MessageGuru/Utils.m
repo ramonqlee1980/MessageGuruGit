@@ -14,6 +14,7 @@
 
 #define CurrentGoldenStringKey @"CurrentGolden"
 #define kDailyChallengeDateKey @"DailyChallengeDateKey"
+#define kSendCardTouch @"kSendCardTouch"
 
 static NSString* ipAddress;
 @implementation Utils
@@ -165,5 +166,16 @@ static NSString* ipAddress;
 {
     id obj = [Utils objectForKey:levelName];
     return [levelName isEqualToString:obj];
+}
+
+
++(void)touchSendCard
+{
+    [Utils setValue:kSendCardTouch forKey:kSendCardTouch];
+}
++(BOOL)sendCardTouched
+{
+    NSString* value = [Utils objectForKey:kSendCardTouch];
+    return [kSendCardTouch isEqualToString:value];
 }
 @end

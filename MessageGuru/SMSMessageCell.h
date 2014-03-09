@@ -25,6 +25,7 @@
 @property(nonatomic,retain)IBOutlet UILabel* detailLabel;
 @property(nonatomic,copy)NSString* fromUrl;
 @property(nonatomic,retain)IBOutlet UIButton* favoriteButton;
+@property(nonatomic,retain)IBOutlet UIButton* sendCardButton;
 @property(nonatomic,copy)NSString* category;
 
 -(IBAction)shareBySNS:(id)sender;

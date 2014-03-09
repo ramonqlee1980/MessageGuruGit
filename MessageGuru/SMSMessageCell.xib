@@ -83,6 +83,7 @@
             <connections>
                 <outlet property="detailLabel" destination="39" id="lnu-OX-z2o"/>
                 <outlet property="favoriteButton" destination="KbH-mC-NBr" id="h4N-CK-VIx"/>
+                <outlet property="sendCardButton" destination="0iC-iB-lec" id="m1j-N1-lZd"/>
             </connections>
         </tableViewCell>
     </objects>

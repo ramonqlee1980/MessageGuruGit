@@ -28,11 +28,9 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     NSMutableArray* itemsAscByDateArray;//12个月的数组，废弃第0个，启动第12个；每个里面是一个数组，记录具体的信息
     DMScrollingTicker* scrollingTicker;
 }
-@property(nonatomic,assign)PulsingHaloLayer* halo;
 @end
 
 @implementation RMTimelineViewController
-@synthesize halo;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,17 +71,7 @@ const CGFloat kLeftTextViewTextOffsetY= 10.0f;
     {
         return;
     }
-    self.halo = [PulsingHaloLayer layer];
-    self.halo.position = button.center;
-    [parent.layer insertSublayer:self.halo below:button.layer];
-    
-    self.halo.radius = 40;
-    UIColor *color = [UIColor colorWithRed:1.0
-                                     green:0
-                                      blue:0
-                                     alpha:1.0];
-    
-    self.halo.backgroundColor = color.CGColor;
+    [self pulsingView:button];
 }
 - (NSUInteger)numberOfItem//时间线上的元素项数
 {
