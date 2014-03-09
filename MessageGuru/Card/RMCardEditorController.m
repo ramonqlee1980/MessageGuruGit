@@ -19,7 +19,7 @@ const NSUInteger kCellHeight = 44;
 {
     UITableView *bottomTableview;
     NSArray* backgroundImages;
-    CGRect _inputViewOriginalFrame;
+    CGPoint _inputViewOriginalPoint;
 }
 @property(nonatomic,retain)NSArray* backgroundImages;
 @end
@@ -64,6 +64,8 @@ const NSUInteger kCellHeight = 44;
     _textView = [[UITextView alloc]init];
     _textView.delegate = self;
     _textView.backgroundColor = [UIColor clearColor];
+    _textView.textAlignment = NSTextAlignmentCenter;
+    _textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.textView addGestureRecognizer:pan];
@@ -74,7 +76,7 @@ const NSUInteger kCellHeight = 44;
     if (self.textView) {
         [self.textView setText:msg];
         CGRect frame = self.textView.frame;
-        frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
+        frame.size = [RMCardEditorController boundingSize:self.textView.font withText:self.textView.text withinView:self.view];
         self.textView.frame = frame;
     }
     
@@ -363,7 +365,7 @@ const NSUInteger kCellHeight = 44;
     //把键盘的frame坐标转换到与UITextView一致的父view上来
     UIView* inputView = self.textView;
     UIView* parentView = [self clientView];
-    _inputViewOriginalFrame = inputView.frame;
+    _inputViewOriginalPoint = inputView.frame.origin;
     
     endOrigin = [parentView convertPoint:endOrigin fromView:[UIApplication sharedApplication].keyWindow];
     NSLog(@"endOrigin = %@",NSStringFromCGPoint(endOrigin));
@@ -371,7 +373,7 @@ const NSUInteger kCellHeight = 44;
     CGFloat inputView_Y =parentView.frame.size.height - endRect.size.height - inputView.frame.size.height;
     
     //move it or not
-    if (inputView_Y>_inputViewOriginalFrame.origin.y) {
+    if (inputView_Y>_inputViewOriginalPoint.y) {
         return;
     }
     [UIView beginAnimations:nil context:nil];
@@ -380,15 +382,35 @@ const NSUInteger kCellHeight = 44;
 }
 
 - (void) keyboardWillBeHidden:(NSNotification *) notification {
-    //resize it
-    CGRect frame = self.textView.frame;
-    frame.size = [RMCardEditorController boundingSize:self.textView.font withText:msg withinView:self.view];
-    self.textView.frame = frame;
-    
     //reposition it
     [UIView beginAnimations:nil context:nil];
-    self.textView.frame = _inputViewOriginalFrame;
+    
+    CGRect frame = self.textView.frame;
+    frame.origin = _inputViewOriginalPoint;
+    self.textView.frame = frame;
     [UIView commitAnimations];
+    
+    NSLog(@"keyboardWillBeHidden resizing = %@",NSStringFromCGRect(frame));
+    frame.size = [RMCardEditorController boundingSize:self.textView.font withText:self.textView.text withinView:self.view];
+    NSLog(@"keyboardWillBeHidden resized = %@",NSStringFromCGRect(frame));
+    self.textView.frame = frame;
+}
+#pragma mark textviewdelegate
+- (void)textViewDidChange:(UITextView *)textView
+{
+    //resize it
+    CGRect frame = self.textView.frame;
+    NSLog(@"textViewDidChange resizing = %@",NSStringFromCGRect(frame));
+    frame.size = [RMCardEditorController boundingSize:self.textView.font withText:self.textView.text withinView:self.view];
+    NSLog(@"textViewDidChange resized = %@",NSStringFromCGRect(frame));
+    self.textView.frame = frame;
+    self.textView.contentSize = frame.size;
+   
+    NSLog(@"textViewDidChange contentOffset = %@",NSStringFromCGPoint(self.textView.contentOffset));
+    NSLog(@"textViewDidChange contentSize = %@",NSStringFromCGSize(self.textView.contentSize));
+}
+-(void)textViewDidChangeSelection:(UITextView *)textView {
+    [textView scrollRangeToVisible:textView.selectedRange];
 }
 
 #pragma mark text bounding box
@@ -398,11 +420,11 @@ const NSUInteger kCellHeight = 44;
     
     NSDictionary * attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
     NSAttributedString *attributedText =
-    [[NSAttributedString alloc]
+    [[[NSAttributedString alloc]
      initWithString:text
-     attributes:attributes];
+     attributes:attributes]autorelease];
     return [attributedText boundingRectWithSize:constraint
-                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
                                                context:nil].size;
 }
 @end
