@@ -321,7 +321,7 @@ const NSUInteger kCellHeight = 44;
     
     UIImage* image = [RMCardEditorController getImage:backgroundFileName];
     
-    if (self.background && image) {
+    if (image) {
         self.backgroundImageView.image = image;
     }
     self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -423,7 +423,7 @@ const NSUInteger kCellHeight = 44;
     CGSize size = [attributedText boundingRectWithSize:constraint
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil].size;
-    size.height +=  10;
+    size.height +=  10;//clip size
     
     return size;
 }
