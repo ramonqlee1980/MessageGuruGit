@@ -409,9 +409,6 @@ const NSUInteger kCellHeight = 44;
     NSLog(@"textViewDidChange contentOffset = %@",NSStringFromCGPoint(self.textView.contentOffset));
     NSLog(@"textViewDidChange contentSize = %@",NSStringFromCGSize(self.textView.contentSize));
 }
--(void)textViewDidChangeSelection:(UITextView *)textView {
-    [textView scrollRangeToVisible:textView.selectedRange];
-}
 
 #pragma mark text bounding box
 +(CGSize)boundingSize:(UIFont*)font withText:(NSString*)text withinView:(UIView*)view
@@ -423,8 +420,11 @@ const NSUInteger kCellHeight = 44;
     [[[NSAttributedString alloc]
      initWithString:text
      attributes:attributes]autorelease];
-    return [attributedText boundingRectWithSize:constraint
-                                               options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
+    CGSize size = [attributedText boundingRectWithSize:constraint
+                                               options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil].size;
+    size.height +=  10;
+    
+    return size;
 }
 @end

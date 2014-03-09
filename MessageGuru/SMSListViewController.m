@@ -99,7 +99,7 @@ NSString *CellIdentifier = @"SMSMessageCell";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self share:nil withText:[self getMessage:indexPath]];
+//    [self share:nil withText:[self getMessage:indexPath]];
 }
 #pragma mark util methods
 -(RMSMS*)getMessage:(NSIndexPath*)indexPath
