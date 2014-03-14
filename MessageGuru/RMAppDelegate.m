@@ -13,11 +13,17 @@
 #include "Flurry.h"
 #import "UMSocialWechatHandler.h"
 #import "MobiSageSDK.h"
-
+#import "RMEncoding.h"
 @implementation RMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //fixme:test
+//    [RMEncoding SC2Pinyin:@"我爱北京" withDiacritics:YES];
+//    [RMEncoding SC2TC:@"我爱北京"];
+//    [RMEncoding SC2Huoxing:@"我爱北京"];
+//    [RMEncoding SC2Juhua:@"我爱北京"];
+    //end
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     TabbedViewController* homepage = [[TabbedViewController new]autorelease];
@@ -50,7 +56,7 @@
     [[MobiSageManager getInstance] showStoreInApp:YES];
     
     //flurry initialization
-    [Flurry startSession:kAppleId];
+    [Flurry startSession:kFlurryAppId];
     [Flurry setSecureTransportEnabled:YES];
     [Flurry setCrashReportingEnabled:YES];
 }

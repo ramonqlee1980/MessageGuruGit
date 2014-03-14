@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300AD36318D11345009CB210 /* RMEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 300AD36218D11345009CB210 /* RMEncoding.m */; };
+		300AD36818D11B7C009CB210 /* OBCConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = 300AD36618D11B7C009CB210 /* OBCConvertor.m */; };
+		300AD36918D11B7C009CB210 /* ts.tab in Resources */ = {isa = PBXBuildFile; fileRef = 300AD36718D11B7C009CB210 /* ts.tab */; };
 		303DAB1518C68D84003832E9 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 303DAAED18C68D84003832E9 /* UMSocialLocalizable.strings */; };
 		303DAB1618C68D84003832E9 /* libUMSocial_Sdk_3.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303DAAFB18C68D84003832E9 /* libUMSocial_Sdk_3.3.5.a */; };
 		303DAB1718C68D84003832E9 /* libUMSocial_Sdk_Comment_3.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303DAAFC18C68D84003832E9 /* libUMSocial_Sdk_Comment_3.3.5.a */; };
@@ -235,6 +238,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300AD36118D11345009CB210 /* RMEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMEncoding.h; sourceTree = "<group>"; };
+		300AD36218D11345009CB210 /* RMEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMEncoding.m; sourceTree = "<group>"; };
+		300AD36518D11B7C009CB210 /* OBCConvertor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCConvertor.h; sourceTree = "<group>"; };
+		300AD36618D11B7C009CB210 /* OBCConvertor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCConvertor.m; sourceTree = "<group>"; };
+		300AD36718D11B7C009CB210 /* ts.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ts.tab; sourceTree = "<group>"; };
 		303DAAEE18C68D84003832E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		303DAAF018C68D84003832E9 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		303DAAF118C68D84003832E9 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -559,6 +567,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300AD36418D11B7C009CB210 /* SC2TC */ = {
+			isa = PBXGroup;
+			children = (
+				300AD36518D11B7C009CB210 /* OBCConvertor.h */,
+				300AD36618D11B7C009CB210 /* OBCConvertor.m */,
+				300AD36718D11B7C009CB210 /* ts.tab */,
+			);
+			path = SC2TC;
+			sourceTree = "<group>";
+		};
 		303DAAEB18C68D84003832E9 /* umeng_ios_social_sdk_3.3.5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +1003,8 @@
 				30A8E561189479D400DE7D99 /* Favorite.m */,
 				30A8E56318947C1E00DE7D99 /* RMSMS.h */,
 				30A8E56418947C1E00DE7D99 /* RMSMS.m */,
+				300AD36118D11345009CB210 /* RMEncoding.h */,
+				300AD36218D11345009CB210 /* RMEncoding.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1005,6 +1025,7 @@
 		30A8E55E1894760500DE7D99 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				300AD36418D11B7C009CB210 /* SC2TC */,
 				305D98D218CB5D3800791945 /* SWSnapshotStackView */,
 				303DAC4818C69143003832E9 /* MobiSageSDK */,
 				303DAAEB18C68D84003832E9 /* umeng_ios_social_sdk_3.3.5 */,
@@ -1305,6 +1326,7 @@
 				304C2F9718B0F72C006B4A59 /* 升职短信.jpg in Resources */,
 				304C2FDF18B0FCAC006B4A59 /* 浪漫的情话.jpg in Resources */,
 				304C2FAE18B0F8B2006B4A59 /* 母亲节.jpeg in Resources */,
+				300AD36918D11B7C009CB210 /* ts.tab in Resources */,
 				30A8E5051893C72E00DE7D99 /* pic_plank_down.png in Resources */,
 				305D98C418C8AD7D00791945 /* popular_topic-32.png in Resources */,
 				304C2FD218B0FB5F006B4A59 /* 生活短信.jpg in Resources */,
@@ -1448,6 +1470,7 @@
 				304C2F7118AF7C82006B4A59 /* BaseViewController.m in Sources */,
 				30842D2518BD50E8002AFF48 /* RMCardEditorController.m in Sources */,
 				30EE962318B2C9B700E76697 /* Toast+UIView.m in Sources */,
+				300AD36818D11B7C009CB210 /* OBCConvertor.m in Sources */,
 				304C2E1018AF7BAB006B4A59 /* POHorizontalList.m in Sources */,
 				30A8E562189479D400DE7D99 /* Favorite.m in Sources */,
 				3096EAC118B63247004B5B8F /* TimelineViewController.m in Sources */,
@@ -1461,6 +1484,7 @@
 				304C2E1118AF7BAB006B4A59 /* SQLiteManager.m in Sources */,
 				304C2E0F18AF7BAB006B4A59 /* ListItem.m in Sources */,
 				30A8E5781895BCC900DE7D99 /* SettingsViewController.m in Sources */,
+				300AD36318D11345009CB210 /* RMEncoding.m in Sources */,
 				30842D2918BD5677002AFF48 /* RMViewController+Aux.m in Sources */,
 				30A8E51E1893DC5B00DE7D99 /* RMCategory.m in Sources */,
 				30A8E56518947C1E00DE7D99 /* RMSMS.m in Sources */,
