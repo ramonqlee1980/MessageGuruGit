@@ -22,7 +22,7 @@
 //    [RMEncoding SC2Pinyin:@"我爱北京" withDiacritics:YES];
 //    [RMEncoding SC2TC:@"我爱北京"];
 //    [RMEncoding SC2Huoxing:@"我爱北京"];
-//    [RMEncoding SC2Juhua:@"我爱北京"];
+    [RMEncoding SC2Juhua:@"我爱北京"];
     //end
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

@@ -13,7 +13,7 @@
 #import "RMDataCenter.h"
 #import "SWSnapshotStackView.h"
 #import "Flurry.h"
-
+#import "RMViewController+Aux.h"
 
 
 const NSUInteger kCellHeight = 44;
@@ -341,9 +341,14 @@ const NSUInteger kCellHeight = 44;
     if (!image) {
         image = [UIImage imageNamed:fileName];
     }
-//    NSLog(@"(%f,%f)",image.size.width,image.size.height);
     
-    
+    //try to find under directory -card
+    NSString *homeDir = [[NSBundle mainBundle] resourcePath];
+    NSString* cardFileName = [NSString stringWithFormat:@"%@/card/%@",homeDir,fileName];
+    if (!image) {
+        image = [UIImage imageWithContentsOfFile:cardFileName];
+    }
+    //    NSLog(@"(%f,%f)",image.size.width,image.size.height);
     return image;
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

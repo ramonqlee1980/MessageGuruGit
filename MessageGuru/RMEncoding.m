@@ -15,18 +15,15 @@
     //TODO::简体转火星文
     return @"";
 }
-+(NSString*)SC2Juhua:(NSString*)str//
++(NSString*)SC2Juhua:(NSString*)str
 {
-    //TODO::简体转菊花文
-    unichar utf16_string[] = {0x0489};
-    NSString *tmp = [[NSString alloc] initWithBytes:utf16_string
-                                             length:sizeof(utf16_string) / sizeof(utf16_string[0])
-                                           encoding:NSUTF16StringEncoding
-                     ];
-    const char *utf8_string = [tmp UTF8String];
-    
-    NSString* r = [NSString stringWithFormat:@"我%@爱%@",tmp,tmp];
-    return r;
+    //简体转菊花文
+    NSMutableString* ret = [[[NSMutableString alloc]init]autorelease];
+    const unichar juhua = 0x0489;
+    for (int i=0;i<str.length;++i) {
+        [ret appendFormat:@"%C%C",[str characterAtIndex:i],juhua];
+    }
+    return ret;
 }
 
 +(NSString*)SC2TC:(NSString*)str

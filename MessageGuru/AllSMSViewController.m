@@ -13,7 +13,7 @@
 #import "RMSmsDataCenter.h"
 #import "Constants.h"
 #import "RMTimelineViewController.h"
-
+#import "RMViewController+Aux.h"
 
 @interface AllSMSViewController ()
 {

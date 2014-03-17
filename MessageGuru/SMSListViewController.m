@@ -15,6 +15,7 @@
 #import "Flurry.h"
 #import "Card/RMCardEditorController.h"
 #import "Utils.h"
+#import "RMViewController+Aux.h"
 
 NSString *CellIdentifier = @"SMSMessageCell";
 

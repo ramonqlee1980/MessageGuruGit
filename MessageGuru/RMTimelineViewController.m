@@ -15,6 +15,7 @@
 #import "DMScrollingTicker.h"
 #import "PulsingHaloLayer.h"
 #import "Flurry.h"
+#import "RMViewController+Aux.h"
 
 const NSUInteger kMonthNumber= 12;//一年12个月份
 
