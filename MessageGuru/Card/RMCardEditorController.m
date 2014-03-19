@@ -15,6 +15,7 @@
 #import "Flurry.h"
 #import "RMViewController+Aux.h"
 #import "REMenu.h"
+#import "RMEncoding.h"
 
 
 const NSUInteger kCellHeight = 44;
@@ -485,6 +486,7 @@ const NSUInteger kCellHeight = 44;
     self.textView.frame = frame;
     self.textView.contentSize = frame.size;
    
+    self.msg = self.textView.text;
     NSLog(@"textViewDidChange contentOffset = %@",NSStringFromCGPoint(self.textView.contentOffset));
     NSLog(@"textViewDidChange contentSize = %@",NSStringFromCGSize(self.textView.contentSize));
 }
@@ -517,43 +519,58 @@ const NSUInteger kCellHeight = 44;
     // Sample icons from http://icons8.com/download-free-icons-for-ios-tab-bar
     //
     
-    REMenuItem *homeItem = [[REMenuItem alloc] initWithTitle:@"Home"
+    REMenuItem *homeItem = [[REMenuItem alloc] initWithTitle:@"转繁体"
                                                     subtitle:@"Return to Home Screen"
                                                        image:[UIImage imageNamed:@"Icon_Home"]
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
                                                           NSLog(@"Item: %@", item);
+                                                          self.textView.text = [RMEncoding SC2TC:self.msg];
                                                       }];
     
-    REMenuItem *exploreItem = [[REMenuItem alloc] initWithTitle:@"Explore"
+    REMenuItem *exploreItem = [[REMenuItem alloc] initWithTitle:@"转拼音"
                                                        subtitle:@"Explore 47 additional options"
                                                           image:[UIImage imageNamed:@"Icon_Explore"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
                                                              NSLog(@"Item: %@", item);
+                                                             self.textView.text = [RMEncoding SC2Pinyin:self.msg withDiacritics:YES];
                                                          }];
     
-    REMenuItem *activityItem = [[REMenuItem alloc] initWithTitle:@"Activity"
+    REMenuItem *activityItem = [[REMenuItem alloc] initWithTitle:@"转菊花文"
                                                         subtitle:@"Perform 3 additional activities"
                                                            image:[UIImage imageNamed:@"Icon_Activity"]
                                                 highlightedImage:nil
                                                           action:^(REMenuItem *item) {
                                                               NSLog(@"Item: %@", item);
+                                                              self.textView.text = [RMEncoding SC2Juhua:self.msg];
+
                                                           }];
     
-    REMenuItem *profileItem = [[REMenuItem alloc] initWithTitle:@"Profile"
+    REMenuItem *profileItem = [[REMenuItem alloc] initWithTitle:@"转火星文"
                                                           image:[UIImage imageNamed:@"Icon_Profile"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
                                                              NSLog(@"Item: %@", item);
+                                                             self.textView.text = [RMEncoding SC2Huoxing:self.msg];
+
                                                          }];
+    
+    REMenuItem *scItem = [[REMenuItem alloc] initWithTitle:@"恢复简体"
+                                                    subtitle:@"Return to Home Screen"
+                                                       image:[UIImage imageNamed:@"Icon_Home"]
+                                            highlightedImage:nil
+                                                      action:^(REMenuItem *item) {
+                                                          NSLog(@"Item: %@", item);
+                                                          self.textView.text = self.msg;
+                                                      }];
     
     homeItem.tag = 0;
     exploreItem.tag = 1;
     activityItem.tag = 2;
     profileItem.tag = 3;
     
-    _menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem]];
+    _menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem,scItem]];
     _menu.cornerRadius = 4;
     _menu.shadowColor = [UIColor blackColor];
     _menu.shadowOffset = CGSizeMake(0, 1);
