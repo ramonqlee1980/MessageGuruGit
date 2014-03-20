@@ -166,7 +166,7 @@ const NSUInteger kCellHeight = 44;
     //[button1 setImage:[UIImage imageNamed:@"btng.png"] forState:UIControlStateNormal];
     
     //设置button标题
-    [button1 setTitle:@"字体" forState:UIControlStateNormal];
+    [button1 setTitle:NSLocalizedString(@"ChangeFont", @"") forState:UIControlStateNormal];
     
     /* forState: 这个参数的作用是定义按钮的文字或图片在何种状态下才会显现*/
     //以下是几种状态
@@ -520,8 +520,8 @@ const NSUInteger kCellHeight = 44;
     //
     
     REMenuItem *homeItem = [[REMenuItem alloc] initWithTitle:@"转繁体"
-                                                    subtitle:@"Return to Home Screen"
-                                                       image:[UIImage imageNamed:@"Icon_Home"]
+                                                    subtitle:@"你还认识汉字吗"
+                                                       image:nil
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
                                                           NSLog(@"Item: %@", item);
@@ -529,17 +529,26 @@ const NSUInteger kCellHeight = 44;
                                                       }];
     
     REMenuItem *exploreItem = [[REMenuItem alloc] initWithTitle:@"转拼音"
-                                                       subtitle:@"Explore 47 additional options"
-                                                          image:[UIImage imageNamed:@"Icon_Explore"]
+                                                       subtitle:@"考验你的拼音功底"
+                                                          image:nil
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
                                                              NSLog(@"Item: %@", item);
                                                              self.textView.text = [RMEncoding SC2Pinyin:self.msg withDiacritics:YES];
                                                          }];
+    REMenuItem *profileItem = [[REMenuItem alloc] initWithTitle:@"转拼音(无发音符)"
+                                                       subtitle:@"考验你的拼音功底"
+                                                          image:nil
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             self.textView.text = [RMEncoding SC2Pinyin:self.msg withDiacritics:NO];
+                                                             
+                                                         }];
     
     REMenuItem *activityItem = [[REMenuItem alloc] initWithTitle:@"转菊花文"
-                                                        subtitle:@"Perform 3 additional activities"
-                                                           image:[UIImage imageNamed:@"Icon_Activity"]
+                                                        subtitle:@"菊花满字飞"
+                                                           image:nil
                                                 highlightedImage:nil
                                                           action:^(REMenuItem *item) {
                                                               NSLog(@"Item: %@", item);
@@ -547,18 +556,10 @@ const NSUInteger kCellHeight = 44;
 
                                                           }];
     
-    REMenuItem *profileItem = [[REMenuItem alloc] initWithTitle:@"转火星文"
-                                                          image:[UIImage imageNamed:@"Icon_Profile"]
-                                               highlightedImage:nil
-                                                         action:^(REMenuItem *item) {
-                                                             NSLog(@"Item: %@", item);
-                                                             self.textView.text = [RMEncoding SC2Huoxing:self.msg];
-
-                                                         }];
     
     REMenuItem *scItem = [[REMenuItem alloc] initWithTitle:@"恢复简体"
-                                                    subtitle:@"Return to Home Screen"
-                                                       image:[UIImage imageNamed:@"Icon_Home"]
+                                                    subtitle:@"恢复原来的面貌"
+                                                       image:nil
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
                                                           NSLog(@"Item: %@", item);
@@ -570,7 +571,7 @@ const NSUInteger kCellHeight = 44;
     activityItem.tag = 2;
     profileItem.tag = 3;
     
-    _menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem,scItem]];
+    _menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, profileItem,activityItem, scItem]];
     _menu.cornerRadius = 4;
     _menu.shadowColor = [UIColor blackColor];
     _menu.shadowOffset = CGSizeMake(0, 1);

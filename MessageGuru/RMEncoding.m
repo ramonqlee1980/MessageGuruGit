@@ -13,7 +13,7 @@
 +(NSString*)SC2Huoxing:(NSString*)str//
 {
     //TODO::简体转火星文
-    return @"";
+    return str;
 }
 +(NSString*)SC2Juhua:(NSString*)str
 {
