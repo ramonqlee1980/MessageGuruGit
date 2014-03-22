@@ -15,6 +15,20 @@
     //TODO::简体转火星文
     return str;
 }
++(NSString*)SC2Kuang:(NSString*)str
+{
+    //简体转边框文
+    NSMutableString* ret = [[[NSMutableString alloc]init]autorelease];
+    const unichar topLine = 773;
+    const unichar bottomLine = 818;
+    
+    [ret appendFormat:@"[%C%C",topLine,bottomLine];
+    for (int i=0;i<str.length;++i) {
+        [ret appendFormat:@"%C%C%C",[str characterAtIndex:i],topLine,bottomLine];
+    }
+    [ret appendString:@"]"];
+    return ret;
+}
 +(NSString*)SC2Juhua:(NSString*)str
 {
     //简体转菊花文

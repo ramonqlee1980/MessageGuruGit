@@ -555,7 +555,15 @@ const NSUInteger kCellHeight = 44;
                                                               self.textView.text = [RMEncoding SC2Juhua:self.msg];
 
                                                           }];
-    
+    REMenuItem *kuangItem = [[REMenuItem alloc] initWithTitle:@"转边框文"
+                                                        subtitle:@"框框更健康"
+                                                           image:nil
+                                                highlightedImage:nil
+                                                          action:^(REMenuItem *item) {
+                                                              NSLog(@"Item: %@", item);
+                                                              self.textView.text = [RMEncoding SC2Kuang:self.msg];
+                                                              
+                                                          }];
     
     REMenuItem *scItem = [[REMenuItem alloc] initWithTitle:@"恢复简体"
                                                     subtitle:@"恢复原来的面貌"
@@ -571,7 +579,7 @@ const NSUInteger kCellHeight = 44;
     activityItem.tag = 2;
     profileItem.tag = 3;
     
-    _menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, profileItem,activityItem, scItem]];
+    _menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, profileItem,activityItem,kuangItem, scItem]];
     _menu.cornerRadius = 4;
     _menu.shadowColor = [UIColor blackColor];
     _menu.shadowOffset = CGSizeMake(0, 1);
